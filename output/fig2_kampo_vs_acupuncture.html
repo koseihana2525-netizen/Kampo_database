@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Figure 2: Kampo vs Acupuncture — What Conditions Are Studied?</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #333; padding: 20px; }
+h1 { font-size: 15px; text-align: center; margin-bottom: 2px; }
+.subtitle { text-align: center; font-size: 11px; color: #888; margin-bottom: 16px; }
+
+.container { max-width: 900px; margin: 0 auto; }
+
+.legend {
+  display: flex; gap: 20px; justify-content: center; margin-bottom: 14px; font-size: 11px;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.leg-k { width: 12px; height: 12px; background: #ea580c; border-radius: 2px; }
+.leg-a { width: 12px; height: 12px; background: #0891b2; border-radius: 2px; }
+
+.section-title {
+  font-size: 11px; font-weight: 700; color: #fff; padding: 4px 12px;
+  border-radius: 4px; margin: 12px 0 4px 0; display: inline-block;
+}
+
+.row {
+  display: flex; align-items: center; height: 22px; margin: 1px 0;
+}
+.cond {
+  width: 150px; font-size: 10.5px; text-align: right; padding-right: 8px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  color: #444;
+}
+.bars {
+  flex: 1; display: flex; align-items: center; position: relative;
+  height: 18px;
+}
+.center-line {
+  position: absolute; left: 50%; top: 0; bottom: 0; width: 1px;
+  background: #ccc; z-index: 0;
+}
+.bar-left {
+  position: absolute; right: 50%; height: 14px;
+  background: #ea580c; border-radius: 2px 0 0 2px;
+  display: flex; align-items: center; justify-content: flex-start;
+  z-index: 1;
+}
+.bar-right {
+  position: absolute; left: 50%; height: 14px;
+  background: #0891b2; border-radius: 0 2px 2px 0;
+  display: flex; align-items: center; justify-content: flex-end;
+  z-index: 1;
+}
+.bar-num {
+  font-size: 8px; font-weight: 700; color: #fff; padding: 0 3px;
+  white-space: nowrap;
+}
+.bar-num-out-k {
+  position: absolute; right: calc(50% + 4px); font-size: 8px; color: #ea580c;
+  font-weight: 600; z-index: 2;
+}
+.bar-num-out-a {
+  position: absolute; left: calc(50% + 4px); font-size: 8px; color: #0891b2;
+  font-weight: 600; z-index: 2;
+}
+
+.col-labels {
+  display: flex; align-items: center; height: 20px; margin-bottom: 2px;
+  font-size: 10px; font-weight: 700; color: #666;
+}
+.col-labels .cond { color: transparent; }
+.col-labels .bars { justify-content: center; }
+.col-labels .lbl-k { position: absolute; right: calc(50% + 20px); color: #ea580c; }
+.col-labels .lbl-a { position: absolute; left: calc(50% + 20px); color: #0891b2; }
+
+/* Highlight rows where only one side has articles */
+.only-k .cond { color: #9a3412; font-weight: 600; }
+.only-a .cond { color: #155e75; font-weight: 600; }
+.both-strong .cond { color: #333; font-weight: 600; }
+
+.note { text-align: center; font-size: 9px; color: #aaa; margin-top: 16px; line-height: 1.6; }
+
+.highlight-box {
+  margin: 12px 0; padding: 8px 14px; border-radius: 6px; font-size: 10px; line-height: 1.6;
+}
+.hb-orange { background: #fff7ed; border-left: 3px solid #ea580c; }
+.hb-cyan { background: #ecfeff; border-left: 3px solid #0891b2; }
+.hb-purple { background: #faf5ff; border-left: 3px solid #7c3aed; }
+</style>
+</head>
+<body>
+
+<h1>Kampo vs Acupuncture: What Conditions Are Studied?</h1>
+<p class="subtitle">Butterfly chart comparing disease/symptom coverage across 2,653 articles from two core Japanese traditional medicine journals (1982–2024)</p>
+
+<div class="container">
+
+<div class="legend">
+  <div class="legend-item"><div class="leg-k"></div> Kampo (漢方) — Journal of Kampo Medicine, n=2,003</div>
+  <div class="legend-item"><div class="leg-a"></div> Acupuncture (鍼灸) — Both journals combined, n=771</div>
+</div>
+
+<div id="chart"></div>
+
+<div class="highlight-box hb-orange">
+  <b>Kampo-dominant conditions</b> (orange): GI diseases, respiratory, metabolic — reflecting that Kampo is prescribed by physicians with access to internal medicine patients.
+</div>
+<div class="highlight-box hb-cyan">
+  <b>Acupuncture-dominant conditions</b> (cyan): Sports, back pain, shoulder pain — reflecting the musculoskeletal focus of acupuncture practice.
+</div>
+<div class="highlight-box hb-purple">
+  <b>Shared conditions</b>: Cancer/palliative care, facial palsy, headache, mental health — where both modalities contribute and integration may benefit patients.
+</div>
+
+<p class="note">
+  Article counts are based on title keyword matching. A single article may appear in multiple categories.<br>
+  Acupuncture counts include articles from both the Journal of the Japan Society of Acupuncture and Moxibustion (n=650) and acupuncture-related articles in the Journal of Kampo Medicine (n=121).<br>
+  Only 44 authors published in both journals, highlighting the personnel divide between the two fields.
+</p>
+</div>
+
+<script>
+const maxVal = 42;
+const pxPerArticle = 6;
+
+const sections = [
+  { title: 'Pain & Musculoskeletal', color: '#7c3aed', items: [
+    {c:'関節痛・リウマチ', k:41, a:4}, {c:'腰痛', k:4, a:14}, {c:'頭痛', k:21, a:7},
+    {c:'神経痛', k:16, a:5}, {c:'三叉神経痛', k:10, a:2}, {c:'頸部痛', k:10, a:4},
+    {c:'膝痛', k:6, a:5}, {c:'肩こり・肩痛', k:4, a:5}, {c:'線維筋痛症', k:8, a:3},
+    {c:'スポーツ', k:2, a:28},
+  ]},
+  { title: 'Neurology', color: '#2563eb', items: [
+    {c:'顔面神経麻痺', k:7, a:12}, {c:'脳卒中', k:9, a:3}, {c:'末梢神経障害', k:5, a:4},
+    {c:'めまい', k:8, a:1}, {c:'パーキンソン', k:6, a:5}, {c:'認知症', k:4, a:5},
+  ]},
+  { title: 'Mental Health', color: '#6d28d9', items: [
+    {c:'不眠', k:22, a:5}, {c:'不安・ストレス', k:16, a:8}, {c:'うつ', k:11, a:4},
+    {c:'自律神経', k:9, a:3},
+  ]},
+  { title: 'Gastrointestinal', color: '#059669', items: [
+    {c:'肝疾患', k:33, a:0}, {c:'便秘', k:10, a:0}, {c:'下痢', k:9, a:0},
+    {c:'イレウス', k:9, a:0}, {c:'IBS', k:7, a:0}, {c:'FD・食欲不振', k:6, a:0},
+    {c:'GERD', k:3, a:0}, {c:'口内炎', k:3, a:0},
+  ]},
+  { title: 'Respiratory & Infectious', color: '#0891b2', items: [
+    {c:'喘息', k:24, a:2}, {c:'COVID-19', k:17, a:6}, {c:'咳嗽', k:9, a:1},
+    {c:'アレルギー性鼻炎', k:8, a:4}, {c:'インフルエンザ', k:7, a:0},
+    {c:'感冒', k:6, a:0}, {c:'COPD', k:7, a:0},
+  ]},
+  { title: 'Cardiovascular & Metabolic', color: '#dc2626', items: [
+    {c:'糖尿病', k:21, a:0}, {c:'冷え', k:19, a:6}, {c:'高血圧', k:8, a:0},
+    {c:'肥満', k:6, a:0}, {c:'浮腫', k:6, a:4}, {c:'動悸', k:5, a:0},
+  ]},
+  { title: "Women's Health", color: '#db2777', items: [
+    {c:'月経・PMS', k:15, a:5}, {c:'妊娠関連', k:14, a:1}, {c:'更年期', k:11, a:0},
+    {c:'不妊', k:7, a:5},
+  ]},
+  { title: 'Dermatology', color: '#ca8a04', items: [
+    {c:'皮膚疾患', k:38, a:14}, {c:'アトピー', k:23, a:0}, {c:'帯状疱疹', k:6, a:3},
+    {c:'褥瘡', k:2, a:2},
+  ]},
+  { title: 'Oncology & Aging', color: '#4f46e5', items: [
+    {c:'がん', k:38, a:16}, {c:'高齢者', k:25, a:10}, {c:'倦怠感・疲労', k:21, a:6},
+    {c:'小児', k:28, a:4},
+  ]},
+  { title: 'ENT & Sensory', color: '#0d9488', items: [
+    {c:'耳鳴', k:10, a:5}, {c:'嗅覚・味覚', k:8, a:1}, {c:'難聴', k:6, a:2},
+    {c:'眼疾患', k:3, a:4}, {c:'美容', k:1, a:6},
+  ]},
+  { title: 'Urological', color: '#92400e', items: [
+    {c:'腎疾患', k:13, a:0}, {c:'頻尿', k:5, a:5}, {c:'膀胱炎', k:5, a:0},
+  ]},
+];
+
+const chart = document.getElementById('chart');
+
+// Column labels
+const labelRow = document.createElement('div');
+labelRow.className = 'col-labels';
+labelRow.innerHTML = `
+  <div class="cond">.</div>
+  <div class="bars" style="position:relative">
+    <span class="lbl-k">← Kampo (漢方)</span>
+    <div class="center-line"></div>
+    <span class="lbl-a">Acupuncture (鍼灸) →</span>
+  </div>
+`;
+chart.appendChild(labelRow);
+
+sections.forEach(sec => {
+  const title = document.createElement('div');
+  title.className = 'section-title';
+  title.style.background = sec.color;
+  title.textContent = sec.title;
+  chart.appendChild(title);
+
+  sec.items.forEach(item => {
+    const row = document.createElement('div');
+    row.className = 'row';
+    if (item.a === 0) row.classList.add('only-k');
+    else if (item.k <= 2 && item.a > item.k * 2) row.classList.add('only-a');
+    else if (item.k >= 5 && item.a >= 5) row.classList.add('both-strong');
+
+    const kWidth = item.k * pxPerArticle;
+    const aWidth = item.a * pxPerArticle;
+
+    const kLabel = item.k >= 3 ? `<span class="bar-num">${item.k}</span>` : '';
+    const aLabel = item.a >= 3 ? `<span class="bar-num">${item.a}</span>` : '';
+    const kOut = item.k > 0 && item.k < 3 ? `<span class="bar-num-out-k" style="right:calc(50% + ${kWidth+4}px)">${item.k}</span>` : '';
+    const aOut = item.a > 0 && item.a < 3 ? `<span class="bar-num-out-a" style="left:calc(50% + ${aWidth+4}px)">${item.a}</span>` : '';
+
+    row.innerHTML = `
+      <div class="cond" title="${item.c}">${item.c}</div>
+      <div class="bars">
+        <div class="center-line"></div>
+        ${item.k > 0 ? `<div class="bar-left" style="width:${kWidth}px">${kLabel}</div>` : ''}
+        ${item.a > 0 ? `<div class="bar-right" style="width:${aWidth}px">${aLabel}</div>` : ''}
+        ${kOut}${aOut}
+      </div>
+    `;
+    chart.appendChild(row);
+  });
+});
+</script>
+</body>
+</html>

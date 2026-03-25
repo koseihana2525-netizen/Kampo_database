@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Duagnosis Kampo KB - 時系列分析</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+  .header { background: #1B3A5C; color: white; padding: 24px 32px; }
+  .header h1 { font-size: 24px; font-weight: 500; }
+  .header p { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .section { background: white; border-radius: 8px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .section h2 { font-size: 18px; color: #1B3A5C; margin-bottom: 16px; border-bottom: 2px solid #E8F0F8; padding-bottom: 8px; }
+  .chart { width: 100%; }
+  .legend { display: flex; gap: 16px; margin-bottom: 12px; font-size: 13px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 2px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1B3A5C; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 6px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f8f9fa; }
+  .bar-cell { position: relative; }
+  .bar { height: 20px; border-radius: 3px; display: inline-block; }
+  .tooltip { position: absolute; background: white; border: 1px solid #ddd; border-radius: 4px; padding: 8px 12px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.15); pointer-events: none; z-index: 100; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Duagnosis Kampo KB - 時系列分析</h1>
+  <p>方剤出現頻度の年次推移 | 1982-2025年 | 872件</p>
+</div>
+<div class="container">
+  <div class="section">
+    <h2>経方 vs 後世方 年別出現数</h2>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#2563EB"></div> 経方</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#EA580C"></div> 後世方</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#9CA3AF"></div> 分類不明</div>
+    </div>
+    <div id="origin-chart" class="chart"></div>
+  </div>
+
+  <div class="section">
+    <h2>方剤別出現頻度トップ20</h2>
+    <div id="formula-chart" class="chart"></div>
+  </div>
+
+  <div class="section">
+    <h2>方剤別年次推移（トップ20）</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>方剤名</th>
+          <th>分類</th>
+          <th>合計</th>
+          <th>1982</th><th>1983</th><th>1984</th><th>1985</th><th>1986</th><th>1987</th><th>1988</th><th>1989</th><th>1990</th><th>1991</th><th>1992</th><th>1993</th><th>1994</th><th>1995</th><th>1996</th><th>1997</th><th>1998</th><th>1999</th><th>2000</th><th>2001</th><th>2002</th><th>2003</th><th>2004</th><th>2005</th><th>2006</th><th>2007</th><th>2008</th><th>2009</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>2014</th><th>2015</th><th>2016</th><th>2017</th><th>2018</th><th>2019</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>補中益気湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>35</strong></td>
+            <td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>3</td><td>1</td><td>-</td><td>-</td><td>3</td><td>4</td><td>2</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>3</td><td>1</td><td>-</td><td>4</td><td>-</td><td>1</td><td>-</td><td>2</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td>
+          </tr><tr>
+            <td>五苓散</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>29</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>2</td><td>2</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>2</td><td>2</td><td>-</td><td>5</td><td>-</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>4</td><td>-</td><td>-</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>桂枝茯苓丸</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>25</strong></td>
+            <td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>2</td><td>1</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>2</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td>
+          </tr><tr>
+            <td>当帰芍薬散</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>24</strong></td>
+            <td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>2</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>2</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>-</td><td>2</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>柴苓湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>24</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>2</td><td>1</td><td>-</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>-</td>
+          </tr><tr>
+            <td>抑肝散</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>21</strong></td>
+            <td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>2</td>
+          </tr><tr>
+            <td>小柴胡湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>21</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>4</td><td>2</td><td>1</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>当帰四逆加呉茱萸生姜湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>21</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>5</td><td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>1</td><td>1</td><td>-</td><td>1</td>
+          </tr><tr>
+            <td>十全大補湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>20</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>2</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>2</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td>
+          </tr><tr>
+            <td>八味地黄丸</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>19</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>2</td><td>2</td><td>1</td><td>2</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>真武湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>17</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>2</td><td>2</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>2</td><td>-</td><td>2</td>
+          </tr><tr>
+            <td>芍薬甘草湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>17</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>2</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>黄連解毒湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>16</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>2</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>2</td><td>2</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td>
+          </tr><tr>
+            <td>防已黄耆湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>15</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>苓桂朮甘湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>14</strong></td>
+            <td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>3</td><td>-</td><td>2</td><td>1</td><td>1</td><td>-</td>
+          </tr><tr>
+            <td>加味帰脾湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>14</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>2</td><td>-</td><td>1</td><td>-</td>
+          </tr><tr>
+            <td>半夏厚朴湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>14</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>柴胡加竜骨牡蛎湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>13</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>2</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td>
+          </tr><tr>
+            <td>柴胡桂枝湯</td>
+            <td style="color:#2563EB">経方</td>
+            <td><strong>13</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>1</td><td>1</td><td>1</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td>
+          </tr><tr>
+            <td>六君子湯</td>
+            <td style="color:#EA580C">後世方</td>
+            <td><strong>13</strong></td>
+            <td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>2</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td><td>1</td><td>1</td><td>-</td><td>-</td><td>1</td><td>-</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>1</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div id="tooltip" class="tooltip" style="display:none"></div>
+<script>
+const originData = [{"year": 1982, "total": 4, "経方": 2, "後世方": 2, "不明": 0}, {"year": 1983, "total": 6, "経方": 3, "後世方": 3, "不明": 0}, {"year": 1984, "total": 8, "経方": 6, "後世方": 2, "不明": 0}, {"year": 1985, "total": 4, "経方": 3, "後世方": 1, "不明": 0}, {"year": 1986, "total": 8, "経方": 4, "後世方": 4, "不明": 0}, {"year": 1987, "total": 4, "経方": 3, "後世方": 1, "不明": 0}, {"year": 1988, "total": 4, "経方": 2, "後世方": 2, "不明": 0}, {"year": 1989, "total": 7, "経方": 5, "後世方": 2, "不明": 0}, {"year": 1990, "total": 5, "経方": 3, "後世方": 2, "不明": 0}, {"year": 1991, "total": 12, "経方": 8, "後世方": 4, "不明": 0}, {"year": 1992, "total": 20, "経方": 11, "後世方": 10, "不明": 0}, {"year": 1993, "total": 19, "経方": 15, "後世方": 8, "不明": 0}, {"year": 1994, "total": 37, "経方": 23, "後世方": 15, "不明": 0}, {"year": 1995, "total": 43, "経方": 37, "後世方": 15, "不明": 0}, {"year": 1996, "total": 24, "経方": 15, "後世方": 12, "不明": 0}, {"year": 1997, "total": 26, "経方": 18, "後世方": 14, "不明": 0}, {"year": 1998, "total": 14, "経方": 10, "後世方": 6, "不明": 0}, {"year": 1999, "total": 28, "経方": 15, "後世方": 16, "不明": 0}, {"year": 2000, "total": 18, "経方": 8, "後世方": 10, "不明": 0}, {"year": 2001, "total": 10, "経方": 7, "後世方": 3, "不明": 0}, {"year": 2002, "total": 18, "経方": 12, "後世方": 5, "不明": 0}, {"year": 2003, "total": 15, "経方": 7, "後世方": 8, "不明": 0}, {"year": 2004, "total": 9, "経方": 4, "後世方": 4, "不明": 0}, {"year": 2005, "total": 13, "経方": 6, "後世方": 7, "不明": 0}, {"year": 2006, "total": 15, "経方": 6, "後世方": 11, "不明": 0}, {"year": 2007, "total": 14, "経方": 9, "後世方": 6, "不明": 0}, {"year": 2008, "total": 22, "経方": 14, "後世方": 8, "不明": 0}, {"year": 2009, "total": 32, "経方": 21, "後世方": 14, "不明": 0}, {"year": 2010, "total": 25, "経方": 16, "後世方": 10, "不明": 0}, {"year": 2011, "total": 28, "経方": 20, "後世方": 10, "不明": 0}, {"year": 2012, "total": 18, "経方": 14, "後世方": 4, "不明": 0}, {"year": 2013, "total": 32, "経方": 16, "後世方": 17, "不明": 0}, {"year": 2014, "total": 22, "経方": 13, "後世方": 10, "不明": 0}, {"year": 2015, "total": 30, "経方": 17, "後世方": 12, "不明": 0}, {"year": 2016, "total": 31, "経方": 19, "後世方": 16, "不明": 0}, {"year": 2017, "total": 28, "経方": 16, "後世方": 20, "不明": 0}, {"year": 2018, "total": 28, "経方": 15, "後世方": 15, "不明": 0}, {"year": 2019, "total": 27, "経方": 20, "後世方": 14, "不明": 0}, {"year": 2020, "total": 35, "経方": 25, "後世方": 15, "不明": 0}, {"year": 2021, "total": 31, "経方": 26, "後世方": 10, "不明": 0}, {"year": 2022, "total": 31, "経方": 16, "後世方": 19, "不明": 0}, {"year": 2023, "total": 33, "経方": 22, "後世方": 16, "不明": 0}, {"year": 2024, "total": 17, "経方": 8, "後世方": 12, "不明": 0}, {"year": 2025, "total": 17, "経方": 11, "後世方": 9, "不明": 0}];
+const tooltip = d3.select('#tooltip');
+
+// 経方/後世方のスタックバーチャート
+(function() {
+  const container = document.getElementById('origin-chart');
+  const margin = {top: 20, right: 30, bottom: 40, left: 50};
+  const width = container.clientWidth - margin.left - margin.right;
+  const height = 300 - margin.top - margin.bottom;
+
+  const svg = d3.select('#origin-chart').append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleBand().domain(originData.map(d => d.year)).range([0, width]).padding(0.3);
+  const maxY = d3.max(originData, d => d['経方'] + d['後世方'] + d['不明']);
+  const y = d3.scaleLinear().domain([0, maxY]).nice().range([height, 0]);
+
+  svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x));
+  svg.append('g').call(d3.axisLeft(y));
+
+  const keys = ['経方', '後世方', '不明'];
+  const colors = {'経方': '#2563EB', '後世方': '#EA580C', '不明': '#9CA3AF'};
+
+  const stack = d3.stack().keys(keys)(originData);
+
+  svg.selectAll('.layer')
+    .data(stack).enter().append('g')
+    .attr('fill', (d, i) => colors[keys[i]])
+    .selectAll('rect').data(d => d).enter().append('rect')
+    .attr('x', d => x(d.data.year))
+    .attr('y', d => y(d[1]))
+    .attr('height', d => y(d[0]) - y(d[1]))
+    .attr('width', x.bandwidth())
+    .attr('rx', 2)
+    .on('mouseover', (e, d) => {
+      tooltip.style('display', 'block')
+        .html(`${d.data.year}年<br>経方: ${d.data['経方']}<br>後世方: ${d.data['後世方']}<br>論文数: ${d.data.total}`)
+        .style('left', (e.pageX + 10) + 'px').style('top', (e.pageY - 10) + 'px');
+    })
+    .on('mouseout', () => tooltip.style('display', 'none'));
+})();
+
+// 方剤別出現頻度の横棒グラフ
+(function() {
+  const formulaData = [{"name": "補中益気湯", "count": 35, "origin": "後世方"}, {"name": "五苓散", "count": 29, "origin": "経方"}, {"name": "桂枝茯苓丸", "count": 25, "origin": "経方"}, {"name": "当帰芍薬散", "count": 24, "origin": "経方"}, {"name": "柴苓湯", "count": 24, "origin": "後世方"}, {"name": "抑肝散", "count": 21, "origin": "後世方"}, {"name": "小柴胡湯", "count": 21, "origin": "経方"}, {"name": "当帰四逆加呉茱萸生姜湯", "count": 21, "origin": "経方"}, {"name": "十全大補湯", "count": 20, "origin": "後世方"}, {"name": "八味地黄丸", "count": 19, "origin": "経方"}, {"name": "真武湯", "count": 17, "origin": "経方"}, {"name": "芍薬甘草湯", "count": 17, "origin": "経方"}, {"name": "黄連解毒湯", "count": 16, "origin": "後世方"}, {"name": "防已黄耆湯", "count": 15, "origin": "経方"}, {"name": "苓桂朮甘湯", "count": 14, "origin": "経方"}, {"name": "加味帰脾湯", "count": 14, "origin": "後世方"}, {"name": "半夏厚朴湯", "count": 14, "origin": "経方"}, {"name": "柴胡加竜骨牡蛎湯", "count": 13, "origin": "経方"}, {"name": "柴胡桂枝湯", "count": 13, "origin": "経方"}, {"name": "六君子湯", "count": 13, "origin": "後世方"}];
+
+  const container = document.getElementById('formula-chart');
+  const margin = {top: 10, right: 30, bottom: 30, left: 180};
+  const width = container.clientWidth - margin.left - margin.right;
+  const height = formulaData.length * 28;
+
+  const svg = d3.select('#formula-chart').append('svg')
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
+    .append('g').attr('transform', `translate(${margin.left},${margin.top})`);
+
+  const x = d3.scaleLinear().domain([0, d3.max(formulaData, d => d.count)]).nice().range([0, width]);
+  const y = d3.scaleBand().domain(formulaData.map(d => d.name)).range([0, height]).padding(0.2);
+
+  svg.append('g').attr('transform', `translate(0,${height})`).call(d3.axisBottom(x).ticks(5));
+  svg.append('g').call(d3.axisLeft(y));
+
+  const colors = {'経方': '#2563EB', '後世方': '#EA580C', '不明': '#9CA3AF'};
+
+  svg.selectAll('rect').data(formulaData).enter().append('rect')
+    .attr('x', 0).attr('y', d => y(d.name))
+    .attr('width', d => x(d.count)).attr('height', y.bandwidth())
+    .attr('fill', d => colors[d.origin] || '#9CA3AF')
+    .attr('rx', 3);
+
+  svg.selectAll('.count-label').data(formulaData).enter().append('text')
+    .attr('x', d => x(d.count) + 5).attr('y', d => y(d.name) + y.bandwidth() / 2)
+    .attr('dy', '0.35em').attr('font-size', '11px').attr('fill', '#666')
+    .text(d => d.count);
+})();
+</script>
+</body>
+</html>

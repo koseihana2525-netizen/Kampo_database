@@ -1,0 +1,1154 @@
+[
+  {
+    "condition": "がん支持療法",
+    "kampo": 38,
+    "acup": 9,
+    "top_formulas": "十全大補湯(4), 柴苓湯(2), 五苓散(2), 小柴胡湯(2), 香蘇散(2)",
+    "top_list": [
+      {
+        "name": "十全大補湯",
+        "count": 4
+      },
+      {
+        "name": "柴苓湯",
+        "count": 2
+      },
+      {
+        "name": "五苓散",
+        "count": 2
+      },
+      {
+        "name": "小柴胡湯",
+        "count": 2
+      },
+      {
+        "name": "香蘇散",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "condition": "関節痛・リウマチ",
+    "kampo": 41,
+    "acup": 2,
+    "top_formulas": "防已黄耆湯(3), 大防風湯(2), 十全大補湯(1), 治打撲一方(1), 柴苓湯(1)",
+    "top_list": [
+      {
+        "name": "防已黄耆湯",
+        "count": 3
+      },
+      {
+        "name": "大防風湯",
+        "count": 2
+      },
+      {
+        "name": "十全大補湯",
+        "count": 1
+      },
+      {
+        "name": "治打撲一方",
+        "count": 1
+      },
+      {
+        "name": "柴苓湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "高齢者フレイル",
+    "kampo": 25,
+    "acup": 8,
+    "top_formulas": "八味地黄丸(3), 人参湯(2), 真武湯(2), 麦門冬湯(2), 当帰芍薬散(2)",
+    "top_list": [
+      {
+        "name": "八味地黄丸",
+        "count": 3
+      },
+      {
+        "name": "人参湯",
+        "count": 2
+      },
+      {
+        "name": "真武湯",
+        "count": 2
+      },
+      {
+        "name": "麦門冬湯",
+        "count": 2
+      },
+      {
+        "name": "当帰芍薬散",
+        "count": 2
+      }
+    ]
+  },
+  {
+    "condition": "小児",
+    "kampo": 28,
+    "acup": 2,
+    "top_formulas": "小建中湯(2), 加味帰脾湯(2), 帰脾湯(2), 芎帰膠艾湯(2), 半夏厚朴湯(1)",
+    "top_list": [
+      {
+        "name": "小建中湯",
+        "count": 2
+      },
+      {
+        "name": "加味帰脾湯",
+        "count": 2
+      },
+      {
+        "name": "帰脾湯",
+        "count": 2
+      },
+      {
+        "name": "芎帰膠艾湯",
+        "count": 2
+      },
+      {
+        "name": "半夏厚朴湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "頭痛",
+    "kampo": 21,
+    "acup": 6,
+    "top_formulas": "五苓散(3), 抑肝散(2), 呉茱萸湯(2), 十全大補湯(2), 正気天香湯(1)",
+    "top_list": [
+      {
+        "name": "五苓散",
+        "count": 3
+      },
+      {
+        "name": "抑肝散",
+        "count": 2
+      },
+      {
+        "name": "呉茱萸湯",
+        "count": 2
+      },
+      {
+        "name": "十全大補湯",
+        "count": 2
+      },
+      {
+        "name": "正気天香湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "アトピー",
+    "kampo": 23,
+    "acup": 3,
+    "top_formulas": "人参湯(2), 白虎加人参湯(2), 苓桂朮甘湯(1), 白虎湯(1), 消風散(1)",
+    "top_list": [
+      {
+        "name": "人参湯",
+        "count": 2
+      },
+      {
+        "name": "白虎加人参湯",
+        "count": 2
+      },
+      {
+        "name": "苓桂朮甘湯",
+        "count": 1
+      },
+      {
+        "name": "白虎湯",
+        "count": 1
+      },
+      {
+        "name": "消風散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "倦怠感・疲労",
+    "kampo": 21,
+    "acup": 4,
+    "top_formulas": "帰脾湯(2), 茯苓四逆湯(2), 四逆湯(2), 麻黄附子細辛湯(1), 十全大補湯(1)",
+    "top_list": [
+      {
+        "name": "帰脾湯",
+        "count": 2
+      },
+      {
+        "name": "茯苓四逆湯",
+        "count": 2
+      },
+      {
+        "name": "四逆湯",
+        "count": 2
+      },
+      {
+        "name": "麻黄附子細辛湯",
+        "count": 1
+      },
+      {
+        "name": "十全大補湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "喘息",
+    "kampo": 24,
+    "acup": 0,
+    "top_formulas": "半夏厚朴湯(2), 八味地黄丸(2), 柴朴湯(1), 越婢加半夏湯(1), 五苓散(1)",
+    "top_list": [
+      {
+        "name": "半夏厚朴湯",
+        "count": 2
+      },
+      {
+        "name": "八味地黄丸",
+        "count": 2
+      },
+      {
+        "name": "柴朴湯",
+        "count": 1
+      },
+      {
+        "name": "越婢加半夏湯",
+        "count": 1
+      },
+      {
+        "name": "五苓散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "COVID-19",
+    "kampo": 17,
+    "acup": 6,
+    "top_formulas": "小柴胡湯(2), 葛根湯(2), 小柴胡湯加桔梗石膏(2), 麻黄湯(1), 柴朴湯(1)",
+    "top_list": [
+      {
+        "name": "小柴胡湯",
+        "count": 2
+      },
+      {
+        "name": "葛根湯",
+        "count": 2
+      },
+      {
+        "name": "小柴胡湯加桔梗石膏",
+        "count": 2
+      },
+      {
+        "name": "麻黄湯",
+        "count": 1
+      },
+      {
+        "name": "柴朴湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "冷え",
+    "kampo": 19,
+    "acup": 3,
+    "top_formulas": "当帰四逆加呉茱萸生姜湯(4), 八味地黄丸(2), 桂枝湯(1), 麻黄附子細辛湯(1), 桂枝加竜骨牡蛎湯(1)",
+    "top_list": [
+      {
+        "name": "当帰四逆加呉茱萸生姜湯",
+        "count": 4
+      },
+      {
+        "name": "八味地黄丸",
+        "count": 2
+      },
+      {
+        "name": "桂枝湯",
+        "count": 1
+      },
+      {
+        "name": "麻黄附子細辛湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝加竜骨牡蛎湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "神経痛",
+    "kampo": 17,
+    "acup": 4,
+    "top_formulas": "桂枝加朮附湯(2), 五苓散(2), 小柴胡湯(1), 桂枝加芍薬湯(1), 烏薬順気散(1)",
+    "top_list": [
+      {
+        "name": "桂枝加朮附湯",
+        "count": 2
+      },
+      {
+        "name": "五苓散",
+        "count": 2
+      },
+      {
+        "name": "小柴胡湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝加芍薬湯",
+        "count": 1
+      },
+      {
+        "name": "烏薬順気散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "こむら返り",
+    "kampo": 19,
+    "acup": 0,
+    "top_formulas": "芍薬甘草湯(6), 甘草湯(6), 疎経活血湯(2), 柴苓湯(1), 八味地黄丸(1)",
+    "top_list": [
+      {
+        "name": "芍薬甘草湯",
+        "count": 6
+      },
+      {
+        "name": "甘草湯",
+        "count": 6
+      },
+      {
+        "name": "疎経活血湯",
+        "count": 2
+      },
+      {
+        "name": "柴苓湯",
+        "count": 1
+      },
+      {
+        "name": "八味地黄丸",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "月経異常",
+    "kampo": 15,
+    "acup": 4,
+    "top_formulas": "桂枝茯苓丸(1), 烏薬順気散(1), 加味帰脾湯(1), 帰脾湯(1), 大柴胡湯(1)",
+    "top_list": [
+      {
+        "name": "桂枝茯苓丸",
+        "count": 1
+      },
+      {
+        "name": "烏薬順気散",
+        "count": 1
+      },
+      {
+        "name": "加味帰脾湯",
+        "count": 1
+      },
+      {
+        "name": "帰脾湯",
+        "count": 1
+      },
+      {
+        "name": "大柴胡湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "腰痛",
+    "kampo": 4,
+    "acup": 13,
+    "top_formulas": "烏頭赤石脂丸(1), 四物湯(1), 大黄牡丹皮湯(1)",
+    "top_list": [
+      {
+        "name": "烏頭赤石脂丸",
+        "count": 1
+      },
+      {
+        "name": "四物湯",
+        "count": 1
+      },
+      {
+        "name": "大黄牡丹皮湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "不眠",
+    "kampo": 13,
+    "acup": 3,
+    "top_formulas": "黄連解毒湯(1), 加味帰脾湯(1), 帰脾湯(1), 酸棗仁湯(1), 補中益気湯(1)",
+    "top_list": [
+      {
+        "name": "黄連解毒湯",
+        "count": 1
+      },
+      {
+        "name": "加味帰脾湯",
+        "count": 1
+      },
+      {
+        "name": "帰脾湯",
+        "count": 1
+      },
+      {
+        "name": "酸棗仁湯",
+        "count": 1
+      },
+      {
+        "name": "補中益気湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "うつ",
+    "kampo": 11,
+    "acup": 4,
+    "top_formulas": "加味帰脾湯(2), 帰脾湯(2), 六君子湯(1), 半夏厚朴湯(1), 茯苓飲合半夏厚朴湯(1)",
+    "top_list": [
+      {
+        "name": "加味帰脾湯",
+        "count": 2
+      },
+      {
+        "name": "帰脾湯",
+        "count": 2
+      },
+      {
+        "name": "六君子湯",
+        "count": 1
+      },
+      {
+        "name": "半夏厚朴湯",
+        "count": 1
+      },
+      {
+        "name": "茯苓飲合半夏厚朴湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "妊娠悪阻",
+    "kampo": 14,
+    "acup": 0,
+    "top_formulas": "当帰芍薬散(3), 芍薬甘草湯(2), 甘草湯(2), 大建中湯(2), 柴苓湯(1)",
+    "top_list": [
+      {
+        "name": "当帰芍薬散",
+        "count": 3
+      },
+      {
+        "name": "芍薬甘草湯",
+        "count": 2
+      },
+      {
+        "name": "甘草湯",
+        "count": 2
+      },
+      {
+        "name": "大建中湯",
+        "count": 2
+      },
+      {
+        "name": "柴苓湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "顔面神経麻痺",
+    "kampo": 6,
+    "acup": 7,
+    "top_formulas": "香蘇散(1), 大三五七散(1)",
+    "top_list": [
+      {
+        "name": "香蘇散",
+        "count": 1
+      },
+      {
+        "name": "大三五七散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "不妊",
+    "kampo": 7,
+    "acup": 5,
+    "top_formulas": "当帰芍薬散(2), 桂枝茯苓丸(1), 補中益気湯(1), 温経湯(1), 加味逍遙散(1)",
+    "top_list": [
+      {
+        "name": "当帰芍薬散",
+        "count": 2
+      },
+      {
+        "name": "桂枝茯苓丸",
+        "count": 1
+      },
+      {
+        "name": "補中益気湯",
+        "count": 1
+      },
+      {
+        "name": "温経湯",
+        "count": 1
+      },
+      {
+        "name": "加味逍遙散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "耳鳴",
+    "kampo": 10,
+    "acup": 2,
+    "top_formulas": "蘇子降気湯(1), 釣藤散(1), 桂枝茯苓丸(1), 桂枝茯苓丸加薏苡仁(1), 八味地黄丸(1)",
+    "top_list": [
+      {
+        "name": "蘇子降気湯",
+        "count": 1
+      },
+      {
+        "name": "釣藤散",
+        "count": 1
+      },
+      {
+        "name": "桂枝茯苓丸",
+        "count": 1
+      },
+      {
+        "name": "桂枝茯苓丸加薏苡仁",
+        "count": 1
+      },
+      {
+        "name": "八味地黄丸",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "自律神経失調",
+    "kampo": 9,
+    "acup": 2,
+    "top_formulas": "補中益気湯(1), 六君子湯(1), 茯苓四逆湯(1), 四逆湯(1), 釣藤散(1)",
+    "top_list": [
+      {
+        "name": "補中益気湯",
+        "count": 1
+      },
+      {
+        "name": "六君子湯",
+        "count": 1
+      },
+      {
+        "name": "茯苓四逆湯",
+        "count": 1
+      },
+      {
+        "name": "四逆湯",
+        "count": 1
+      },
+      {
+        "name": "釣藤散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "更年期障害",
+    "kampo": 11,
+    "acup": 0,
+    "top_formulas": "柴胡桂枝乾姜湯(2), 加味逍遙散(1), 逍遙散(1), 人参湯(1), 白虎加人参湯(1)",
+    "top_list": [
+      {
+        "name": "柴胡桂枝乾姜湯",
+        "count": 2
+      },
+      {
+        "name": "加味逍遙散",
+        "count": 1
+      },
+      {
+        "name": "逍遙散",
+        "count": 1
+      },
+      {
+        "name": "人参湯",
+        "count": 1
+      },
+      {
+        "name": "白虎加人参湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "便秘",
+    "kampo": 10,
+    "acup": 0,
+    "top_formulas": "八味丸(1), 潤腸湯(1), 麻子仁丸(1), 甘草湯(1), 半夏人参甘草湯(1)",
+    "top_list": [
+      {
+        "name": "八味丸",
+        "count": 1
+      },
+      {
+        "name": "潤腸湯",
+        "count": 1
+      },
+      {
+        "name": "麻子仁丸",
+        "count": 1
+      },
+      {
+        "name": "甘草湯",
+        "count": 1
+      },
+      {
+        "name": "半夏人参甘草湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "慢性咳嗽",
+    "kampo": 9,
+    "acup": 1,
+    "top_formulas": "麦門冬湯(1), 茯苓飲(1), 蘇子降気湯(1), 越婢加朮湯(1), 防已黄耆湯(1)",
+    "top_list": [
+      {
+        "name": "麦門冬湯",
+        "count": 1
+      },
+      {
+        "name": "茯苓飲",
+        "count": 1
+      },
+      {
+        "name": "蘇子降気湯",
+        "count": 1
+      },
+      {
+        "name": "越婢加朮湯",
+        "count": 1
+      },
+      {
+        "name": "防已黄耆湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "アレルギー性鼻炎",
+    "kampo": 7,
+    "acup": 3,
+    "top_formulas": "人参湯(1), 桂枝湯(1), 真武湯(1), 当帰芍薬散(1)",
+    "top_list": [
+      {
+        "name": "人参湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝湯",
+        "count": 1
+      },
+      {
+        "name": "真武湯",
+        "count": 1
+      },
+      {
+        "name": "当帰芍薬散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "不安",
+    "kampo": 7,
+    "acup": 2,
+    "top_formulas": "桂枝加竜骨牡蛎湯(1), 甘麦大棗湯(1), 黄耆建中湯(1), 芎帰調血飲(1), 安中散(1)",
+    "top_list": [
+      {
+        "name": "桂枝加竜骨牡蛎湯",
+        "count": 1
+      },
+      {
+        "name": "甘麦大棗湯",
+        "count": 1
+      },
+      {
+        "name": "黄耆建中湯",
+        "count": 1
+      },
+      {
+        "name": "芎帰調血飲",
+        "count": 1
+      },
+      {
+        "name": "安中散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "下痢",
+    "kampo": 9,
+    "acup": 0,
+    "top_formulas": "五苓散(2), 白通湯(1), 半夏瀉心湯(1), 大建中湯(1), 桂枝加芍薬湯(1)",
+    "top_list": [
+      {
+        "name": "五苓散",
+        "count": 2
+      },
+      {
+        "name": "白通湯",
+        "count": 1
+      },
+      {
+        "name": "半夏瀉心湯",
+        "count": 1
+      },
+      {
+        "name": "大建中湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝加芍薬湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "湿疹・蕁麻疹",
+    "kampo": 9,
+    "acup": 0,
+    "top_formulas": "桂枝二越婢一湯(1), 桂枝茯苓丸(1), 人参湯(1), 白虎加人参湯(1), 黄連解毒湯(1)",
+    "top_list": [
+      {
+        "name": "桂枝二越婢一湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝茯苓丸",
+        "count": 1
+      },
+      {
+        "name": "人参湯",
+        "count": 1
+      },
+      {
+        "name": "白虎加人参湯",
+        "count": 1
+      },
+      {
+        "name": "黄連解毒湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "嗅覚・味覚障害",
+    "kampo": 8,
+    "acup": 1,
+    "top_formulas": "香蘇散(2), 麗沢通気湯(1), 補中益気湯(1), 越婢加朮湯(1)",
+    "top_list": [
+      {
+        "name": "香蘇散",
+        "count": 2
+      },
+      {
+        "name": "麗沢通気湯",
+        "count": 1
+      },
+      {
+        "name": "補中益気湯",
+        "count": 1
+      },
+      {
+        "name": "越婢加朮湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "線維筋痛症",
+    "kampo": 8,
+    "acup": 0,
+    "top_formulas": "白虎湯(1), 十味剉散(1)",
+    "top_list": [
+      {
+        "name": "白虎湯",
+        "count": 1
+      },
+      {
+        "name": "十味剉散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "めまい",
+    "kampo": 8,
+    "acup": 0,
+    "top_formulas": "沢瀉湯(1), 当帰四逆加呉茱萸生姜湯(1), 五積散(1), 桂枝加竜骨牡蛎湯(1)",
+    "top_list": [
+      {
+        "name": "沢瀉湯",
+        "count": 1
+      },
+      {
+        "name": "当帰四逆加呉茱萸生姜湯",
+        "count": 1
+      },
+      {
+        "name": "五積散",
+        "count": 1
+      },
+      {
+        "name": "桂枝加竜骨牡蛎湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "IBS",
+    "kampo": 7,
+    "acup": 1,
+    "top_formulas": "香蘇散(1), 茯苓桂枝甘草大棗湯(1), 柴胡疎肝湯(1), 良枳湯(1), 胃苓湯(1)",
+    "top_list": [
+      {
+        "name": "香蘇散",
+        "count": 1
+      },
+      {
+        "name": "茯苓桂枝甘草大棗湯",
+        "count": 1
+      },
+      {
+        "name": "柴胡疎肝湯",
+        "count": 1
+      },
+      {
+        "name": "良枳湯",
+        "count": 1
+      },
+      {
+        "name": "胃苓湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "高血圧",
+    "kampo": 8,
+    "acup": 0,
+    "top_formulas": "三黄瀉心湯(1), 釣藤散(1), 柴胡加竜骨牡蛎湯(1), 明朗飲(1), 七物降下湯(1)",
+    "top_list": [
+      {
+        "name": "三黄瀉心湯",
+        "count": 1
+      },
+      {
+        "name": "釣藤散",
+        "count": 1
+      },
+      {
+        "name": "柴胡加竜骨牡蛎湯",
+        "count": 1
+      },
+      {
+        "name": "明朗飲",
+        "count": 1
+      },
+      {
+        "name": "七物降下湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "帯状疱疹",
+    "kampo": 6,
+    "acup": 2,
+    "top_formulas": "烏薬順気散(1), 釣藤散(1), 葛根湯(1), 桂枝加朮附湯(1)",
+    "top_list": [
+      {
+        "name": "烏薬順気散",
+        "count": 1
+      },
+      {
+        "name": "釣藤散",
+        "count": 1
+      },
+      {
+        "name": "葛根湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝加朮附湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "肩こり",
+    "kampo": 2,
+    "acup": 5,
+    "top_formulas": "温経湯(1), 葛根湯(1)",
+    "top_list": [
+      {
+        "name": "温経湯",
+        "count": 1
+      },
+      {
+        "name": "葛根湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "感冒",
+    "kampo": 6,
+    "acup": 1,
+    "top_formulas": "柴胡桂枝湯(1), 桂枝湯(1), 半夏厚朴湯(1), 葛根湯(1), 升麻葛根湯(1)",
+    "top_list": [
+      {
+        "name": "柴胡桂枝湯",
+        "count": 1
+      },
+      {
+        "name": "桂枝湯",
+        "count": 1
+      },
+      {
+        "name": "半夏厚朴湯",
+        "count": 1
+      },
+      {
+        "name": "葛根湯",
+        "count": 1
+      },
+      {
+        "name": "升麻葛根湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "インフルエンザ",
+    "kampo": 7,
+    "acup": 0,
+    "top_formulas": "麻黄湯(1), 葛根湯(1)",
+    "top_list": [
+      {
+        "name": "麻黄湯",
+        "count": 1
+      },
+      {
+        "name": "葛根湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "浮腫",
+    "kampo": 6,
+    "acup": 1,
+    "top_formulas": "柴苓湯(1), 防已黄耆湯(1)",
+    "top_list": [
+      {
+        "name": "柴苓湯",
+        "count": 1
+      },
+      {
+        "name": "防已黄耆湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "機能性ディスペプシア",
+    "kampo": 6,
+    "acup": 0,
+    "top_formulas": "香蘇散(2), 六君子湯(1), 香蘇散合六君子湯(1), 薯蕷丸(1), 人参養栄湯(1)",
+    "top_list": [
+      {
+        "name": "香蘇散",
+        "count": 2
+      },
+      {
+        "name": "六君子湯",
+        "count": 1
+      },
+      {
+        "name": "香蘇散合六君子湯",
+        "count": 1
+      },
+      {
+        "name": "薯蕷丸",
+        "count": 1
+      },
+      {
+        "name": "人参養栄湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "頻尿",
+    "kampo": 5,
+    "acup": 1,
+    "top_formulas": "八味地黄丸(1), 牛車腎気丸(1), 四物湯(1), 猪苓湯(1), 猪苓湯合四物湯(1)",
+    "top_list": [
+      {
+        "name": "八味地黄丸",
+        "count": 1
+      },
+      {
+        "name": "牛車腎気丸",
+        "count": 1
+      },
+      {
+        "name": "四物湯",
+        "count": 1
+      },
+      {
+        "name": "猪苓湯",
+        "count": 1
+      },
+      {
+        "name": "猪苓湯合四物湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "しびれ",
+    "kampo": 4,
+    "acup": 1,
+    "top_formulas": "八味地黄丸(1), 黄耆桂枝五物湯(1)",
+    "top_list": [
+      {
+        "name": "八味地黄丸",
+        "count": 1
+      },
+      {
+        "name": "黄耆桂枝五物湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "認知症・BPSD",
+    "kampo": 3,
+    "acup": 2,
+    "top_formulas": "抑肝散(1), 半夏白朮天麻湯(1), 大承気湯(1)",
+    "top_list": [
+      {
+        "name": "抑肝散",
+        "count": 1
+      },
+      {
+        "name": "半夏白朮天麻湯",
+        "count": 1
+      },
+      {
+        "name": "大承気湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "膀胱炎",
+    "kampo": 5,
+    "acup": 0,
+    "top_formulas": "四物湯(1), 猪苓湯(1), 猪苓湯合四物湯(1), 加味帰脾湯(1), 帰脾湯(1)",
+    "top_list": [
+      {
+        "name": "四物湯",
+        "count": 1
+      },
+      {
+        "name": "猪苓湯",
+        "count": 1
+      },
+      {
+        "name": "猪苓湯合四物湯",
+        "count": 1
+      },
+      {
+        "name": "加味帰脾湯",
+        "count": 1
+      },
+      {
+        "name": "帰脾湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "褥瘡",
+    "kampo": 2,
+    "acup": 2,
+    "top_formulas": "帰耆建中湯(1), 千金内托散(1)",
+    "top_list": [
+      {
+        "name": "帰耆建中湯",
+        "count": 1
+      },
+      {
+        "name": "千金内托散",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "GERD",
+    "kampo": 3,
+    "acup": 0,
+    "top_formulas": "六君子湯(1), 清熱補血湯(1)",
+    "top_list": [
+      {
+        "name": "六君子湯",
+        "count": 1
+      },
+      {
+        "name": "清熱補血湯",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "condition": "口内炎",
+    "kampo": 3,
+    "acup": 0,
+    "top_formulas": "黄連湯(1), 清熱補血湯(1), 半夏瀉心湯(1)",
+    "top_list": [
+      {
+        "name": "黄連湯",
+        "count": 1
+      },
+      {
+        "name": "清熱補血湯",
+        "count": 1
+      },
+      {
+        "name": "半夏瀉心湯",
+        "count": 1
+      }
+    ]
+  }
+]

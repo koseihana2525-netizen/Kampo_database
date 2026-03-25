@@ -1,0 +1,474 @@
+[
+  {
+    "system": "Musculoskeletal",
+    "condition": "Back pain",
+    "western": "A",
+    "kampo": 4,
+    "acupuncture": 13,
+    "tjm_total": 17
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Headache",
+    "western": "A",
+    "kampo": 21,
+    "acupuncture": 6,
+    "tjm_total": 27
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Shoulder pain",
+    "western": "B",
+    "kampo": 5,
+    "acupuncture": 5,
+    "tjm_total": 10
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Knee/OA",
+    "western": "A",
+    "kampo": 11,
+    "acupuncture": 4,
+    "tjm_total": 15
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Rheumatoid arthritis",
+    "western": "A",
+    "kampo": 37,
+    "acupuncture": 1,
+    "tjm_total": 38
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Fibromyalgia",
+    "western": "B",
+    "kampo": 8,
+    "acupuncture": 0,
+    "tjm_total": 8
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Neuropathic pain",
+    "western": "M",
+    "kampo": 17,
+    "acupuncture": 4,
+    "tjm_total": 21
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Numbness",
+    "western": "B",
+    "kampo": 4,
+    "acupuncture": 1,
+    "tjm_total": 5
+  },
+  {
+    "system": "Musculoskeletal",
+    "condition": "Muscle cramps",
+    "western": "B",
+    "kampo": 14,
+    "acupuncture": 0,
+    "tjm_total": 14
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Depression",
+    "western": "A",
+    "kampo": 11,
+    "acupuncture": 4,
+    "tjm_total": 15
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Anxiety",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 2,
+    "tjm_total": 9
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Insomnia",
+    "western": "A",
+    "kampo": 22,
+    "acupuncture": 5,
+    "tjm_total": 27
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Dementia/BPSD",
+    "western": "B",
+    "kampo": 4,
+    "acupuncture": 5,
+    "tjm_total": 9
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Dizziness",
+    "western": "M",
+    "kampo": 8,
+    "acupuncture": 0,
+    "tjm_total": 8
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Dysautonomia",
+    "western": "B",
+    "kampo": 9,
+    "acupuncture": 2,
+    "tjm_total": 11
+  },
+  {
+    "system": "Mental/Neuro",
+    "condition": "Facial palsy",
+    "western": "M",
+    "kampo": 7,
+    "acupuncture": 7,
+    "tjm_total": 14
+  },
+  {
+    "system": "GI",
+    "condition": "Functional dyspepsia",
+    "western": "M",
+    "kampo": 6,
+    "acupuncture": 0,
+    "tjm_total": 6
+  },
+  {
+    "system": "GI",
+    "condition": "GERD",
+    "western": "A",
+    "kampo": 3,
+    "acupuncture": 0,
+    "tjm_total": 3
+  },
+  {
+    "system": "GI",
+    "condition": "IBS",
+    "western": "M",
+    "kampo": 7,
+    "acupuncture": 1,
+    "tjm_total": 8
+  },
+  {
+    "system": "GI",
+    "condition": "Constipation",
+    "western": "A",
+    "kampo": 10,
+    "acupuncture": 0,
+    "tjm_total": 10
+  },
+  {
+    "system": "GI",
+    "condition": "Diarrhea",
+    "western": "M",
+    "kampo": 9,
+    "acupuncture": 0,
+    "tjm_total": 9
+  },
+  {
+    "system": "GI",
+    "condition": "Liver disease",
+    "western": "A",
+    "kampo": 80,
+    "acupuncture": 6,
+    "tjm_total": 86
+  },
+  {
+    "system": "GI",
+    "condition": "Ileus",
+    "western": "A",
+    "kampo": 9,
+    "acupuncture": 0,
+    "tjm_total": 9
+  },
+  {
+    "system": "GI",
+    "condition": "Oral ulcer",
+    "western": "B",
+    "kampo": 7,
+    "acupuncture": 1,
+    "tjm_total": 8
+  },
+  {
+    "system": "Respiratory",
+    "condition": "Common cold",
+    "western": "M",
+    "kampo": 6,
+    "acupuncture": 1,
+    "tjm_total": 7
+  },
+  {
+    "system": "Respiratory",
+    "condition": "Influenza",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 0,
+    "tjm_total": 7
+  },
+  {
+    "system": "Respiratory",
+    "condition": "COVID-19",
+    "western": "M",
+    "kampo": 17,
+    "acupuncture": 6,
+    "tjm_total": 23
+  },
+  {
+    "system": "Respiratory",
+    "condition": "Chronic cough",
+    "western": "B",
+    "kampo": 10,
+    "acupuncture": 1,
+    "tjm_total": 11
+  },
+  {
+    "system": "Respiratory",
+    "condition": "Asthma",
+    "western": "A",
+    "kampo": 25,
+    "acupuncture": 1,
+    "tjm_total": 26
+  },
+  {
+    "system": "Respiratory",
+    "condition": "Allergic rhinitis",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 3,
+    "tjm_total": 10
+  },
+  {
+    "system": "Respiratory",
+    "condition": "COPD",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 0,
+    "tjm_total": 7
+  },
+  {
+    "system": "Cardiovascular",
+    "condition": "Hypertension",
+    "western": "A",
+    "kampo": 8,
+    "acupuncture": 0,
+    "tjm_total": 8
+  },
+  {
+    "system": "Cardiovascular",
+    "condition": "Palpitation",
+    "western": "A",
+    "kampo": 5,
+    "acupuncture": 0,
+    "tjm_total": 5
+  },
+  {
+    "system": "Cardiovascular",
+    "condition": "Cold sensitivity",
+    "western": "B",
+    "kampo": 19,
+    "acupuncture": 3,
+    "tjm_total": 22
+  },
+  {
+    "system": "Cardiovascular",
+    "condition": "Edema",
+    "western": "M",
+    "kampo": 6,
+    "acupuncture": 1,
+    "tjm_total": 7
+  },
+  {
+    "system": "Urological",
+    "condition": "OAB/Frequency",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 1,
+    "tjm_total": 8
+  },
+  {
+    "system": "Urological",
+    "condition": "Cystitis",
+    "western": "A",
+    "kampo": 5,
+    "acupuncture": 0,
+    "tjm_total": 5
+  },
+  {
+    "system": "Urological",
+    "condition": "Prostate",
+    "western": "A",
+    "kampo": 3,
+    "acupuncture": 1,
+    "tjm_total": 4
+  },
+  {
+    "system": "Urological",
+    "condition": "Renal disease",
+    "western": "A",
+    "kampo": 37,
+    "acupuncture": 0,
+    "tjm_total": 37
+  },
+  {
+    "system": "OB/GYN",
+    "condition": "Menopause",
+    "western": "M",
+    "kampo": 11,
+    "acupuncture": 0,
+    "tjm_total": 11
+  },
+  {
+    "system": "OB/GYN",
+    "condition": "Menstrual/PMS",
+    "western": "A",
+    "kampo": 15,
+    "acupuncture": 4,
+    "tjm_total": 19
+  },
+  {
+    "system": "OB/GYN",
+    "condition": "Infertility",
+    "western": "A",
+    "kampo": 7,
+    "acupuncture": 5,
+    "tjm_total": 12
+  },
+  {
+    "system": "OB/GYN",
+    "condition": "Pregnancy-related",
+    "western": "M",
+    "kampo": 14,
+    "acupuncture": 0,
+    "tjm_total": 14
+  },
+  {
+    "system": "Dermatology",
+    "condition": "Atopic dermatitis",
+    "western": "A",
+    "kampo": 23,
+    "acupuncture": 3,
+    "tjm_total": 26
+  },
+  {
+    "system": "Dermatology",
+    "condition": "Eczema/Urticaria",
+    "western": "A",
+    "kampo": 37,
+    "acupuncture": 4,
+    "tjm_total": 41
+  },
+  {
+    "system": "Dermatology",
+    "condition": "Herpes zoster",
+    "western": "A",
+    "kampo": 6,
+    "acupuncture": 2,
+    "tjm_total": 8
+  },
+  {
+    "system": "Dermatology",
+    "condition": "Pressure ulcer",
+    "western": "A",
+    "kampo": 13,
+    "acupuncture": 2,
+    "tjm_total": 15
+  },
+  {
+    "system": "Oncology/Metabolic",
+    "condition": "Cancer support",
+    "western": "A",
+    "kampo": 38,
+    "acupuncture": 9,
+    "tjm_total": 47
+  },
+  {
+    "system": "Oncology/Metabolic",
+    "condition": "Diabetes",
+    "western": "A",
+    "kampo": 21,
+    "acupuncture": 0,
+    "tjm_total": 21
+  },
+  {
+    "system": "Oncology/Metabolic",
+    "condition": "Obesity",
+    "western": "A",
+    "kampo": 8,
+    "acupuncture": 0,
+    "tjm_total": 8
+  },
+  {
+    "system": "Oncology/Metabolic",
+    "condition": "Fatigue/CFS",
+    "western": "B",
+    "kampo": 21,
+    "acupuncture": 4,
+    "tjm_total": 25
+  },
+  {
+    "system": "ENT/Eye",
+    "condition": "Tinnitus",
+    "western": "B",
+    "kampo": 10,
+    "acupuncture": 2,
+    "tjm_total": 12
+  },
+  {
+    "system": "ENT/Eye",
+    "condition": "Sudden deafness",
+    "western": "M",
+    "kampo": 6,
+    "acupuncture": 1,
+    "tjm_total": 7
+  },
+  {
+    "system": "ENT/Eye",
+    "condition": "Anosmia/Dysgeusia",
+    "western": "B",
+    "kampo": 8,
+    "acupuncture": 1,
+    "tjm_total": 9
+  },
+  {
+    "system": "ENT/Eye",
+    "condition": "Eye disease",
+    "western": "A",
+    "kampo": 10,
+    "acupuncture": 2,
+    "tjm_total": 12
+  },
+  {
+    "system": "Life stage",
+    "condition": "Pediatrics",
+    "western": "A",
+    "kampo": 29,
+    "acupuncture": 2,
+    "tjm_total": 31
+  },
+  {
+    "system": "Life stage",
+    "condition": "Geriatrics",
+    "western": "M",
+    "kampo": 25,
+    "acupuncture": 9,
+    "tjm_total": 34
+  },
+  {
+    "system": "Life stage",
+    "condition": "Sports injury",
+    "western": "A",
+    "kampo": 0,
+    "acupuncture": 23,
+    "tjm_total": 23
+  },
+  {
+    "system": "Life stage",
+    "condition": "Stroke rehab",
+    "western": "A",
+    "kampo": 6,
+    "acupuncture": 2,
+    "tjm_total": 8
+  }
+]

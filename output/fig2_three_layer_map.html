@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Figure 2: Three-Layer Evidence Map</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #fff; color: #333; padding: 20px; }
+h1 { font-size: 18px; text-align: center; margin-bottom: 4px; }
+.subtitle { text-align: center; font-size: 13px; color: #666; margin-bottom: 20px; }
+
+.chart-container { max-width: 1100px; margin: 0 auto; }
+
+/* Legend */
+.legend { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+.legend-circle { width: 14px; height: 14px; border-radius: 50%; }
+.legend-rect { width: 14px; height: 14px; border-radius: 2px; }
+
+/* Quadrant labels */
+.quadrant-labels { display: flex; justify-content: center; gap: 16px; margin-bottom: 12px; flex-wrap: wrap; }
+.q-label { font-size: 11px; padding: 4px 10px; border-radius: 4px; font-weight: 600; }
+.q1 { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
+.q2 { background: #d1fae5; color: #065f46; border: 1px solid #10b981; }
+.q3 { background: #fee2e2; color: #991b1b; border: 1px solid #ef4444; }
+.q4 { background: #e0e7ff; color: #3730a3; border: 1px solid #6366f1; }
+
+/* System group */
+.system-group { margin-bottom: 2px; }
+.system-header {
+  font-size: 11px; font-weight: 700; color: #fff;
+  padding: 4px 10px; border-radius: 4px 4px 0 0;
+}
+
+/* Row */
+.row {
+  display: flex; align-items: center; border-bottom: 1px solid #f0f0f0;
+  padding: 3px 0; min-height: 32px;
+}
+.row:hover { background: #f8f9fa; }
+
+.condition-name {
+  width: 160px; font-size: 11px; padding-left: 10px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+.western-col { width: 50px; text-align: center; }
+.western-badge {
+  display: inline-block; width: 28px; height: 18px; line-height: 18px;
+  border-radius: 3px; font-size: 10px; font-weight: 700; color: #fff;
+}
+.w-A { background: #3b82f6; }
+.w-M { background: #f59e0b; }
+.w-B { background: #ef4444; }
+
+.bar-col { flex: 1; display: flex; align-items: center; gap: 2px; padding-right: 10px; }
+
+.kampo-bar {
+  height: 16px; background: #f97316; border-radius: 2px;
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 3px; font-size: 9px; color: #fff; font-weight: 600;
+  min-width: 0;
+}
+.acup-bar {
+  height: 16px; background: #06b6d4; border-radius: 2px;
+  display: flex; align-items: center; justify-content: flex-start;
+  padding-left: 3px; font-size: 9px; color: #fff; font-weight: 600;
+  min-width: 0;
+}
+
+.quadrant-tag {
+  width: 24px; font-size: 9px; text-align: center; font-weight: 700;
+  margin-left: 4px;
+}
+
+/* Column header */
+.col-header {
+  display: flex; align-items: center; padding: 6px 0;
+  border-bottom: 2px solid #333; margin-bottom: 4px; font-size: 10px; font-weight: 700;
+}
+
+/* System colors */
+.sys-musculoskeletal { background: #7c3aed; }
+.sys-mental { background: #2563eb; }
+.sys-gi { background: #059669; }
+.sys-respiratory { background: #0891b2; }
+.sys-cardiovascular { background: #dc2626; }
+.sys-urological { background: #7c2d12; }
+.sys-obgyn { background: #db2777; }
+.sys-dermatology { background: #ca8a04; }
+.sys-oncology { background: #4f46e5; }
+.sys-ent { background: #0d9488; }
+.sys-life { background: #6b7280; }
+
+/* Highlight Q1 rows */
+.row-q1 { background: #fffbeb; }
+.row-q3 { background: #fff5f5; }
+</style>
+</head>
+<body>
+
+<h1>Figure 2. Three-Layer Evidence Map: Western Medicine × Kampo × Acupuncture</h1>
+<p class="subtitle">59 primary care conditions mapped across three therapeutic modalities (article counts from 2,653 articles, 1982–2024)</p>
+
+<div class="chart-container">
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-rect" style="background:#3b82f6"></div> Western: Strong (A)</div>
+  <div class="legend-item"><div class="legend-rect" style="background:#f59e0b"></div> Western: Moderate (M)</div>
+  <div class="legend-item"><div class="legend-rect" style="background:#ef4444"></div> Western: Weak (B)</div>
+  <div class="legend-item"><div class="legend-rect" style="background:#f97316"></div> Kampo articles</div>
+  <div class="legend-item"><div class="legend-rect" style="background:#06b6d4"></div> Acupuncture articles</div>
+</div>
+
+<div class="quadrant-labels">
+  <span class="q-label q1">Q1: Western Weak + TJM Strong → TJM fills the gap</span>
+  <span class="q-label q2">Q2: Both Strong → Complementary</span>
+  <span class="q-label q3">Q3: Both Weak → True gap</span>
+  <span class="q-label q4">Q4: Western Strong + TJM Weak → Western sufficient</span>
+</div>
+
+<div class="col-header">
+  <div class="condition-name">Condition</div>
+  <div class="western-col">West</div>
+  <div class="bar-col">← Kampo | Acupuncture →</div>
+  <div class="quadrant-tag">Q</div>
+</div>
+
+<div id="chart"></div>
+
+</div>
+
+<script>
+const data = [
+  {sys:'Musculoskeletal', sysClass:'sys-musculoskeletal', items:[
+    {c:'Back pain (腰痛)', w:'A', k:4, a:13},
+    {c:'Headache (頭痛)', w:'A', k:21, a:6},
+    {c:'Shoulder pain (肩こり)', w:'B', k:5, a:5},
+    {c:'Knee/OA (膝・変形性)', w:'A', k:11, a:4},
+    {c:'Rheumatoid arthritis', w:'A', k:37, a:1},
+    {c:'Fibromyalgia (線維筋痛)', w:'B', k:8, a:0},
+    {c:'Neuropathic pain', w:'M', k:17, a:4},
+    {c:'Numbness (しびれ)', w:'B', k:4, a:1},
+    {c:'Muscle cramps', w:'B', k:14, a:0},
+  ]},
+  {sys:'Mental / Neuro', sysClass:'sys-mental', items:[
+    {c:'Depression (うつ)', w:'A', k:11, a:4},
+    {c:'Anxiety (不安)', w:'A', k:7, a:2},
+    {c:'Insomnia (不眠)', w:'A', k:22, a:5},
+    {c:'Dementia/BPSD', w:'B', k:4, a:5},
+    {c:'Dizziness (めまい)', w:'M', k:8, a:0},
+    {c:'Dysautonomia', w:'B', k:9, a:2},
+    {c:'Facial palsy', w:'M', k:7, a:7},
+  ]},
+  {sys:'Gastrointestinal', sysClass:'sys-gi', items:[
+    {c:'Functional dyspepsia', w:'M', k:6, a:0},
+    {c:'GERD', w:'A', k:3, a:0},
+    {c:'IBS', w:'M', k:7, a:1},
+    {c:'Constipation (便秘)', w:'A', k:10, a:0},
+    {c:'Diarrhea (下痢)', w:'M', k:9, a:0},
+    {c:'Liver disease (肝)', w:'A', k:80, a:6},
+    {c:'Ileus (腸閉塞)', w:'A', k:9, a:0},
+    {c:'Oral ulcer (口内炎)', w:'B', k:7, a:1},
+  ]},
+  {sys:'Respiratory', sysClass:'sys-respiratory', items:[
+    {c:'Common cold (感冒)', w:'M', k:6, a:1},
+    {c:'Influenza', w:'A', k:7, a:0},
+    {c:'COVID-19', w:'M', k:17, a:6},
+    {c:'Chronic cough (咳嗽)', w:'B', k:10, a:1},
+    {c:'Asthma (喘息)', w:'A', k:25, a:1},
+    {c:'Allergic rhinitis', w:'A', k:7, a:3},
+    {c:'COPD', w:'A', k:7, a:0},
+  ]},
+  {sys:'Cardiovascular', sysClass:'sys-cardiovascular', items:[
+    {c:'Hypertension', w:'A', k:8, a:0},
+    {c:'Palpitation', w:'A', k:5, a:0},
+    {c:'Cold sensitivity (冷え)', w:'B', k:19, a:3},
+    {c:'Edema (浮腫)', w:'M', k:6, a:1},
+  ]},
+  {sys:'Urological', sysClass:'sys-urological', items:[
+    {c:'OAB / Frequency', w:'A', k:7, a:1},
+    {c:'Cystitis (膀胱炎)', w:'A', k:5, a:0},
+    {c:'Prostate', w:'A', k:3, a:1},
+    {c:'Renal disease (腎)', w:'A', k:37, a:0},
+  ]},
+  {sys:'OB/GYN', sysClass:'sys-obgyn', items:[
+    {c:'Menopause (更年期)', w:'M', k:11, a:0},
+    {c:'Menstrual / PMS', w:'A', k:15, a:4},
+    {c:'Infertility (不妊)', w:'A', k:7, a:5},
+    {c:'Pregnancy-related', w:'M', k:14, a:0},
+  ]},
+  {sys:'Dermatology', sysClass:'sys-dermatology', items:[
+    {c:'Atopic dermatitis', w:'A', k:23, a:3},
+    {c:'Eczema / Urticaria', w:'A', k:37, a:4},
+    {c:'Herpes zoster', w:'A', k:6, a:2},
+    {c:'Pressure ulcer', w:'A', k:13, a:2},
+  ]},
+  {sys:'Oncology / Metabolic', sysClass:'sys-oncology', items:[
+    {c:'Cancer support', w:'A', k:38, a:9},
+    {c:'Diabetes (糖尿病)', w:'A', k:21, a:0},
+    {c:'Obesity (肥満)', w:'A', k:8, a:0},
+    {c:'Fatigue / CFS (倦怠感)', w:'B', k:21, a:4},
+  ]},
+  {sys:'ENT / Eye', sysClass:'sys-ent', items:[
+    {c:'Tinnitus (耳鳴)', w:'B', k:10, a:2},
+    {c:'Sudden deafness', w:'M', k:6, a:1},
+    {c:'Anosmia (嗅覚障害)', w:'B', k:8, a:1},
+    {c:'Eye disease (眼)', w:'A', k:10, a:2},
+  ]},
+  {sys:'Life stage / Sports', sysClass:'sys-life', items:[
+    {c:'Pediatrics (小児)', w:'A', k:29, a:2},
+    {c:'Geriatrics (高齢者)', w:'M', k:25, a:9},
+    {c:'Sports injury', w:'A', k:0, a:23},
+    {c:'Stroke rehab', w:'A', k:6, a:2},
+  ]},
+];
+
+const maxBar = 80;
+const scale = 4; // pixels per article
+
+function getQuadrant(w, k, a) {
+  const tjm = k + a;
+  const strong = tjm >= 8;
+  if (w === 'B' && strong) return {q:'Q1', cls:'row-q1', color:'#92400e'};
+  if (w === 'A' && strong) return {q:'Q2', cls:'', color:'#065f46'};
+  if (w === 'B' && !strong) return {q:'Q3', cls:'row-q3', color:'#991b1b'};
+  if (w === 'A' && !strong) return {q:'Q4', cls:'', color:'#3730a3'};
+  return {q:'M', cls:'', color:'#666'};
+}
+
+const chart = document.getElementById('chart');
+
+data.forEach(group => {
+  // System header
+  const header = document.createElement('div');
+  header.className = 'system-header ' + group.sysClass;
+  header.textContent = group.sys;
+  chart.appendChild(header);
+
+  group.items.forEach(item => {
+    const quad = getQuadrant(item.w, item.k, item.a);
+    const row = document.createElement('div');
+    row.className = 'row ' + quad.cls;
+
+    const kWidth = Math.max(item.k * scale, item.k > 0 ? 16 : 0);
+    const aWidth = Math.max(item.a * scale, item.a > 0 ? 16 : 0);
+
+    row.innerHTML = `
+      <div class="condition-name" title="${item.c}">${item.c}</div>
+      <div class="western-col"><span class="western-badge w-${item.w}">${item.w}</span></div>
+      <div class="bar-col">
+        <div style="flex:1;display:flex;justify-content:flex-end">
+          ${item.k > 0 ? `<div class="kampo-bar" style="width:${kWidth}px">${item.k}</div>` : ''}
+        </div>
+        <div style="width:2px;background:#ccc;height:20px;flex-shrink:0"></div>
+        <div style="flex:1;display:flex;justify-content:flex-start">
+          ${item.a > 0 ? `<div class="acup-bar" style="width:${aWidth}px">${item.a}</div>` : ''}
+        </div>
+      </div>
+      <div class="quadrant-tag" style="color:${quad.color}">${quad.q}</div>
+    `;
+    chart.appendChild(row);
+  });
+});
+</script>
+</body>
+</html>

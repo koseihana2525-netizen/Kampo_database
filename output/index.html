@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kampo Evidence Map - 漢方エビデンスマップ</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif; background: #f5f5f0; color: #333; }
+
+.header { background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); color: white; padding: 24px 32px; }
+.header h1 { font-size: 24px; font-weight: 300; letter-spacing: 2px; }
+.header h1 span { font-weight: 600; }
+.header p { font-size: 13px; opacity: 0.7; margin-top: 4px; }
+.header .stats { display: flex; gap: 24px; margin-top: 12px; font-size: 13px; }
+.header .stats .stat { background: rgba(255,255,255,0.1); padding: 6px 14px; border-radius: 20px; }
+.header .stats .stat strong { color: #f39c12; }
+
+.search-container { background: white; padding: 20px 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+.search-box { display: flex; gap: 12px; align-items: center; max-width: 800px; }
+.search-box input { flex: 1; padding: 12px 20px; font-size: 16px; border: 2px solid #e0e0e0; border-radius: 8px; outline: none; transition: border-color 0.2s; }
+.search-box input:focus { border-color: #3498db; }
+.search-box .hint { font-size: 12px; color: #999; }
+.tabs { display: flex; gap: 4px; margin-top: 12px; }
+.tab { padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; background: #f0f0f0; border: none; transition: all 0.2s; }
+.tab.active { background: #2c3e50; color: white; }
+.tab:hover { background: #ddd; }
+.tab.active:hover { background: #34495e; }
+
+.main { max-width: 1200px; margin: 0 auto; padding: 24px 32px; }
+
+/* Disease tags */
+.disease-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.disease-tag { padding: 6px 14px; border-radius: 20px; font-size: 13px; cursor: pointer; border: 1px solid #ddd; background: white; transition: all 0.2s; }
+.disease-tag:hover { border-color: #3498db; background: #ebf5fb; }
+.disease-tag.active { background: #3498db; color: white; border-color: #3498db; }
+.disease-tag .count { font-size: 11px; opacity: 0.7; margin-left: 4px; }
+
+/* Formula cards */
+.formula-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 16px; }
+.formula-card { background: white; border-radius: 10px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); cursor: pointer; transition: all 0.2s; border-left: 4px solid #ccc; }
+.formula-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-1px); }
+.formula-card.keipo { border-left-color: #e74c3c; }
+.formula-card.gosei { border-left-color: #3498db; }
+.formula-card .name { font-size: 18px; font-weight: 600; }
+.formula-card .meta { font-size: 12px; color: #888; margin-top: 2px; }
+.formula-card .meta .origin { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+.formula-card .meta .origin.keipo { background: #fde8e8; color: #c0392b; }
+.formula-card .meta .origin.gosei { background: #e8f0fe; color: #2980b9; }
+.formula-card .diseases { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 4px; }
+.formula-card .diseases span { font-size: 11px; background: #f5f5f5; padding: 2px 8px; border-radius: 10px; }
+.formula-card .paper-count { font-size: 13px; color: #666; margin-top: 8px; }
+.formula-card .paper-count strong { color: #f39c12; }
+
+/* Article list */
+.article-list { display: none; }
+.article-list.visible { display: block; }
+.article-item { background: white; border-radius: 8px; padding: 16px 20px; margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.article-item .title { font-size: 15px; font-weight: 500; }
+.article-item .title a { color: #2c3e50; text-decoration: none; }
+.article-item .title a:hover { color: #3498db; text-decoration: underline; }
+.article-item .info { font-size: 12px; color: #888; margin-top: 4px; }
+.article-item .tags { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 4px; }
+.article-item .tags .formula-tag { font-size: 11px; background: #fff3e0; color: #e65100; padding: 2px 8px; border-radius: 10px; }
+.article-item .tags .disease-tag-small { font-size: 11px; background: #e8f5e9; color: #2e7d32; padding: 2px 8px; border-radius: 10px; }
+.article-item .abstract { font-size: 13px; color: #555; margin-top: 8px; line-height: 1.6; display: none; }
+.article-item.expanded .abstract { display: block; }
+.article-item .toggle-abstract { font-size: 12px; color: #3498db; cursor: pointer; margin-top: 4px; }
+
+.section-title { font-size: 18px; font-weight: 600; margin: 24px 0 12px; padding-bottom: 8px; border-bottom: 2px solid #eee; }
+.result-info { font-size: 14px; color: #666; margin-bottom: 16px; }
+.back-btn { display: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; background: #f0f0f0; border: none; margin-bottom: 16px; }
+.back-btn:hover { background: #ddd; }
+
+.footer { text-align: center; padding: 32px; font-size: 12px; color: #999; }
+.footer a { color: #3498db; }
+
+.empty-state { text-align: center; padding: 60px 20px; color: #999; }
+.empty-state .icon { font-size: 48px; margin-bottom: 12px; }
+
+@media (max-width: 768px) {
+  .header { padding: 16px; }
+  .search-container { padding: 12px 16px; }
+  .main { padding: 12px 16px; }
+  .formula-grid { grid-template-columns: 1fr; }
+  .header .stats { flex-wrap: wrap; gap: 8px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1><span>Kampo</span> Evidence Map</h1>
+  <p>日本東洋医学雑誌 43年間（1982-2025）の研究蓄積データベース</p>
+  <div class="stats">
+    <span class="stat"><strong id="stat-articles">-</strong> 論文</span>
+    <span class="stat"><strong id="stat-formulas">-</strong> 方剤</span>
+    <span class="stat"><strong id="stat-diseases">-</strong> 疾患領域</span>
+    <span class="stat"><strong id="stat-abstracts">-</strong> 抄録あり</span>
+  </div>
+</div>
+
+<div class="search-container">
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="臨床シナリオを入力（例：50歳女性の舌痛症、高齢者の食欲不振と倦怠感）">
+    <span class="hint">Enter でおすすめ論文を検索</span>
+  </div>
+  <div class="tabs">
+    <button class="tab active" data-view="diseases">疾患から探す</button>
+    <button class="tab" data-view="formulas">方剤一覧</button>
+    <button class="tab" data-view="articles">論文一覧</button>
+  </div>
+</div>
+
+<div class="main">
+  <button class="back-btn" id="back-btn" onclick="goBack()">← 戻る</button>
+  <div id="content"></div>
+</div>
+
+<div class="footer">
+  <p>Kampo Evidence Map v0.1 | Data source: 日本東洋医学雑誌 (J-STAGE, ISSN 0287-4857)</p>
+  <p>Created by Duagnosis Project | <a href="https://www.jstage.jst.go.jp/browse/kampomed/-char/ja" target="_blank">J-STAGE</a></p>
+  <p style="margin-top:8px; font-size:11px;">This database is for research and educational purposes. Clinical decisions should be based on individual patient assessment.</p>
+</div>
+
+<script>
+let DB = null;
+let currentView = 'diseases';
+let viewStack = [];
+
+async function loadDB() {
+  const res = await fetch('kampo_db.json');
+  DB = await res.json();
+  document.getElementById('stat-articles').textContent = DB.total_articles.toLocaleString();
+  document.getElementById('stat-formulas').textContent = Object.keys(DB.formula_index).length;
+  document.getElementById('stat-diseases').textContent = Object.keys(DB.disease_index).length;
+  document.getElementById('stat-abstracts').textContent = DB.total_with_abstract.toLocaleString();
+  showDiseases();
+}
+
+function showDiseases() {
+  currentView = 'diseases';
+  updateTabs();
+  document.getElementById('back-btn').style.display = 'none';
+  const content = document.getElementById('content');
+
+  // Sort by count
+  const diseases = Object.entries(DB.disease_index).sort((a,b) => b[1].length - a[1].length);
+
+  let html = '<div class="section-title">疾患・症状から探す</div>';
+  html += '<p class="result-info">症状や疾患名をクリックすると、関連する方剤と論文が表示されます</p>';
+  html += '<div class="disease-tags">';
+  for (const [disease, indices] of diseases) {
+    html += `<span class="disease-tag" onclick="showDisease('${disease}')">${disease}<span class="count">${indices.length}</span></span>`;
+  }
+  html += '</div>';
+  content.innerHTML = html;
+}
+
+function showDisease(disease) {
+  viewStack.push({type: 'diseases'});
+  document.getElementById('back-btn').style.display = 'inline-block';
+  const content = document.getElementById('content');
+  const indices = DB.disease_index[disease] || [];
+
+  // Get related formulas
+  const formulaCounts = {};
+  for (const idx of indices) {
+    for (const f of DB.articles[idx].formulas) {
+      formulaCounts[f] = (formulaCounts[f] || 0) + 1;
+    }
+  }
+  const sortedFormulas = Object.entries(formulaCounts).sort((a,b) => b[1] - a[1]);
+
+  let html = `<div class="section-title">${disease} の漢方研究</div>`;
+  html += `<p class="result-info">${indices.length}本の論文、${sortedFormulas.length}種の方剤</p>`;
+
+  // Formula cards
+  if (sortedFormulas.length > 0) {
+    html += '<h3 style="font-size:15px;color:#666;margin:16px 0 8px;">関連方剤（出現頻度順）</h3>';
+    html += '<div class="formula-grid">';
+    for (const [fname, count] of sortedFormulas.slice(0, 12)) {
+      const info = DB.formula_summary[fname] || {};
+      const originClass = info.origin === '経方' ? 'keipo' : 'gosei';
+      html += `<div class="formula-card ${originClass}" onclick="showFormula('${fname}')">`;
+      html += `<div class="name">${fname}</div>`;
+      html += `<div class="meta">`;
+      if (info.yomi) html += `${info.yomi} `;
+      if (info.origin) html += `<span class="origin ${originClass}">${info.origin}</span> `;
+      if (info.number) html += `TJ-${String(info.number).padStart(3,'0')}`;
+      html += `</div>`;
+      html += `<div class="paper-count">この疾患で <strong>${count}本</strong>（全${info.count || '?'}本中）</div>`;
+      html += '</div>';
+    }
+    html += '</div>';
+  }
+
+  // Article list
+  html += '<h3 style="font-size:15px;color:#666;margin:24px 0 8px;">論文一覧（新しい順）</h3>';
+  const sorted = [...indices].sort((a,b) => (DB.articles[b].year||'') .localeCompare(DB.articles[a].year||''));
+  html += renderArticleList(sorted.slice(0, 50));
+  if (sorted.length > 50) {
+    html += `<p style="color:#999;font-size:13px;margin-top:12px;">他 ${sorted.length - 50}本...</p>`;
+  }
+
+  content.innerHTML = html;
+  window.scrollTo(0, 0);
+}
+
+function showFormulas(filter) {
+  currentView = 'formulas';
+  updateTabs();
+  document.getElementById('back-btn').style.display = 'none';
+  const content = document.getElementById('content');
+
+  let formulas = Object.entries(DB.formula_summary).sort((a,b) => b[1].count - a[1].count);
+  if (filter) {
+    formulas = formulas.filter(([name, info]) =>
+      name.includes(filter) || (info.yomi && info.yomi.includes(filter))
+    );
+  }
+
+  let html = `<div class="section-title">方剤一覧</div>`;
+  html += `<p class="result-info">${formulas.length}種の方剤（論文数順）</p>`;
+  html += '<div class="formula-grid">';
+
+  for (const [fname, info] of formulas) {
+    const originClass = info.origin === '経方' ? 'keipo' : 'gosei';
+    html += `<div class="formula-card ${originClass}" onclick="showFormula('${fname}')">`;
+    html += `<div class="name">${fname}</div>`;
+    html += `<div class="meta">`;
+    if (info.yomi) html += `${info.yomi} `;
+    if (info.origin) html += `<span class="origin ${originClass}">${info.origin}</span> `;
+    if (info.number) html += `TJ-${String(info.number).padStart(3,'0')}`;
+    html += `</div>`;
+    html += `<div class="diseases">`;
+    for (const [d, c] of (info.top_diseases || []).slice(0, 4)) {
+      html += `<span>${d}(${c})</span>`;
+    }
+    html += '</div>';
+    html += `<div class="paper-count"><strong>${info.count}</strong> 本の論文</div>`;
+    html += '</div>';
+  }
+  html += '</div>';
+  content.innerHTML = html;
+}
+
+function showFormula(fname) {
+  viewStack.push({type: currentView});
+  document.getElementById('back-btn').style.display = 'inline-block';
+  const content = document.getElementById('content');
+  const indices = DB.formula_index[fname] || [];
+  const info = DB.formula_summary[fname] || {};
+
+  let html = `<div class="section-title">${fname}</div>`;
+  html += '<div style="margin-bottom:16px;">';
+  if (info.yomi) html += `<span style="color:#888">${info.yomi}</span> `;
+  if (info.origin) {
+    const oc = info.origin === '経方' ? 'keipo' : 'gosei';
+    html += `<span class="origin ${oc}" style="display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;">${info.origin}</span> `;
+  }
+  if (info.number) html += `<span style="color:#888">ツムラ${info.number}</span>`;
+  html += '</div>';
+
+  html += `<p class="result-info">${indices.length}本の論文</p>`;
+
+  // Related diseases
+  if (info.top_diseases && info.top_diseases.length > 0) {
+    html += '<div class="disease-tags" style="margin-bottom:20px">';
+    for (const [d, c] of info.top_diseases) {
+      html += `<span class="disease-tag" onclick="showDisease('${d}')">${d}<span class="count">${c}</span></span>`;
+    }
+    html += '</div>';
+  }
+
+  // Articles
+  const sorted = [...indices].sort((a,b) => (DB.articles[b].year||'').localeCompare(DB.articles[a].year||''));
+  html += renderArticleList(sorted);
+
+  content.innerHTML = html;
+  window.scrollTo(0, 0);
+}
+
+function showArticles(filter) {
+  currentView = 'articles';
+  updateTabs();
+  document.getElementById('back-btn').style.display = 'none';
+  const content = document.getElementById('content');
+
+  let indices = [...Array(DB.articles.length).keys()];
+  if (filter) {
+    indices = indices.filter(i => {
+      const a = DB.articles[i];
+      const text = a.title + ' ' + a.abstract + ' ' + a.formulas.join(' ') + ' ' + a.diseases.join(' ');
+      return text.includes(filter);
+    });
+  }
+
+  // Sort by year desc
+  indices.sort((a,b) => (DB.articles[b].year||'').localeCompare(DB.articles[a].year||''));
+
+  let html = `<div class="section-title">論文一覧</div>`;
+  html += `<p class="result-info">${indices.length}本${filter ? '（検索結果）' : ''}</p>`;
+  html += renderArticleList(indices.slice(0, 100));
+  if (indices.length > 100) {
+    html += `<p style="color:#999;font-size:13px;margin-top:12px;">表示: 100 / ${indices.length}本</p>`;
+  }
+  content.innerHTML = html;
+}
+
+function renderArticleList(indices) {
+  let html = '';
+  for (const idx of indices) {
+    const a = DB.articles[idx];
+    const cleanTitle = a.title.replace(/<[^>]*>/g, '');
+    html += `<div class="article-item" id="article-${idx}">`;
+    html += `<div class="title">`;
+    if (a.link) {
+      html += `<a href="${a.link}" target="_blank">${cleanTitle}</a>`;
+    } else {
+      html += cleanTitle;
+    }
+    html += '</div>';
+    html += `<div class="info">${a.year}年${a.authors ? ' | ' + a.authors : ''}</div>`;
+    html += '<div class="tags">';
+    for (const f of a.formulas) {
+      html += `<span class="formula-tag" onclick="event.stopPropagation();showFormula('${f}')">${f}</span>`;
+    }
+    for (const d of a.diseases) {
+      html += `<span class="disease-tag-small">${d}</span>`;
+    }
+    html += '</div>';
+    if (a.abstract) {
+      html += `<div class="toggle-abstract" onclick="toggleAbstract(${idx})">抄録を表示</div>`;
+      html += `<div class="abstract">${a.abstract}</div>`;
+    }
+    html += '</div>';
+  }
+  return html;
+}
+
+function toggleAbstract(idx) {
+  const el = document.getElementById(`article-${idx}`);
+  el.classList.toggle('expanded');
+  const toggle = el.querySelector('.toggle-abstract');
+  toggle.textContent = el.classList.contains('expanded') ? '抄録を閉じる' : '抄録を表示';
+}
+
+function goBack() {
+  if (viewStack.length > 0) {
+    const prev = viewStack.pop();
+    if (prev.type === 'diseases') showDiseases();
+    else if (prev.type === 'formulas') showFormulas();
+    else if (prev.type === 'articles') showArticles();
+  }
+  if (viewStack.length === 0) {
+    document.getElementById('back-btn').style.display = 'none';
+  }
+}
+
+function updateTabs() {
+  document.querySelectorAll('.tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.view === currentView);
+  });
+}
+
+// Tab clicks
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    viewStack = [];
+    const view = tab.dataset.view;
+    if (view === 'diseases') showDiseases();
+    else if (view === 'formulas') showFormulas();
+    else if (view === 'articles') showArticles();
+  });
+});
+
+// Search
+document.getElementById('search-input').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    const q = e.target.value.trim();
+    if (!q) { showDiseases(); return; }
+
+    viewStack = [];
+
+    // Check if it matches a formula name
+    if (DB.formula_index[q]) {
+      showFormula(q);
+      return;
+    }
+
+    // Check if it matches a disease
+    if (DB.disease_index[q]) {
+      showDisease(q);
+      return;
+    }
+
+    // Full text search
+    showArticles(q);
+  }
+});
+
+// Init
+loadDB();
+</script>
+</body>
+</html>

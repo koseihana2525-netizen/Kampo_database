@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Duagnosis Kampo KB - クラスタリング分析</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #f5f5f5; color: #333; }
+  .header { background: #1B3A5C; color: white; padding: 24px 32px; }
+  .header h1 { font-size: 24px; font-weight: 500; }
+  .header p { font-size: 14px; opacity: 0.8; margin-top: 4px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+  .cluster-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .cluster-card h3 { color: #1B3A5C; margin-bottom: 8px; font-size: 16px; }
+  .tag { display: inline-block; padding: 2px 6px; border-radius: 3px; margin: 2px; font-size: 11px; }
+  .tag.formula { background: #E6F1FB; color: #0C447C; }
+  .tag.pattern { background: #EEEDFE; color: #3C3489; }
+  .tag.symptom { background: #E1F5EE; color: #085041; }
+  .summary { background: white; border-radius: 8px; padding: 20px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Duagnosis Kampo KB - クラスタリング分析</h1>
+  <p>教師なしクラスタリングによる漢方臨床知の再構造化 | 8クラスター検出</p>
+</div>
+<div class="container">
+  <div class="summary">
+    <h2 style="color:#1B3A5C;margin-bottom:12px">分析サマリー</h2>
+    <p>総エンティティ数: 292 | クラスター数: 8</p>
+    <p style="margin-top:8px;font-size:13px;color:#666">
+      核心の問い: データ駆動型クラスターは、六経弁証・八綱弁証・気血津液弁証・臓腑弁証のどれとどの程度重なるか？
+    </p>
+  </div>
+  
+        <div class="cluster-card">
+          <h3>Cluster 0 <span style="font-size:13px;color:#888">(165要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">七物降下湯</span> <span class="tag formula">三黄湯</span> <span class="tag formula">三黄瀉心湯</span> <span class="tag formula">中黄膏</span> <span class="tag formula">乙字湯</span> <span class="tag formula">伯州散</span> <span class="tag formula">六味丸合酸棗仁湯</span> <span class="tag formula">分消湯</span> <span class="tag formula">利隔湯</span> <span class="tag formula">十味剉散</span> <span class="tag formula">十味敗毒湯</span> <span class="tag formula">千金内托散</span> <span class="tag formula">升麻葛根湯</span> <span class="tag formula">半夏白朮天麻湯</span> <span class="tag formula">厚朴七物湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">浮腫</span> <span class="tag pattern">熱証</span> <span class="tag pattern">痰飲</span> <span class="tag pattern">陰虚</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">不安</span> <span class="tag symptom">口内炎</span> <span class="tag symptom">口渇</span> <span class="tag symptom">喀痰</span> <span class="tag symptom">喘鳴</span> <span class="tag symptom">掻痒感</span> <span class="tag symptom">浮腫</span> <span class="tag symptom">腰痛</span> <span class="tag symptom">腹痛</span> <span class="tag symptom">蕁麻疹</span> <span class="tag symptom">頻尿</span> <span class="tag symptom">鼻閉</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (2/4)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:50%;font-size:10px;color:white;line-height:16px;padding-left:4px">50%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (2/4)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:50%;font-size:10px;color:white;line-height:16px;padding-left:4px">50%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/4)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/4)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 1 <span style="font-size:13px;color:#888">(10要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">二陳湯</span> <span class="tag formula">人参養栄湯</span> <span class="tag formula">六君子湯</span> <span class="tag formula">小半夏加茯苓湯</span> <span class="tag formula">苓桂朮甘湯</span> <span class="tag formula">茯苓沢瀉湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span style="color:#aaa">なし</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">下痢</span> <span class="tag symptom">嘔吐</span> <span class="tag symptom">悪心</span> <span class="tag symptom">食欲低下</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 2 <span style="font-size:13px;color:#888">(10要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">帰耆建中湯</span> <span class="tag formula">柴胡桂枝湯</span> <span class="tag formula">補中益気湯</span> <span class="tag formula">酸棗仁湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">気虚</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">不眠</span> <span class="tag symptom">抑うつ</span> <span class="tag symptom">月経痛</span> <span class="tag symptom">筋肉痛</span> <span class="tag symptom">関節痛</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (1/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:100%;font-size:10px;color:white;line-height:16px;padding-left:4px">100%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 3 <span style="font-size:13px;color:#888">(14要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">催生湯</span> <span class="tag formula">加味逍遙散</span> <span class="tag formula">大黄甘草湯</span> <span class="tag formula">当帰芍薬散</span> <span class="tag formula">木防已湯</span> <span class="tag formula">桂枝茯苓丸</span> <span class="tag formula">桂枝茯苓丸加薏苡仁</span> <span class="tag formula">桃核承気湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">気滞</span> <span class="tag pattern">水滞</span> <span class="tag pattern">瘀血</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">不妊</span> <span class="tag symptom">更年期障害</span> <span class="tag symptom">耳鳴</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (0/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (3/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:100%;font-size:10px;color:white;line-height:16px;padding-left:4px">100%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 4 <span style="font-size:13px;color:#888">(12要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">九味檳榔湯</span> <span class="tag formula">五苓散</span> <span class="tag formula">十全大補湯</span> <span class="tag formula">呉茱萸湯</span> <span class="tag formula">正気天香湯</span> <span class="tag formula">温経湯</span> <span class="tag formula">甘草附子湯</span> <span class="tag formula">選奇湯</span> <span class="tag formula">釣藤散</span> <span class="tag formula">麗沢通気湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span style="color:#aaa">なし</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">肩こり</span> <span class="tag symptom">頭痛</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 5 <span style="font-size:13px;color:#888">(36要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">人参湯</span> <span class="tag formula">人参養栄湯合香蘇散</span> <span class="tag formula">加味帰脾湯</span> <span class="tag formula">半夏厚朴湯</span> <span class="tag formula">半夏瀉心湯</span> <span class="tag formula">大柴胡湯</span> <span class="tag formula">小建中湯</span> <span class="tag formula">帰脾湯</span> <span class="tag formula">柴胡加竜骨牡蛎湯</span> <span class="tag formula">柴胡桂枝乾姜湯</span> <span class="tag formula">桂姜棗草黄辛附湯</span> <span class="tag formula">桂枝湯</span> <span class="tag formula">梔子乾姜湯</span> <span class="tag formula">炙甘草湯</span> <span class="tag formula">猪苓湯合四物湯</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">出血</span> <span class="tag pattern">寒証</span> <span class="tag pattern">悪寒</span> <span class="tag pattern">発熱</span> <span class="tag pattern">虚証</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">倦怠感</span> <span class="tag symptom">全身倦怠感</span> <span class="tag symptom">動悸</span> <span class="tag symptom">悪寒</span> <span class="tag symptom">疲労</span> <span class="tag symptom">発熱</span> <span class="tag symptom">食欲不振</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (4/5)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:80%;font-size:10px;color:white;line-height:16px;padding-left:4px">80%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (1/5)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:20%;font-size:10px;color:white;line-height:16px;padding-left:4px">20%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/5)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/5)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 6 <span style="font-size:13px;color:#888">(35要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">中建中湯</span> <span class="tag formula">五積散</span> <span class="tag formula">厚朴三物湯</span> <span class="tag formula">大承気湯</span> <span class="tag formula">大陥胸丸</span> <span class="tag formula">大陥胸湯</span> <span class="tag formula">大青竜湯</span> <span class="tag formula">抑肝散</span> <span class="tag formula">抑肝散加陳皮半夏</span> <span class="tag formula">柴朴湯</span> <span class="tag formula">柴陥湯</span> <span class="tag formula">桂枝二越婢一湯</span> <span class="tag formula">桂枝加竜骨牡蛎湯</span> <span class="tag formula">沢瀉湯</span> <span class="tag formula">消風散</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">実証</span> <span class="tag pattern">心下痞</span> <span class="tag pattern">水毒</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">めまい</span> <span class="tag symptom">アトピー性皮膚炎</span> <span class="tag symptom">呼吸困難</span> <span class="tag symptom">咳嗽</span> <span class="tag symptom">易怒性</span> <span class="tag symptom">湿疹</span> <span class="tag symptom">胸痛</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (1/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:33%;font-size:10px;color:white;line-height:16px;padding-left:4px">33%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (1/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:33%;font-size:10px;color:white;line-height:16px;padding-left:4px">33%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/3)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cluster-card">
+          <h3>Cluster 7 <span style="font-size:13px;color:#888">(10要素)</span></h3>
+          <div style="margin:8px 0">
+            <strong>方剤:</strong> <span class="tag formula">八味地黄丸</span> <span class="tag formula">六味丸</span> <span class="tag formula">半夏人参甘草湯</span> <span class="tag formula">潤腸湯</span> <span class="tag formula">麻子仁丸</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>証:</strong> <span class="tag pattern">気鬱</span>
+          </div>
+          <div style="margin:8px 0">
+            <strong>症状:</strong> <span class="tag symptom">しびれ</span> <span class="tag symptom">便秘</span> <span class="tag symptom">冷え</span> <span class="tag symptom">腹部膨満</span>
+          </div>
+          <div style="margin:12px 0">
+            <strong>弁証体系との重なり:</strong>
+            
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">八綱弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">気血津液弁証 (1/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:100%;font-size:10px;color:white;line-height:16px;padding-left:4px">100%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">臓腑弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+            <div style="margin:4px 0">
+              <div style="font-size:11px;color:#666">六経弁証 (0/1)</div>
+              <div style="background:#eee;border-radius:3px;height:16px;width:200px">
+                <div style="background:#2563EB;height:16px;border-radius:3px;width:0%;font-size:10px;color:white;line-height:16px;padding-left:4px">0%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+</div>
+</body>
+</html>

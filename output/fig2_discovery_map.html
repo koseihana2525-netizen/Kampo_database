@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Figure 2: What Kampo & Acupuncture Evidence Exists for Your Patients?</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Arial, sans-serif; background: #fafafa; color: #333; padding: 16px; }
+h1 { font-size: 16px; text-align: center; margin-bottom: 2px; color: #1a1a1a; }
+.subtitle { text-align: center; font-size: 12px; color: #888; margin-bottom: 16px; }
+
+.container { max-width: 1000px; margin: 0 auto; }
+
+.legend {
+  display: flex; gap: 20px; justify-content: center; margin-bottom: 12px;
+  font-size: 11px; color: #555;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.leg-k { width: 12px; height: 12px; background: #ea580c; border-radius: 2px; }
+.leg-a { width: 12px; height: 12px; background: #0891b2; border-radius: 2px; }
+.leg-pill { background: #f5f5f5; border: 1px solid #ddd; border-radius: 10px; padding: 1px 6px; font-size: 9px; }
+
+/* Category section */
+.category {
+  margin-bottom: 12px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+.cat-header {
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cat-header .emoji { font-size: 14px; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  padding: 6px 14px;
+  border-bottom: 1px solid #f0f0f0;
+  min-height: 36px;
+}
+.row:last-child { border-bottom: none; }
+.row:hover { background: #fef9f0; }
+
+.cond-col {
+  width: 140px;
+  flex-shrink: 0;
+}
+.cond-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+}
+.cond-name-sub {
+  font-size: 10px;
+  color: #999;
+}
+
+.evidence-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.bar-label {
+  width: 14px;
+  font-size: 9px;
+  font-weight: 700;
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-label-k { color: #ea580c; }
+.bar-label-a { color: #0891b2; }
+
+.bar-track {
+  flex: 1;
+  height: 14px;
+  background: #f5f5f5;
+  border-radius: 3px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+.bar-fill-k {
+  height: 100%;
+  background: linear-gradient(90deg, #ea580c, #f97316);
+  border-radius: 3px;
+  min-width: 2px;
+}
+.bar-fill-a {
+  height: 100%;
+  background: linear-gradient(90deg, #0891b2, #22d3ee);
+  border-radius: 3px;
+  min-width: 2px;
+}
+.bar-count {
+  font-size: 9px;
+  font-weight: 700;
+  margin-left: 4px;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.formula-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 1px;
+}
+.pill {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+  border-radius: 10px;
+  padding: 0px 6px;
+  font-size: 9px;
+  color: #9a3412;
+  white-space: nowrap;
+}
+.pill-count {
+  font-weight: 700;
+  color: #ea580c;
+}
+.pill-acup {
+  background: #ecfeff;
+  border-color: #a5f3fc;
+  color: #155e75;
+}
+
+/* Colors for categories */
+.bg-pain { background: #7c3aed; }
+.bg-mental { background: #2563eb; }
+.bg-gi { background: #059669; }
+.bg-resp { background: #0891b2; }
+.bg-cardio { background: #dc2626; }
+.bg-uro { background: #92400e; }
+.bg-obgyn { background: #db2777; }
+.bg-derm { background: #ca8a04; }
+.bg-onco { background: #4f46e5; }
+.bg-ent { background: #0d9488; }
+.bg-life { background: #6b7280; }
+
+.note {
+  text-align: center;
+  font-size: 10px;
+  color: #999;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+</style>
+</head>
+<body>
+
+<h1>What Kampo & Acupuncture Evidence Exists for Your Patients?</h1>
+<p class="subtitle">Article counts and representative formulas from 2,653 articles (1982–2024) across two core Japanese traditional medicine journals</p>
+
+<div class="container">
+
+<div class="legend">
+  <div class="legend-item"><div class="leg-k"></div> Kampo articles</div>
+  <div class="legend-item"><div class="leg-a"></div> Acupuncture articles</div>
+  <div class="legend-item"><span class="leg-pill">方剤名(n)</span> Top formulas studied</div>
+</div>
+
+<div id="chart"></div>
+
+<p class="note">
+  K = Kampo (漢方), A = Acupuncture (鍼灸). Numbers in parentheses = article count for that formula-condition pair.<br>
+  Data sources: Journal of Kampo Medicine (1982–2024, n=2,003) and Journal of the Japan Society of Acupuncture and Moxibustion (2007–2024, n=650).
+</p>
+</div>
+
+<script>
+const categories = [
+  { name: 'Pain & Musculoskeletal', emoji: '🦴', cls: 'bg-pain', items: [
+    {c: 'Headache', j: '頭痛', k: 21, a: 6, f: [{n:'五苓散',c:3},{n:'抑肝散',c:2},{n:'呉茱萸湯',c:2}]},
+    {c: 'Muscle cramps', j: 'こむら返り', k: 19, a: 0, f: [{n:'芍薬甘草湯',c:6},{n:'甘草湯',c:6},{n:'疎経活血湯',c:2}]},
+    {c: 'Back pain', j: '腰痛', k: 4, a: 13, f: [{n:'烏頭赤石脂丸',c:1}], acup: true},
+    {c: 'Neuropathic pain', j: '神経痛', k: 17, a: 4, f: [{n:'桂枝加朮附湯',c:2},{n:'五苓散',c:2}]},
+    {c: 'Fibromyalgia', j: '線維筋痛症', k: 8, a: 0, f: [{n:'白虎湯',c:1}]},
+    {c: 'Shoulder pain', j: '肩こり', k: 2, a: 5, f: [{n:'葛根湯',c:1}], acup: true},
+    {c: 'Numbness', j: 'しびれ', k: 4, a: 1, f: [{n:'八味地黄丸',c:1},{n:'黄耆桂枝五物湯',c:1}]},
+  ]},
+  { name: 'Mental Health & Neurology', emoji: '🧠', cls: 'bg-mental', items: [
+    {c: 'Insomnia', j: '不眠', k: 13, a: 3, f: [{n:'加味帰脾湯',c:1},{n:'酸棗仁湯',c:1},{n:'帰脾湯',c:1}]},
+    {c: 'Depression', j: 'うつ', k: 11, a: 4, f: [{n:'加味帰脾湯',c:2},{n:'帰脾湯',c:2},{n:'半夏厚朴湯',c:1}]},
+    {c: 'Anxiety', j: '不安', k: 7, a: 2, f: [{n:'桂枝加竜骨牡蛎湯',c:1},{n:'甘麦大棗湯',c:1}]},
+    {c: 'Dysautonomia', j: '自律神経失調', k: 9, a: 2, f: [{n:'補中益気湯',c:1},{n:'六君子湯',c:1}]},
+    {c: 'Dizziness', j: 'めまい', k: 8, a: 0, f: [{n:'沢瀉湯',c:1},{n:'当帰四逆加呉茱萸生姜湯',c:1}]},
+    {c: 'Dementia/BPSD', j: '認知症', k: 3, a: 2, f: [{n:'抑肝散',c:1}]},
+    {c: 'Facial palsy', j: '顔面神経麻痺', k: 6, a: 7, f: [{n:'香蘇散',c:1}], acup: true},
+  ]},
+  { name: 'Gastrointestinal', emoji: '🫁', cls: 'bg-gi', items: [
+    {c: 'Constipation', j: '便秘', k: 10, a: 0, f: [{n:'潤腸湯',c:1},{n:'麻子仁丸',c:1}]},
+    {c: 'Diarrhea', j: '下痢', k: 9, a: 0, f: [{n:'五苓散',c:2},{n:'半夏瀉心湯',c:1},{n:'大建中湯',c:1}]},
+    {c: 'IBS', j: '過敏性腸', k: 7, a: 1, f: [{n:'香蘇散',c:1},{n:'胃苓湯',c:1}]},
+    {c: 'Func. dyspepsia', j: 'FD', k: 6, a: 0, f: [{n:'香蘇散',c:2},{n:'六君子湯',c:1}]},
+    {c: 'Oral ulcer', j: '口内炎', k: 3, a: 0, f: [{n:'黄連湯',c:1},{n:'半夏瀉心湯',c:1}]},
+    {c: 'GERD', j: '逆流性食道炎', k: 3, a: 0, f: [{n:'六君子湯',c:1}]},
+  ]},
+  { name: 'Respiratory & Infectious', emoji: '🫁', cls: 'bg-resp', items: [
+    {c: 'Asthma', j: '喘息', k: 24, a: 0, f: [{n:'半夏厚朴湯',c:2},{n:'八味地黄丸',c:2},{n:'柴朴湯',c:1}]},
+    {c: 'COVID-19', j: 'コロナ', k: 17, a: 6, f: [{n:'葛根湯',c:2},{n:'小柴胡湯加桔梗石膏',c:2},{n:'麻黄湯',c:1}]},
+    {c: 'Chronic cough', j: '慢性咳嗽', k: 9, a: 1, f: [{n:'麦門冬湯',c:1},{n:'蘇子降気湯',c:1}]},
+    {c: 'Influenza', j: 'インフルエンザ', k: 7, a: 0, f: [{n:'麻黄湯',c:1},{n:'葛根湯',c:1}]},
+    {c: 'Allergic rhinitis', j: 'アレルギー性鼻炎', k: 7, a: 3, f: [{n:'小青竜湯',c:0},{n:'人参湯',c:1}]},
+    {c: 'Common cold', j: '感冒', k: 6, a: 1, f: [{n:'葛根湯',c:1},{n:'桂枝湯',c:1}]},
+  ]},
+  { name: 'Cardiovascular & Circulation', emoji: '❤️', cls: 'bg-cardio', items: [
+    {c: 'Cold sensitivity', j: '冷え', k: 19, a: 3, f: [{n:'当帰四逆加呉茱萸生姜湯',c:4},{n:'八味地黄丸',c:2},{n:'麻黄附子細辛湯',c:1}]},
+    {c: 'Hypertension', j: '高血圧', k: 8, a: 0, f: [{n:'釣藤散',c:1},{n:'七物降下湯',c:1},{n:'柴胡加竜骨牡蛎湯',c:1}]},
+    {c: 'Edema', j: '浮腫', k: 6, a: 1, f: [{n:'防已黄耆湯',c:1},{n:'柴苓湯',c:1}]},
+  ]},
+  { name: "Women's Health", emoji: '♀️', cls: 'bg-obgyn', items: [
+    {c: 'Menstrual / PMS', j: '月経異常', k: 15, a: 4, f: [{n:'桂枝茯苓丸',c:1},{n:'加味帰脾湯',c:1}]},
+    {c: 'Pregnancy-related', j: '妊娠悪阻', k: 14, a: 0, f: [{n:'当帰芍薬散',c:3},{n:'芍薬甘草湯',c:2},{n:'大建中湯',c:2}]},
+    {c: 'Infertility', j: '不妊', k: 7, a: 5, f: [{n:'当帰芍薬散',c:2},{n:'温経湯',c:1},{n:'補中益気湯',c:1}]},
+    {c: 'Menopause', j: '更年期', k: 11, a: 0, f: [{n:'柴胡桂枝乾姜湯',c:2},{n:'加味逍遙散',c:1}]},
+  ]},
+  { name: 'Dermatology', emoji: '🩹', cls: 'bg-derm', items: [
+    {c: 'Atopic dermatitis', j: 'アトピー', k: 23, a: 3, f: [{n:'白虎加人参湯',c:2},{n:'消風散',c:1}]},
+    {c: 'Herpes zoster', j: '帯状疱疹', k: 6, a: 2, f: [{n:'葛根湯',c:1},{n:'桂枝加朮附湯',c:1}]},
+  ]},
+  { name: 'Fatigue, Aging & Oncology', emoji: '💪', cls: 'bg-onco', items: [
+    {c: 'Cancer support', j: 'がん支持療法', k: 38, a: 9, f: [{n:'十全大補湯',c:4},{n:'五苓散',c:2},{n:'柴苓湯',c:2}]},
+    {c: 'Fatigue / CFS', j: '倦怠感', k: 21, a: 4, f: [{n:'帰脾湯',c:2},{n:'茯苓四逆湯',c:2},{n:'四逆湯',c:2}]},
+    {c: 'Elderly frailty', j: '高齢者フレイル', k: 25, a: 8, f: [{n:'八味地黄丸',c:3},{n:'人参湯',c:2},{n:'真武湯',c:2}]},
+    {c: 'Pediatrics', j: '小児', k: 28, a: 2, f: [{n:'小建中湯',c:2},{n:'加味帰脾湯',c:2}]},
+  ]},
+  { name: 'ENT & Sensory', emoji: '👂', cls: 'bg-ent', items: [
+    {c: 'Tinnitus', j: '耳鳴', k: 10, a: 2, f: [{n:'釣藤散',c:1},{n:'八味地黄丸',c:1},{n:'牛車腎気丸',c:1}]},
+    {c: 'Anosmia / Dysgeusia', j: '嗅覚・味覚障害', k: 8, a: 1, f: [{n:'香蘇散',c:2},{n:'麗沢通気湯',c:1}]},
+  ]},
+];
+
+const maxArticles = 80;
+const barScale = 3.5;
+const chart = document.getElementById('chart');
+
+categories.forEach(cat => {
+  const section = document.createElement('div');
+  section.className = 'category';
+
+  const header = document.createElement('div');
+  header.className = 'cat-header ' + cat.cls;
+  header.innerHTML = `<span class="emoji">${cat.emoji}</span> ${cat.name}`;
+  section.appendChild(header);
+
+  cat.items.forEach(item => {
+    const row = document.createElement('div');
+    row.className = 'row';
+
+    // Condition column
+    const condDiv = document.createElement('div');
+    condDiv.className = 'cond-col';
+    condDiv.innerHTML = `<div class="cond-name">${item.c}</div><div class="cond-name-sub">${item.j}</div>`;
+    row.appendChild(condDiv);
+
+    // Evidence column
+    const evDiv = document.createElement('div');
+    evDiv.className = 'evidence-col';
+
+    // Kampo bar
+    if (item.k > 0) {
+      const kRow = document.createElement('div');
+      kRow.className = 'bar-row';
+      const kWidth = Math.max(item.k * barScale, 8);
+      kRow.innerHTML = `
+        <span class="bar-label bar-label-k">K</span>
+        <div class="bar-track">
+          <div class="bar-fill-k" style="width:${kWidth}px"></div>
+        </div>
+        <span class="bar-count">${item.k}</span>
+      `;
+      evDiv.appendChild(kRow);
+    }
+
+    // Acup bar
+    if (item.a > 0) {
+      const aRow = document.createElement('div');
+      aRow.className = 'bar-row';
+      const aWidth = Math.max(item.a * barScale, 8);
+      aRow.innerHTML = `
+        <span class="bar-label bar-label-a">A</span>
+        <div class="bar-track">
+          <div class="bar-fill-a" style="width:${aWidth}px"></div>
+        </div>
+        <span class="bar-count">${item.a}</span>
+      `;
+      evDiv.appendChild(aRow);
+    }
+
+    // Formula pills
+    if (item.f && item.f.length > 0) {
+      const pillDiv = document.createElement('div');
+      pillDiv.className = 'formula-pills';
+      item.f.forEach(formula => {
+        if (formula.n) {
+          const pill = document.createElement('span');
+          pill.className = 'pill';
+          pill.innerHTML = `${formula.n}${formula.c > 1 ? ' <span class="pill-count">×'+formula.c+'</span>' : ''}`;
+          pillDiv.appendChild(pill);
+        }
+      });
+      evDiv.appendChild(pillDiv);
+    }
+
+    row.appendChild(evDiv);
+    section.appendChild(row);
+  });
+
+  chart.appendChild(section);
+});
+</script>
+</body>
+</html>
