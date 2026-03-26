@@ -561,14 +561,49 @@ def main():
                 "count": count,
             }
 
-    # --- 著者インデックス（AUTHOR_MIN_ARTICLES 以上の著者のみ） ---
+    # --- 著者名寄せ + インデックス ---
     print(f"  著者: {len(author_counter):,} 名 → ", end="")
+
+    # 名寄せ辞書を読み込み（日本語名 ↔ ローマ字名）
+    ALIAS_PATH = DATA_DIR / "author_aliases.json"
+    author_aliases = {}
+    if ALIAS_PATH.exists():
+        with open(ALIAS_PATH, encoding="utf-8") as f:
+            author_aliases = json.load(f)
+        print(f"名寄せ辞書 {len(author_aliases)} 件 → ", end="")
+
+    # 名寄せ: ローマ字名 → 日本語名（主キー）に統合
+    en_to_ja = {}
+    for ja_name, info in author_aliases.items():
+        en_name = info["en"]
+        en_to_ja[en_name] = ja_name
+
+    # 統合著者インデックスを構築
+    merged_author_articles = defaultdict(list)
+    merged_author_counter = Counter()
+    for name, indices in author_articles.items():
+        # ローマ字名が名寄せ辞書にあれば日本語名に統合
+        canonical = en_to_ja.get(name, name)
+        merged_author_articles[canonical].extend(indices)
+        merged_author_counter[canonical] += len(indices)
+
+    # 重複インデックスを除去
+    for name in merged_author_articles:
+        merged_author_articles[name] = sorted(set(merged_author_articles[name]))
+
     au_index = {}
-    for name, count in author_counter.most_common():
+    for name, count in merged_author_counter.most_common():
         if count < AUTHOR_MIN_ARTICLES:
             break
-        au_index[name] = author_articles[name]
-    print(f"{len(au_index):,} 名（{AUTHOR_MIN_ARTICLES}件以上）")
+        au_index[name] = merged_author_articles[name]
+
+    # 名寄せ逆引き辞書もDBに含める（UI用: 日本語名→英語名）
+    au_aliases = {}
+    for ja_name, info in author_aliases.items():
+        if ja_name in au_index:
+            au_aliases[ja_name] = info["en"]
+
+    print(f"{len(au_index):,} 名（{AUTHOR_MIN_ARTICLES}件以上、名寄せ {len(au_aliases)} 件）")
 
     # --- 所属インデックス（上位 INST_TOP_N） ---
     print(f"  所属: {len(inst_counter):,} 機関 → ", end="")
@@ -604,6 +639,7 @@ def main():
         "fi": {k: v for k, v in formula_index.items() if v},
         "ai": {k: v for k, v in axis_index.items() if v},
         "au": au_index,
+        "au_aliases": au_aliases,
         "inst": inst_index,
         "yd": dict(year_dist),
     }

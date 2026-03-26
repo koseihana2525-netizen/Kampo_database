@@ -1,0 +1,3740 @@
+{
+  "寺澤 捷年": {
+    "en": "Katsutoshi TERASAWA",
+    "total": 228,
+    "jp_count": 219,
+    "pm_count": 223
+  },
+  "嶋田 豊": {
+    "en": "Yutaka SHIMADA",
+    "total": 88,
+    "jp_count": 88,
+    "pm_count": 88
+  },
+  "三潴 忠道": {
+    "en": "Tadamichi MITSUMA",
+    "total": 83,
+    "jp_count": 80,
+    "pm_count": 80
+  },
+  "並木 隆雄": {
+    "en": "Takao NAMIKI",
+    "total": 73,
+    "jp_count": 73,
+    "pm_count": 72
+  },
+  "田原 英一": {
+    "en": "Eiichi TAHARA",
+    "total": 71,
+    "jp_count": 71,
+    "pm_count": 69
+  },
+  "地野 充時": {
+    "en": "Atsushi CHINO",
+    "total": 65,
+    "jp_count": 65,
+    "pm_count": 64
+  },
+  "佐藤 弘": {
+    "en": "Hiroshi SATO",
+    "total": 60,
+    "jp_count": 60,
+    "pm_count": 59
+  },
+  "若山 育郎": {
+    "en": "Ikuro WAKAYAMA",
+    "total": 59,
+    "jp_count": 59,
+    "pm_count": 46
+  },
+  "花輪 壽彦": {
+    "en": "Toshihiko HANAWA",
+    "total": 56,
+    "jp_count": 56,
+    "pm_count": 54
+  },
+  "関矢 信康": {
+    "en": "Nobuyasu SEKIYA",
+    "total": 56,
+    "jp_count": 56,
+    "pm_count": 55
+  },
+  "平崎 能郎": {
+    "en": "Yoshiro HIRASAKI",
+    "total": 56,
+    "jp_count": 56,
+    "pm_count": 53
+  },
+  "喜多 敏明": {
+    "en": "Toshiaki KITA",
+    "total": 51,
+    "jp_count": 51,
+    "pm_count": 51
+  },
+  "柴原 直利": {
+    "en": "Naotoshi SHIBAHARA",
+    "total": 50,
+    "jp_count": 50,
+    "pm_count": 50
+  },
+  "木村 容子": {
+    "en": "Yoko KIMURA",
+    "total": 48,
+    "jp_count": 48,
+    "pm_count": 48
+  },
+  "土佐 寛順": {
+    "en": "Hiroyori TOSA",
+    "total": 48,
+    "jp_count": 47,
+    "pm_count": 45
+  },
+  "矢野 博美": {
+    "en": "Hiromi YANO",
+    "total": 45,
+    "jp_count": 45,
+    "pm_count": 45
+  },
+  "及川 哲郎": {
+    "en": "Tetsuro OIKAWA",
+    "total": 44,
+    "jp_count": 44,
+    "pm_count": 43
+  },
+  "渡辺 賢治": {
+    "en": "Kenji WATANABE",
+    "total": 40,
+    "jp_count": 39,
+    "pm_count": 38
+  },
+  "後藤 博三": {
+    "en": "Hirozo GOTO",
+    "total": 37,
+    "jp_count": 36,
+    "pm_count": 32
+  },
+  "引網 宏彰": {
+    "en": "Hiroaki HIKIAMI",
+    "total": 36,
+    "jp_count": 36,
+    "pm_count": 35
+  },
+  "山下 仁": {
+    "en": "Hitoshi YAMASHITA",
+    "total": 35,
+    "jp_count": 35,
+    "pm_count": 31
+  },
+  "石崎 直人": {
+    "en": "Naoto ISHIZAKI",
+    "total": 37,
+    "jp_count": 35,
+    "pm_count": 35
+  },
+  "笠原 裕司": {
+    "en": "Yuji KASAHARA",
+    "total": 35,
+    "jp_count": 35,
+    "pm_count": 35
+  },
+  "井上 博喜": {
+    "en": "Hiroki INOUE",
+    "total": 33,
+    "jp_count": 33,
+    "pm_count": 33
+  },
+  "形井 秀一": {
+    "en": "Shuichi KATAI",
+    "total": 33,
+    "jp_count": 33,
+    "pm_count": 26
+  },
+  "小川 恵子": {
+    "en": "Keiko OGAWA",
+    "total": 33,
+    "jp_count": 33,
+    "pm_count": 32
+  },
+  "小暮 敏明": {
+    "en": "Toshiaki KOGURE",
+    "total": 32,
+    "jp_count": 32,
+    "pm_count": 31
+  },
+  "貝沼 茂三郎": {
+    "en": "Mosaburo KAINUMA",
+    "total": 32,
+    "jp_count": 32,
+    "pm_count": 28
+  },
+  "吉永 亮": {
+    "en": "Ryo YOSHINAGA",
+    "total": 32,
+    "jp_count": 32,
+    "pm_count": 31
+  },
+  "犬塚 央": {
+    "en": "Hisashi INUTSUKA",
+    "total": 30,
+    "jp_count": 30,
+    "pm_count": 21
+  },
+  "長坂 和彦": {
+    "en": "Kazuhiko NAGASAKA",
+    "total": 29,
+    "jp_count": 29,
+    "pm_count": 29
+  },
+  "大野 賢二": {
+    "en": "Kenji OHNO",
+    "total": 30,
+    "jp_count": 29,
+    "pm_count": 29
+  },
+  "矢野 忠": {
+    "en": "Tadashi YANO",
+    "total": 28,
+    "jp_count": 28,
+    "pm_count": 26
+  },
+  "北小路 博司": {
+    "en": "Hiroshi KITAKOJI",
+    "total": 28,
+    "jp_count": 28,
+    "pm_count": 20
+  },
+  "坂口 俊二": {
+    "en": "Shunji SAKAGUCHI",
+    "total": 27,
+    "jp_count": 27,
+    "pm_count": 22
+  },
+  "萬谷 直樹": {
+    "en": "Naoki MANTANI",
+    "total": 27,
+    "jp_count": 27,
+    "pm_count": 25
+  },
+  "木村 豪雄": {
+    "en": "Hideo KIMURA",
+    "total": 28,
+    "jp_count": 27,
+    "pm_count": 28
+  },
+  "田中 耕一郎": {
+    "en": "Koichiro TANAKA",
+    "total": 26,
+    "jp_count": 26,
+    "pm_count": 25
+  },
+  "新谷 卓弘": {
+    "en": "Takahiro SHINTANI",
+    "total": 25,
+    "jp_count": 25,
+    "pm_count": 20
+  },
+  "福嶋 裕造": {
+    "en": "Yuzo FUKUSHIMA",
+    "total": 25,
+    "jp_count": 25,
+    "pm_count": 24
+  },
+  "鶴 浩幸": {
+    "en": "Hiroyuki TSURU",
+    "total": 25,
+    "jp_count": 25,
+    "pm_count": 23
+  },
+  "小田口 浩": {
+    "en": "Hiroshi ODAGUCHI",
+    "total": 24,
+    "jp_count": 24,
+    "pm_count": 24
+  },
+  "山口 智": {
+    "en": "Satoru YAMAGUCHI",
+    "total": 24,
+    "jp_count": 24,
+    "pm_count": 22
+  },
+  "高山 真": {
+    "en": "Shin TAKAYAMA",
+    "total": 31,
+    "jp_count": 23,
+    "pm_count": 30
+  },
+  "津谷 喜一郎": {
+    "en": "Kiichiro TSUTANI",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 18
+  },
+  "鈴木 雅雄": {
+    "en": "Masao SUZUKI",
+    "total": 23,
+    "jp_count": 22,
+    "pm_count": 19
+  },
+  "野上 達也": {
+    "en": "Tatsuya NOGAMI",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 21
+  },
+  "古屋 英治": {
+    "en": "Eiji FURUYA",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 21
+  },
+  "斉藤 宗則": {
+    "en": "Munenori SAITO",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 19
+  },
+  "深澤 洋滋": {
+    "en": "Yohji FUKAZAWA",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 16
+  },
+  "櫻庭 陽": {
+    "en": "Hinata SAKURABA",
+    "total": 22,
+    "jp_count": 22,
+    "pm_count": 21
+  },
+  "村井 政史": {
+    "en": "Masafumi MURAI",
+    "total": 21,
+    "jp_count": 21,
+    "pm_count": 21
+  },
+  "藤本 英樹": {
+    "en": "Hideki FUJIMOTO",
+    "total": 21,
+    "jp_count": 21,
+    "pm_count": 20
+  },
+  "増山 祥子": {
+    "en": "Shoko MASUYAMA",
+    "total": 21,
+    "jp_count": 21,
+    "pm_count": 19
+  },
+  "石野 尚吾": {
+    "en": "Shogo ISHINO",
+    "total": 20,
+    "jp_count": 20,
+    "pm_count": 17
+  },
+  "巽 武司": {
+    "en": "Takeshi TATSUMI",
+    "total": 20,
+    "jp_count": 20,
+    "pm_count": 20
+  },
+  "牧野 利明": {
+    "en": "Toshiaki MAKINO",
+    "total": 20,
+    "jp_count": 20,
+    "pm_count": 18
+  },
+  "檜山 幸孝": {
+    "en": "Yukitaka HIYAMA",
+    "total": 21,
+    "jp_count": 19,
+    "pm_count": 21
+  },
+  "坂井 友実": {
+    "en": "Tomomi SAKAI",
+    "total": 19,
+    "jp_count": 19,
+    "pm_count": 17
+  },
+  "福田 文彦": {
+    "en": "Fumihiko FUKUDA",
+    "total": 19,
+    "jp_count": 19,
+    "pm_count": 15
+  },
+  "隅越 誠": {
+    "en": "Makoto SUMIKOSHI",
+    "total": 16,
+    "jp_count": 16,
+    "pm_count": 15
+  },
+  "今田屋 章": {
+    "en": "Akira IMADAYA",
+    "total": 18,
+    "jp_count": 18,
+    "pm_count": 17
+  },
+  "稲木 一元": {
+    "en": "Kazumoto INAKI",
+    "total": 18,
+    "jp_count": 18,
+    "pm_count": 16
+  },
+  "金子 泰久": {
+    "en": "Yasuhisa KANEKO",
+    "total": 18,
+    "jp_count": 18,
+    "pm_count": 15
+  },
+  "新原 寿志": {
+    "en": "Hisashi SHINBARA",
+    "total": 18,
+    "jp_count": 18,
+    "pm_count": 15
+  },
+  "杵渕 彰": {
+    "en": "Akira KINEBUCHI",
+    "total": 17,
+    "jp_count": 17,
+    "pm_count": 17
+  },
+  "篠原 昭二": {
+    "en": "Shoji SHINOHARA",
+    "total": 17,
+    "jp_count": 17,
+    "pm_count": 14
+  },
+  "岡 洋志": {
+    "en": "Hiroshi OKA",
+    "total": 17,
+    "jp_count": 17,
+    "pm_count": 16
+  },
+  "中永 士師明": {
+    "en": "Hajime NAKAE",
+    "total": 17,
+    "jp_count": 17,
+    "pm_count": 17
+  },
+  "近藤 宏": {
+    "en": "Hiroshi KONDO",
+    "total": 17,
+    "jp_count": 17,
+    "pm_count": 15
+  },
+  "秋葉 哲生": {
+    "en": "Tetsuo AKIBA",
+    "total": 16,
+    "jp_count": 16,
+    "pm_count": 16
+  },
+  "本間 行彦": {
+    "en": "Yukihiko HOMMA",
+    "total": 16,
+    "jp_count": 16,
+    "pm_count": 13
+  },
+  "谷口 博志": {
+    "en": "Hiroshi TANIGUCHI",
+    "total": 16,
+    "jp_count": 16,
+    "pm_count": 15
+  },
+  "津田 昌樹": {
+    "en": "Masaki TSUDA",
+    "total": 15,
+    "jp_count": 15,
+    "pm_count": 12
+  },
+  "林 克美": {
+    "en": "Katsumi HAYASHI",
+    "total": 15,
+    "jp_count": 15,
+    "pm_count": 15
+  },
+  "泉 重樹": {
+    "en": "Shigeki IZUMI",
+    "total": 15,
+    "jp_count": 15,
+    "pm_count": 13
+  },
+  "佐橋 佳郎": {
+    "en": "Yoshiro SAHASHI",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 12
+  },
+  "三谷 和男": {
+    "en": "Kazuo MITANI",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 14
+  },
+  "新井 信": {
+    "en": "Makoto ARAI",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 13
+  },
+  "古谷 陽一": {
+    "en": "Yoichi FURUYA",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 14
+  },
+  "橋本 すみれ": {
+    "en": "Sumire HASHIMOTO",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 14
+  },
+  "織部 和宏": {
+    "en": "Kazuhiro ORIBE",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 12
+  },
+  "笛木 司": {
+    "en": "Tsukasa FUEKI",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 13
+  },
+  "平澤 一浩": {
+    "en": "Kazuhiro HIRASAWA",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 14
+  },
+  "今井 賢治": {
+    "en": "Kenji IMAI",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 12
+  },
+  "池宗 佐知子": {
+    "en": "Sachiko IKEMUNE",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 13
+  },
+  "古瀬 暢達": {
+    "en": "Nobutatsu FURUSE",
+    "total": 14,
+    "jp_count": 14,
+    "pm_count": 14
+  },
+  "山田 光胤": {
+    "en": "Terutane YAMADA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "西本 隆": {
+    "en": "Takashi NISHIMOTO",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "粕谷 大智": {
+    "en": "Daichi KASUYA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "藤本 誠": {
+    "en": "Makoto FUJIMOTO",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "小菅 孝明": {
+    "en": "Takaaki KOSUGE",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "菊池 友和": {
+    "en": "Tomokazu KIKUCHI",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 12
+  },
+  "須永 隆夫": {
+    "en": "Takao SUNAGA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "辻 正徳": {
+    "en": "Masanori TSUJI",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 12
+  },
+  "牧 俊允": {
+    "en": "Toshinobu MAKI",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "中村 真通": {
+    "en": "Masamichi NAKAMURA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "吉田 成仁": {
+    "en": "Naruto YOSHIDA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 12
+  },
+  "松浦 悠人": {
+    "en": "Yuto MATSUURA",
+    "total": 13,
+    "jp_count": 13,
+    "pm_count": 13
+  },
+  "遠藤 次郎": {
+    "en": "Jiro ENDO",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 11
+  },
+  "野口 栄太郎": {
+    "en": "Eitaro NOGUCHI",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 9
+  },
+  "御影 雅幸": {
+    "en": "Masayuki MIKAGE",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "小尾 龍右": {
+    "en": "Ryosuke OBI",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 11
+  },
+  "松岡 尚則": {
+    "en": "Takanori MATSUOKA",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 11
+  },
+  "岩永 淳": {
+    "en": "Jun IWANAGA",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "松本 毅": {
+    "en": "Takeshi MATSUMOTO",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 10
+  },
+  "堀場 裕子": {
+    "en": "Yuko HORIBA",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "吉野 鉄大": {
+    "en": "Tetsuhiro YOSHINO",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 11
+  },
+  "前田 ひろみ": {
+    "en": "Hiromi MAEDA",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "久下 浩史": {
+    "en": "Hiroshi KUGE",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "菅原 正秋": {
+    "en": "Masaaki SUGAWARA",
+    "total": 12,
+    "jp_count": 12,
+    "pm_count": 12
+  },
+  "大塚 恭男": {
+    "en": "Yasuo OTSUKA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 9
+  },
+  "松橋 俊夫": {
+    "en": "Toshio MATSUHASHI",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "村松 慎一": {
+    "en": "Shinichi MURAMATSU",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 9
+  },
+  "阿部 博子": {
+    "en": "Hiroko ABE",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 10
+  },
+  "矢久保 修嗣": {
+    "en": "Shuji YAKUBO",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 10
+  },
+  "山村 義治": {
+    "en": "Yoshiharu YAMAMURA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 9
+  },
+  "江川 雅人": {
+    "en": "Masato EGAWA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "鈴木 達彦": {
+    "en": "Tatsuhiko SUZUKI",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "奈良 和彦": {
+    "en": "Kazuhiko NARA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "千葉 浩輝": {
+    "en": "Koki CHIBA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 10
+  },
+  "後藤 雄輔": {
+    "en": "Yusuke GOTO",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 8
+  },
+  "東郷 俊宏": {
+    "en": "Toshihiro TOGO",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 9
+  },
+  "川喜田 健司": {
+    "en": "Kenji KAWAKITA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 8
+  },
+  "井上 基浩": {
+    "en": "Motohiro INOUE",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "吉田 行宏": {
+    "en": "Yukihiro YOSHIDA",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 10
+  },
+  "安野 富美子": {
+    "en": "Fumiko YASUNO",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "堀部 豪": {
+    "en": "Go HORIBE",
+    "total": 11,
+    "jp_count": 11,
+    "pm_count": 11
+  },
+  "遠田 裕政": {
+    "en": "Hiromasa ONDA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "鈴木 輝彦": {
+    "en": "Teruhiko SUZUKI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "山田 陽城": {
+    "en": "Haruki YAMADA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "伊藤 剛": {
+    "en": "Go ITO",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "宮本 俊和": {
+    "en": "Toshikazu MIYAMOTO",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "後山 尚久": {
+    "en": "Takahisa USHIROYAMA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "蛯子 慶三": {
+    "en": "Keizo EBIKO",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "中田 英之": {
+    "en": "Hideyuki NAKATA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "八重樫 稔": {
+    "en": "Minoru YAEGASHI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "西村 甲": {
+    "en": "Ko NISHIMURA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "若杉 安希乃": {
+    "en": "Akino WAKASUGI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "星野 卓之": {
+    "en": "Takayuki HOSHINO",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "岡本 英輝": {
+    "en": "Hideki OKAMOTO",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "菊地 章子": {
+    "en": "Akiko KIKUCHI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "上田 晃三": {
+    "en": "Koso UEDA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "八木 明男": {
+    "en": "Akio YAGI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "鈴木 朋子": {
+    "en": "Tomoko SUZUKI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "有田 龍太郎": {
+    "en": "Ryutaro ARITA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "宮崎 彰吾": {
+    "en": "Shogo MIYAZAKI",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 9
+  },
+  "鮎澤 聡": {
+    "en": "Satoshi AYUZAWA",
+    "total": 10,
+    "jp_count": 10,
+    "pm_count": 10
+  },
+  "藤平 健": {
+    "en": "Ken FUJIHIRA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "森山 健三": {
+    "en": "Kenzo MORIYAMA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "小曽戸 洋": {
+    "en": "Hiroshi KOSOTO",
+    "total": 10,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "矢船 明史": {
+    "en": "Akifumi YAFUNE",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "和辻 直": {
+    "en": "Tadashi WATSUJI",
+    "total": 10,
+    "jp_count": 9,
+    "pm_count": 10
+  },
+  "磯部 秀之": {
+    "en": "Hideyuki ISOBE",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "三浦 於菟": {
+    "en": "Oto MIURA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "小山 誠次": {
+    "en": "Seiji KOYAMA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "日笠 久美": {
+    "en": "Kumi HIGASA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "浅岡 俊之": {
+    "en": "Toshiyuki ASAOKA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 7
+  },
+  "今井 純生": {
+    "en": "Sumio IMAI",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "土方 康世": {
+    "en": "Yasuyo HIJIKATA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "松井 龍吉": {
+    "en": "Ryukichi MATSUI",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "石田 和之": {
+    "en": "Kazuyuki ISHIDA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "五野 由佳理": {
+    "en": "Yukari GONO",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "早崎 知幸": {
+    "en": "Tomoyuki HAYASAKI",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "永田 豊": {
+    "en": "Yutaka NAGATA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "別府 正志": {
+    "en": "Masashi BEPPU",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "竹田 眞": {
+    "en": "Makoto TAKEDA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "伊藤 ゆい": {
+    "en": "Yui ITO",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "小野 真吾": {
+    "en": "Shingo ONO",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "原田 直之": {
+    "en": "Naoyuki HARADA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "皆川 陽一": {
+    "en": "Yoichi MINAKAWA",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 8
+  },
+  "小内 愛": {
+    "en": "Ai KOUCHI",
+    "total": 9,
+    "jp_count": 9,
+    "pm_count": 9
+  },
+  "中田 敬吾": {
+    "en": "Keigo NAKATA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "岡本 洋明": {
+    "en": "Hiroaki OKAMOTO",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "戸田 静男": {
+    "en": "Shizuo TODA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "土肥 豊": {
+    "en": "Yutaka DOHI",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "塩谷 雄二": {
+    "en": "Yuji SHIOTANI",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "小俣 浩": {
+    "en": "Hiroshi OMATA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 7
+  },
+  "鈴木 邦彦": {
+    "en": "Kunihiko SUZUKI",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "久永 明人": {
+    "en": "Akito HISANAGA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "田村 遵一": {
+    "en": "Jun'ichi TAMURA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 6
+  },
+  "今津 嘉宏": {
+    "en": "Yoshihiro IMAZU",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "奥見 裕邦": {
+    "en": "Hirokuni OKUMI",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "大田 静香": {
+    "en": "Shizuka OTA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 6
+  },
+  "海老澤 茂": {
+    "en": "Shigeru EBISAWA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "小池 宙": {
+    "en": "Hiroshi KOIKE",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 7
+  },
+  "金子 聡一郎": {
+    "en": "Soichiro KANEKO",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 7
+  },
+  "石井 正": {
+    "en": "Tadashi ISHII",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "上原 明仁": {
+    "en": "Akihito UEHARA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "角谷 英治": {
+    "en": "Eiji SUMIYA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 7
+  },
+  "山﨑 寿也": {
+    "en": "Toshiya YAMAZAKI",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "古賀 義久": {
+    "en": "Yoshihisa KOGA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "石山 すみれ": {
+    "en": "Sumire ISHIYAMA",
+    "total": 8,
+    "jp_count": 8,
+    "pm_count": 8
+  },
+  "松下 嘉一": {
+    "en": "Kaichi MATSUSHITA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "福田 佳弘": {
+    "en": "Yoshihiro FUKUTA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 5
+  },
+  "吉崎 文彦": {
+    "en": "Fumihiko YOSHIZAKI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "田中 政彦": {
+    "en": "Masahiko TANAKA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "山岡 傳一郎": {
+    "en": "Denichiro YAMAOKA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "小林 豊": {
+    "en": "Yutaka KOBAYASHI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "唐 方": {
+    "en": "Fang TANG",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "赤尾 清剛": {
+    "en": "Seigou AKAO",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 5
+  },
+  "山田 和男": {
+    "en": "Kazuo YAMADA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "福澤 素子": {
+    "en": "Motoko FUKUZAWA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "藤永 洋": {
+    "en": "Hiroshi FUJINAGA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "村主 明彦": {
+    "en": "Akihiko MURANUSHI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "安井 廣迪": {
+    "en": "Hiromichi YASUI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "谷川 聖明": {
+    "en": "Kiyoaki TANIKAWA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "横山 浩一": {
+    "en": "Koichi YOKOYAMA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "南澤 潔": {
+    "en": "Kiyoshi MINAMIZAWA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "仙田 晶子": {
+    "en": "Shoko SENDA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "松本 淳": {
+    "en": "Jun MATSUMOTO",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 5
+  },
+  "千福 貞博": {
+    "en": "Sadahiro SEMPUKU",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "木俣 有美子": {
+    "en": "Yumiko KIMATA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "峯 尚志": {
+    "en": "Takashi MINE",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "中山 毅": {
+    "en": "Takeshi NAKAYAMA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "松浦 恵子": {
+    "en": "Keiko MATSUURA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "平田 道彦": {
+    "en": "Michihiko HIRATA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "栗山 一道": {
+    "en": "Kazumichi KURIYAMA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "植田 圭吾": {
+    "en": "Keigo UEDA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "坪 敏仁": {
+    "en": "Toshihito TSUBO",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "渡り 英俊": {
+    "en": "Hidetoshi WATARI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "古田 大河": {
+    "en": "Taiga FURUTA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "山本 昇伯": {
+    "en": "Shohaku YAMAMOTO",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "高橋 浩子": {
+    "en": "Hiroko TAKAHASHI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "関根 麻理子": {
+    "en": "Mariko SEKINE",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "辻内 敬子": {
+    "en": "Keiko TSUJIUCHI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "小井土 善彦": {
+    "en": "Yoshihiko KOIDO",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 6
+  },
+  "福島 正也": {
+    "en": "Masaya FUKUSHIMA",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 7
+  },
+  "辻 涼太": {
+    "en": "Ryouta TSUJI",
+    "total": 7,
+    "jp_count": 7,
+    "pm_count": 5
+  },
+  "藤田 六朗": {
+    "en": "Rokuro FUJITA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "細野 八郎": {
+    "en": "Hachiro HOSONO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "小林 詔司": {
+    "en": "Shoji KOBAYASHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "雪村 八一郎": {
+    "en": "Yaichiro YUKIMURA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "渋谷 知宣": {
+    "en": "Tomonori SHIBUYA",
+    "total": 7,
+    "jp_count": 6,
+    "pm_count": 7
+  },
+  "雨宮 修二": {
+    "en": "Shuji AMEMIYA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "小野 孝彦": {
+    "en": "Takahiko ONO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "岡 孝和": {
+    "en": "Takakazu OKA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "松田 邦夫": {
+    "en": "Kunio MATSUDA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "中村 謙介": {
+    "en": "Kensuke NAKAMURA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "高木 嘉子": {
+    "en": "Yoshiko TAKAGI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "大澤 仲昭": {
+    "en": "Nakaaki OHSAWA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "谷 万喜子": {
+    "en": "Makiko TANI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "小松 靖弘": {
+    "en": "Yasuhiro KOMATSU",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "名取 通夫": {
+    "en": "Michio NATORI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "岡田 研吉": {
+    "en": "Kenkichi OKADA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "牧角 和宏": {
+    "en": "Kazuhiro MAKIZUMI",
+    "total": 7,
+    "jp_count": 6,
+    "pm_count": 7
+  },
+  "新沢 敦": {
+    "en": "Atsushi NIIZAWA",
+    "total": 8,
+    "jp_count": 6,
+    "pm_count": 8
+  },
+  "金子 幸夫": {
+    "en": "Yukio KANEKO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "佐藤 浩子": {
+    "en": "Hiroko SATO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "篁 武郎": {
+    "en": "Takerou TAKAMURA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "大塚 吉則": {
+    "en": "Yoshinori OHTSUKA",
+    "total": 7,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "中江 啓晴": {
+    "en": "Yoshiharu NAKAE",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "久保田 正樹": {
+    "en": "Masaki KUBOTA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "沢井 かおり": {
+    "en": "Kaori SAWAI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "高橋 秀実": {
+    "en": "Hidemi TAKAHASHI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "沼田 健裕": {
+    "en": "Takehiro NUMATA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "森 裕紀子": {
+    "en": "Yukiko MORI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "上野 孝治": {
+    "en": "Takaharu UENO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "小宮 ひろみ": {
+    "en": "Hiromi KOMIYA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "齊藤 奈津美": {
+    "en": "Natsumi SAITO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "戸田 稔子": {
+    "en": "Toshiko TODA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "加用 拓己": {
+    "en": "Takumi KAYO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "糸井 恵": {
+    "en": "Megumi ITOI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "日野 こころ": {
+    "en": "Kokoro HINO",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "鍋田 智之": {
+    "en": "Tomoyuki NABETA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 5
+  },
+  "恒松 美香子": {
+    "en": "Mikako TSUNEMATSU",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "玉地 正則": {
+    "en": "Masanori TAMACHI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "菊池 勇哉": {
+    "en": "Yuya KIKUCHI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "大川 祐世": {
+    "en": "Yuse OKAWA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "脇 英彰": {
+    "en": "Hideaki WAKI",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "井畑 真太朗": {
+    "en": "Shintaro IBATA",
+    "total": 6,
+    "jp_count": 6,
+    "pm_count": 6
+  },
+  "小倉 重成": {
+    "en": "Shigenari OGURA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "坂口 弘": {
+    "en": "Hiroshi SAKAGUCHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "八瀬 善郎": {
+    "en": "Yoshiro YASE",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "鳥居塚 和生": {
+    "en": "Kazuo TORIIZUKA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "関 正威": {
+    "en": "Masatake SEKI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "室賀 昭三": {
+    "en": "Shozo MUROGA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "丁 宗鉄": {
+    "en": "Jong-Chol CYONG",
+    "total": 7,
+    "jp_count": 5,
+    "pm_count": 7
+  },
+  "松多 邦雄": {
+    "en": "Kunio MATSUTA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "山上 裕章": {
+    "en": "Hiroaki YAMAGAMI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "北出 利勝": {
+    "en": "Toshikatsu KITADE",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "西森（佐藤） 婦美子": {
+    "en": "Yoshizumi MATSUKAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "杉山 貢": {
+    "en": "Mitsugi SUGIYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "秋山 雄次": {
+    "en": "Yuji AKIYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "織田 真智子": {
+    "en": "Machiko ORITA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "吉田 麻美": {
+    "en": "Mami YOSHIDA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "岩崎 鋼": {
+    "en": "Koh IWASAKI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "高士 将典": {
+    "en": "Masanori TAKASHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "西條 一止": {
+    "en": "Kazushi NISHIJO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "神庭 重信": {
+    "en": "Shigenobu KANBA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "大西 公夫": {
+    "en": "Kimio OHNISHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "酒井 伸也": {
+    "en": "Shinya SAKAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "井齋 偉矢": {
+    "en": "Hideya ISAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "二宮 文乃": {
+    "en": "Fumino NINOMIYA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "福田 秀彦": {
+    "en": "Hidehiko FUKUDA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "元雄 良治": {
+    "en": "Yoshiharu MOTOO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "吉田 実": {
+    "en": "Minoru YOSHIDA",
+    "total": 6,
+    "jp_count": 5,
+    "pm_count": 6
+  },
+  "假野 隆司": {
+    "en": "Takashi KANO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "八木 清貴": {
+    "en": "Kiyotaka YAGI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "田中 彰": {
+    "en": "Akira TANAKA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "崎山 武志": {
+    "en": "Takeshi SAKIYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "金子 明代": {
+    "en": "Akiyo KANEKO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "渡辺 哲郎": {
+    "en": "Tetsuo WATANABE",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "菅生 昌高": {
+    "en": "Masataka SUGAO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "千々岩 武陽": {
+    "en": "Takeharu CHIJIWA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "西田 欣広": {
+    "en": "Yoshihiro NISHIDA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "熊谷 由紀絵": {
+    "en": "Yukie KUMAGAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "砂川 正隆": {
+    "en": "Masataka SUNAGAWA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "萩原 圭祐": {
+    "en": "Keisuke HAGIHARA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "神谷 哲治": {
+    "en": "Tetsuharu KAMIYA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "長崎 直美": {
+    "en": "Naomi NAGASAKI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "飯塚 徳男": {
+    "en": "Norio IIZUKA",
+    "total": 6,
+    "jp_count": 5,
+    "pm_count": 6
+  },
+  "犬飼 賢也": {
+    "en": "Kenya INUKAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "北原 英幸": {
+    "en": "Hideyuki KITAHARA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "白井 明子": {
+    "en": "Akiko SHIRAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "片山 憲史": {
+    "en": "Kenji KATAYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "福原 慎也": {
+    "en": "Shinya FUKUHARA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "堀 雄": {
+    "en": "Takeshi HORI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "森 英俊": {
+    "en": "Hidetoshi MORI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "坂田 雅浩": {
+    "en": "Masahiro SAKATA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "丸山 一男": {
+    "en": "Kazuo MARUYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "岡村 麻子": {
+    "en": "Asako OKAMURA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "田頭 秀悟": {
+    "en": "Shugo TAGASHIRA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "塩田 敦子": {
+    "en": "Atsuko SHIOTA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "福嶋 寛子": {
+    "en": "Hiroko FUKUSHIMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "嶋田 沙織": {
+    "en": "Saori SHIMADA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "藤田 昌弘": {
+    "en": "Masahiro FUJITA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "太田 陽子": {
+    "en": "Yoko OTA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "河井 正隆": {
+    "en": "Masataka KAWAI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "中島 美和": {
+    "en": "Miwa NAKAJIMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "冨田 賢一": {
+    "en": "Kenichi TOMITA",
+    "total": 6,
+    "jp_count": 5,
+    "pm_count": 6
+  },
+  "浦山 久嗣": {
+    "en": "Hisatsugu URAYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "内田 さえ": {
+    "en": "Sae UCHIDA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "森山 朝正": {
+    "en": "Tomomasa MORIYAMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "田口 玲奈": {
+    "en": "Reina TAGUCHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "松熊 秀明": {
+    "en": "Hideaki MATSUKUMA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "岩元 英輔": {
+    "en": "Eisuke IWAMOTO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "齊藤 秀樹": {
+    "en": "Hideki SAITO",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "木村 友昭": {
+    "en": "Tomoaki KIMURA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "藤田 洋輔": {
+    "en": "Yosuke FUJITA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "武田 真輝": {
+    "en": "Masaki TAKEDA",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "田口 太郎": {
+    "en": "Taro TAGUCHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 5
+  },
+  "村橋 昌樹": {
+    "en": "Masaki MURAHASHI",
+    "total": 5,
+    "jp_count": 5,
+    "pm_count": 4
+  },
+  "佐藤 伸彦": {
+    "en": "Nobuhiko SATOH",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "長瀬 千秋": {
+    "en": "Chiaki NAGASE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "木下 恒雄": {
+    "en": "Tsuneo KINOSHITA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "本郷 孝博": {
+    "en": "Takahiro HONGO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "久道 周次": {
+    "en": "Shuji HISAMICHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "谷川 久彦": {
+    "en": "Hisahiko TANIKAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "西岡 五夫": {
+    "en": "Itsuo NISHIOKA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山本 中": {
+    "en": "Ataru YAMAMOTO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "王 元武": {
+    "en": "Yukio AKAHORI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "光藤 英彦": {
+    "en": "Hidehiko MITSUFUJI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "江川 充": {
+    "en": "Mitsuru EGAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "青山 廉平": {
+    "en": "Renpei AOYAMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "貝田 豊郷": {
+    "en": "Toyosato KAIDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "矢数 道明": {
+    "en": "Domei YAKAZU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "松浦 達雄": {
+    "en": "Tatsuo MATSUURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "池田 宏": {
+    "en": "Hiroshi IKEDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山田 享弘": {
+    "en": "Takahiro YAMADA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "栗林 秀樹": {
+    "en": "Hideki KURIBAYASHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "尾崎 哲": {
+    "en": "Satoshi OZAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "川俣 博嗣": {
+    "en": "Hiroshi KAWAMATA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "今井 隆喜": {
+    "en": "Takaki IMAI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "二宮 裕幸": {
+    "en": "Hiroyuki NINOMIYA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "宮崎 瑞明": {
+    "en": "Rueymei MIYAZAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "中川 定明": {
+    "en": "Sadaaki NAKAGAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "許 鳳浩": {
+    "en": "Fenghao XU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "溝部 宏毅": {
+    "en": "Hiroki MIZOBE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "山田 勉": {
+    "en": "Tsutomu YAMADA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "松田 三千雄": {
+    "en": "Michio MATSUDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "久保 道徳": {
+    "en": "Michinori KUBO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "堀野 雅子": {
+    "en": "Masako HORINO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山際 幹和": {
+    "en": "Mikikazu YAMAGIWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "牧野 健司": {
+    "en": "Kenji MAKINO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "仲西 宏元": {
+    "en": "Hiromoto NAKANISHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "水島 広子": {
+    "en": "Hiroko MIZUSHIMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "柳澤 紘": {
+    "en": "Hiroshi YANAGISAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "吉川 信": {
+    "en": "Makoto KIKKAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "村田 高明": {
+    "en": "Takaaki MURATA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "鍋田 理恵": {
+    "en": "Rie NABETA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "金井 成行": {
+    "en": "Shigeyuki KANAI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "盛岡 頼子": {
+    "en": "Yoriko MORIOKA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "坂田 幸治": {
+    "en": "Koji SAKATA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "苗村 健治": {
+    "en": "Kenji NAMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "夏秋 優": {
+    "en": "Masaru NATSUAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "津嘉山 洋": {
+    "en": "Hiroshi TSUKAYAMA",
+    "total": 5,
+    "jp_count": 4,
+    "pm_count": 5
+  },
+  "桜井 みち代": {
+    "en": "Michiyo SAKURAI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "斉藤 大直": {
+    "en": "Hironao SAITOH",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "中尾 紀久世": {
+    "en": "Kikuyo NAKAO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "鉄村 進": {
+    "en": "Susumu TETSUMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "堀江 延和": {
+    "en": "Nobukazu HORIE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "佐藤 祐造": {
+    "en": "Yuzo SATO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "吉田 祐文": {
+    "en": "Hirobumi YOSHIDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "藤原 久義": {
+    "en": "Hisayoshi FUJIWARA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "青柳 晴彦": {
+    "en": "Haruhiko AOYAGI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "宮坂 史路": {
+    "en": "Humiji MIYASAKA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "中村 佳子": {
+    "en": "Yoshiko NAKAMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "関口 由紀": {
+    "en": "Yuki SEKIGUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "佐藤 広康": {
+    "en": "Hiroyasu SATOH",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "清水 正彦": {
+    "en": "Masahiko SHIMIZU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "清水 悟": {
+    "en": "Satoru SHIMIZU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "鈴木 まゆみ": {
+    "en": "Mayumi SUZUKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "垣内 信子": {
+    "en": "Nobuko KAKIUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山口 修平": {
+    "en": "Shuhei YAMAGUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "箕輪 政博": {
+    "en": "Masahiro MINOWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "八代 忍": {
+    "en": "Shinobu YASHIRO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山本 佳乃子": {
+    "en": "Kanoko YAMAMOTO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "堂井 美里": {
+    "en": "Misato DOUI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "津田 篤太郎": {
+    "en": "Tokutaro TSUDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "深谷 良": {
+    "en": "Ryo FUKATANI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "河野 吉成": {
+    "en": "Hidetoshi ITAKURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "矢数 芳英": {
+    "en": "Yoshihide YAKAZU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "岡田 直己": {
+    "en": "Naoki OKADA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "有光 潤介": {
+    "en": "Junsuke ARIMITSU",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "長井 篤": {
+    "en": "Atsushi NAGAI",
+    "total": 5,
+    "jp_count": 4,
+    "pm_count": 5
+  },
+  "平馬 直樹": {
+    "en": "Naoki HIRAMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "石川 利博": {
+    "en": "Toshihiro ISHIKAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "浜本 義彦": {
+    "en": "Yoshihiko HAMAMOTO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "和田 健太朗": {
+    "en": "Kentaro WADA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "山口 秀敏": {
+    "en": "Hidetoshi YAMAGUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "吉村 彰人": {
+    "en": "Akihito YOSHIMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "磯部 哲也": {
+    "en": "Tetsuya ISOBE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "石毛 達也": {
+    "en": "Tatsuya ISHIGE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "三澤 広貴": {
+    "en": "Hiroki MISAWA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "原田 佳尚": {
+    "en": "Yoshinao HARADA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "天野 陽介": {
+    "en": "Yosuke AMANO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "坂本 篤彦": {
+    "en": "Atsuhiko SAKAMOTO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "鈴木 理央": {
+    "en": "Ayao SUZUKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "徳毛 敬三": {
+    "en": "Keizo TOKUMO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "濱口 眞輔": {
+    "en": "Shinsuke HAMAGUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "森 康明": {
+    "en": "Yasuaki MORI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "宮嵜 潤二": {
+    "en": "Junji MIYAZAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "成島 朋美": {
+    "en": "Tomomi NARUSHIMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "高田 敦子": {
+    "en": "Masaki SONODA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "高村 光幸": {
+    "en": "Mitsuyuki TAKAMURA",
+    "total": 5,
+    "jp_count": 4,
+    "pm_count": 5
+  },
+  "横地 歩": {
+    "en": "Ayumu YOKOCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "渡辺 均": {
+    "en": "Hitoshi WATANABE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "星野 朝文": {
+    "en": "Tomofumi HOSHINO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "井藤 久雄": {
+    "en": "Shigeto YANAGIHARA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山下 和彦": {
+    "en": "Kazuhiko YAMASHITA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "荒木 信夫": {
+    "en": "Nobuo ARAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "福田 功": {
+    "en": "Isao FUKUDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "上野 力敏": {
+    "en": "Rikitoshi UENO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "内海 康生": {
+    "en": "Yasuo UTSUMI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "野瀬 由圭里": {
+    "en": "Yukari NOSE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "宮西 圭太": {
+    "en": "Keita MIYANISHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "宮本 信宏": {
+    "en": "Nobuhiro MIYAMOTO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "能美 晶子": {
+    "en": "Akiko NOUMI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "小泉 るい": {
+    "en": "Rui KOIZUMI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "小野 理恵": {
+    "en": "Rie ONO",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "加島 雅之": {
+    "en": "Masayuki KASHIMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "畝田 一司": {
+    "en": "Kazushi UNEDA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "渡邊 一平": {
+    "en": "Ippei WATANABE",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "河原 保裕": {
+    "en": "Yasuhiro KAWAHARA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "戸村 多郎": {
+    "en": "Taro TOMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "石神 龍代": {
+    "en": "Tatsuyo ISHIGAMI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "谷之口 真知子": {
+    "en": "Nozomi MOTOISHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "中山 純一": {
+    "en": "Sumikazu NAKAYAMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "中村 真理": {
+    "en": "Mari NAKAMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "高梨 知揚": {
+    "en": "Tomoaki TAKANASHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "大内 晃一": {
+    "en": "Koichi OUCHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "山崎 さつき": {
+    "en": "Satsuki YAMAZAKI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "久島 達也": {
+    "en": "Tatsuya HISAJIMA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "飯村 佳織": {
+    "en": "Kaori IIMURA",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 3
+  },
+  "村越 祐介": {
+    "en": "Yusuke MURAKOSHI",
+    "total": 4,
+    "jp_count": 4,
+    "pm_count": 4
+  },
+  "谿 忠人": {
+    "en": "Tadato TANI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "坂東 みゆ紀": {
+    "en": "Miyuki BANDOH",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "三谷 和合": {
+    "en": "Wago MITANI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "村山 和子": {
+    "en": "Kazuko MURAYAMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "村山 暉之": {
+    "en": "Teruyuki MURAYAMA",
+    "total": 4,
+    "jp_count": 3,
+    "pm_count": 4
+  },
+  "徳留 一博": {
+    "en": "Kazuhiro TOKUDOME",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "十河 孝博": {
+    "en": "Takahiro SOGO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "岩淵 慎助": {
+    "en": "Shinsuke IWABUCHI",
+    "total": 4,
+    "jp_count": 3,
+    "pm_count": 4
+  },
+  "近澤 幸嗣郎": {
+    "en": "Shigeo ARAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "関 直樹": {
+    "en": "Naoki SEKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "岩崎 勲": {
+    "en": "Isao IWASAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "三浦 圭子": {
+    "en": "Keiko MIURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "櫻井 重樹": {
+    "en": "Shigeki SAKURAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "南雲 三枝子": {
+    "en": "Mieko NAGUMO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "石山 仁": {
+    "en": "Hitoshi ISHIYAMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "菊谷 豊彦": {
+    "en": "Toyohiko KIKUTANI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "溝口 靖紘": {
+    "en": "Yasuhiro MIZOGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "阿部 勝利": {
+    "en": "Katsutoshi ABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "奥田 孝雄": {
+    "en": "Takao OKUDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "中村 輝子": {
+    "en": "Teruko NAKAMURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "古家 仁": {
+    "en": "Hitoshi FURUYA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "森脇 義弘": {
+    "en": "Yoshihiro MORIWAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "玉舎 輝彦": {
+    "en": "Teruhiko TAMAYA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "千葉 庸夫": {
+    "en": "Tsuneo CHIBA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "小泉 久仁弥": {
+    "en": "Kuniya KOIZUMI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "野田 裕司": {
+    "en": "Hiroshi NODA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "我妻 恵": {
+    "en": "Megumu AZUMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "金倉 洋一": {
+    "en": "Yoichi KANAKURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "増井 義一": {
+    "en": "Yoshikazu MASUI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "川本 正純": {
+    "en": "Masazumi KAWAMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "緒方 千秋": {
+    "en": "Chiaki OGATA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "白尾 一定": {
+    "en": "Kazusada SHIRAO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "小牧 宏一": {
+    "en": "Koichi KOMAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "吉村 信": {
+    "en": "Makoto YOSHIMURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "松井 健一郎": {
+    "en": "Kenichiro MATSUI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鈴木 俊明": {
+    "en": "Toshiaki SUZUKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "宮田 健": {
+    "en": "Takeshi MIYATA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "大竹 哲也": {
+    "en": "Tetsuya OTAKE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "池内 隆夫": {
+    "en": "Takao IKEUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "松崎 茂": {
+    "en": "Shigeru MATSUZAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "水嶋 丈雄": {
+    "en": "Takeo MIZUSHIMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "片寄 大": {
+    "en": "Dai KATAYOSE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "町 泉寿郎": {
+    "en": "Senjuro MACHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "恵川 宏敏": {
+    "en": "Hirotoshi EGAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "高屋 豊": {
+    "en": "Yutaka TAKAYA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "谷口 典正": {
+    "en": "Norimasa TANIGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "池本 英志": {
+    "en": "Hideshi IKEMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "川口 哲": {
+    "en": "Satoshi KAWAGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "今西 二郎": {
+    "en": "Jiro IMANISHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "関 義信": {
+    "en": "Yoshinobu SEKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "森 昭憲": {
+    "en": "Akinori MORI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "星野 綾美": {
+    "en": "Ayami HOSHINO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "平岩 久幸": {
+    "en": "Hisayuki HIRAIWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "丹波 さ織": {
+    "en": "Saori TANBA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "奥 裕子": {
+    "en": "Yuko OKU",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "黒川 貴代": {
+    "en": "Takayo KUROKAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "木下 優子": {
+    "en": "Yuko KINOSHITA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "斉藤 輝夫": {
+    "en": "Teruo SAITO",
+    "total": 4,
+    "jp_count": 3,
+    "pm_count": 4
+  },
+  "折笠 秀樹": {
+    "en": "Hideki ORIGASA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "小川 真生": {
+    "en": "Masao OGAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "齋藤 絵美": {
+    "en": "Emi SAITO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "宗形 佳織": {
+    "en": "Kaori MUNAKATA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "岩垣 博巳": {
+    "en": "Hiromi IWAGAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "藤井 泰志": {
+    "en": "Yasushi FUJII",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "植草 康浩": {
+    "en": "Yasuhiro UEKUSA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "大川原 健": {
+    "en": "Ken OKAWARA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "猪 健志": {
+    "en": "Takeshi INO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "橋口 亮": {
+    "en": "Makoto HASHIGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "高橋 啓介": {
+    "en": "Keisuke TAKAHASHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "楢原 久司": {
+    "en": "Hisashi NARAHARA",
+    "total": 4,
+    "jp_count": 3,
+    "pm_count": 4
+  },
+  "及川 恵美子": {
+    "en": "Emiko OIKAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "山本 昇吾": {
+    "en": "Shogo YAMAMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "山口 拓也": {
+    "en": "Takuya YAMAGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "高久 俊": {
+    "en": "Chizuno TAKAKU",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "河路 かおる": {
+    "en": "Yoshinobu KUBOTA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "福田 知顕": {
+    "en": "Tomoaki FUKUDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "堀田 広満": {
+    "en": "Hiromitsu HOTTA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "舘野 正美": {
+    "en": "Masami TATENO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "中島 正光": {
+    "en": "Masamitsu NAKAJIMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "佐藤 万代": {
+    "en": "Mayo SATO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "坂井 由美": {
+    "en": "Yumi SAKAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "阿南 栄一朗": {
+    "en": "Eiichiro ANAN",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "岩田 健太郎": {
+    "en": "Kentaro IWATA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "伊林 由美子": {
+    "en": "Yumiko IBAYASHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "川鍋 伊晃": {
+    "en": "Tadaaki KAWANABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "八木 宏": {
+    "en": "Shigehiro SOH",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "永尾 幸": {
+    "en": "Sachi NAGAO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "大平 征宏": {
+    "en": "Masahiro OHIRA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "佐藤 泰昌": {
+    "en": "Yasumasa SATO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "荒井 紗由梨": {
+    "en": "Sayuri ARAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "奥富 俊之": {
+    "en": "Toshiyuki OKUTOMI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "益田 龍彦": {
+    "en": "Tatsuhiko MASUDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "山口 昌俊": {
+    "en": "Masatoshi YAMAGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "藤野 昭宏": {
+    "en": "Akihiro FUJINO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "韓 哲舜": {
+    "en": "Cheolsun HAN",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "山本 修平": {
+    "en": "Shuhei YAMAMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "綾部 原子": {
+    "en": "Motoko AYABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "渡邊 妙子": {
+    "en": "Taeko WATANABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "佐藤 寿一": {
+    "en": "Juichi SATO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "陣内 厚子": {
+    "en": "Atsuko JINNAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "米満 亨": {
+    "en": "Toru YONEMITSU",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "間宮 敬子": {
+    "en": "Keiko MAMIYA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "高橋 晶": {
+    "en": "Sho TAKAHASHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "萩原 明人": {
+    "en": "Akihito HAGIHARA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "河尻 澄宏": {
+    "en": "Sumihiro KAWAJIRI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "溝井 令一": {
+    "en": "Yoshikazu MIZOI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "森田 智": {
+    "en": "Akira MORITA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鮎川 文夫": {
+    "en": "Fumio AYUKAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鍋島 茂樹": {
+    "en": "Shigeki NABESHIMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "谷口 大吾": {
+    "en": "Daigo TANIGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "髙橋 京子": {
+    "en": "Kyoko TAKAHASHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "丹村 敏則": {
+    "en": "Toshinori NIMURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "河野 恵子": {
+    "en": "Keiko KAWANO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "諸橋 弘子": {
+    "en": "Hiroko MOROHASHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "椛島 浩明": {
+    "en": "Hiroaki KABASHIMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "四日 順子": {
+    "en": "Junko YOKKA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "草鹿砥 宗隆": {
+    "en": "Munetaka KUSAKADO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "山本 了": {
+    "en": "Satoru YAMAMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "向 亜紀": {
+    "en": "Aki MUKAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "有馬 菜千枝": {
+    "en": "Sachie ARIMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "矢口 綾子": {
+    "en": "Ayako YAGUCHI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "服部 孝雄": {
+    "en": "Takao HATTORI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "瀬川 誠": {
+    "en": "Makoto SEGAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "網谷 真理恵": {
+    "en": "Marie AMITANI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鈴木 聡子": {
+    "en": "Satoko SUZUKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "眞木 賀奈子": {
+    "en": "Kanako MAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "中尾 桂子": {
+    "en": "Keiko NAKAO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "中村 裕二": {
+    "en": "Yuji NAKAMURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "渡辺 廣昭": {
+    "en": "Hiroaki WATANABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "楳田 高士": {
+    "en": "Takashi UMEDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "渡辺 雅彦": {
+    "en": "Masahiko WATANABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "香取 俊光": {
+    "en": "Toshimitsu KATORI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "會澤 重勝": {
+    "en": "Shigekatsu AIZAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "有働 幸紘": {
+    "en": "Yukihiro UDO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "本城 久司": {
+    "en": "Hisashi HONJO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "沢崎 健太": {
+    "en": "Kenta SAWAZAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "孫 基然": {
+    "en": "Kizen SON",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "村瀬 健太郎": {
+    "en": "Kentaro MURASE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "坂本 裕和": {
+    "en": "Hirokazu SAKAMOTO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "向井 雄高": {
+    "en": "Yusuke MUKAI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "木村 研一": {
+    "en": "Kenichi KIMURA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "小笠原 千絵": {
+    "en": "Chie OGASAWARA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鈴木 聡": {
+    "en": "Satoshi SUZUKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "大久保 淳子": {
+    "en": "Junko OKUBO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "渡邉 淳一": {
+    "en": "Junichi WATANABE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "堀川 奈央": {
+    "en": "Nao HORIKAWA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "今枝 美和": {
+    "en": "Miwa IMAEDA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "鳥海 崇": {
+    "en": "Takashi TORIUMI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "向 ありさ": {
+    "en": "Arisa MUKO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "吉野 亮子": {
+    "en": "Ryoko YOSHINO",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "川﨑 寛二": {
+    "en": "Kanji KAWASAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "吉山 美仁": {
+    "en": "Mini YOSHIYAMA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "村瀬 智一": {
+    "en": "Tomokazu MURASE",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "玉木 奈美": {
+    "en": "Nami TAMAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "篠原 大侑": {
+    "en": "Daiyu SHINOHARA",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "二本松 明": {
+    "en": "Akira NIHONMATSU",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  },
+  "宮脇 太朗": {
+    "en": "Taro MIYAWAKI",
+    "total": 3,
+    "jp_count": 3,
+    "pm_count": 3
+  }
+}

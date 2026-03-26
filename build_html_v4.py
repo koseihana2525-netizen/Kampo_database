@@ -121,6 +121,7 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 .author-card{background:var(--card);border-radius:var(--radius);padding:10px 14px;box-shadow:var(--shadow);cursor:pointer;transition:all .15s;}
 .author-card:hover{background:#ebf5fb;}
 .author-card .aname{font-size:14px;font-weight:500;}
+.author-card .aalias{font-size:11px;color:#888;font-style:italic;}
 .author-card .acnt{font-size:12px;color:var(--muted);}
 
 /* Article list */
@@ -689,6 +690,15 @@ function renderAuthors(mc) {
   showTopAuthors();
 }
 
+function authorAlias(name) {
+  const al = DB.au_aliases || {};
+  return al[name] || null;
+}
+function authorAliasHtml(name) {
+  const alias = authorAlias(name);
+  return alias ? '<div class="aalias">' + escHtml(alias) + '</div>' : '';
+}
+
 function showTopAuthors() {
   const sorted = Object.entries(DB.au).sort((a,b) => b[1].length - a[1].length).slice(0,20);
   let h = '<div class="section-title">Top 20 著者</div>';
@@ -696,6 +706,7 @@ function showTopAuthors() {
   sorted.forEach(([name, idxs]) => {
     h += '<div class="author-card" onclick="showAuthorArticles(\'' + esc(name) + '\')">';
     h += '<div class="aname">' + escHtml(name) + '</div>';
+    h += authorAliasHtml(name);
     h += '<div class="acnt">' + idxs.length + ' articles</div></div>';
   });
   h += '</div>';
@@ -705,13 +716,25 @@ function showTopAuthors() {
 function filterAuthors(q) {
   if (!q || q.length < 2) { showTopAuthors(); return; }
   const ql = q.toLowerCase();
-  const matches = Object.entries(DB.au).filter(([name]) => name.toLowerCase().includes(ql) || name.includes(q))
-    .sort((a,b) => b[1].length - a[1].length).slice(0,30);
+  const al = DB.au_aliases || {};
+  // Build reverse alias map (en→ja) for search
+  const enToJa = {};
+  Object.entries(al).forEach(([ja, en]) => { enToJa[en.toLowerCase()] = ja; });
+
+  const matches = Object.entries(DB.au).filter(([name]) => {
+    if (name.toLowerCase().includes(ql) || name.includes(q)) return true;
+    // Also match by alias name
+    const alias = al[name];
+    if (alias && alias.toLowerCase().includes(ql)) return true;
+    return false;
+  }).sort((a,b) => b[1].length - a[1].length).slice(0,30);
+
   let h = '<div class="result-info">' + matches.length + ' authors found</div>';
   h += '<div class="author-grid">';
   matches.forEach(([name, idxs]) => {
     h += '<div class="author-card" onclick="showAuthorArticles(\'' + esc(name) + '\')">';
     h += '<div class="aname">' + escHtml(name) + '</div>';
+    h += authorAliasHtml(name);
     h += '<div class="acnt">' + idxs.length + ' articles</div></div>';
   });
   h += '</div>';
@@ -747,8 +770,11 @@ function filterByInst(instName) {
 function showAuthorArticles(authorName) {
   const indices = DB.au[authorName] || [];
   const mc = document.getElementById('main-content');
+  const alias = authorAlias(authorName);
   let h = '<div class="breadcrumb"><span onclick="showTab(\'author\')">\uD83D\uDC64 著者</span> &gt; ' + escHtml(authorName) + '</div>';
-  h += '<div class="section-title">' + escHtml(authorName) + ' <span class="count">' + indices.length + ' articles</span></div>';
+  h += '<div class="section-title">' + escHtml(authorName);
+  if (alias) h += ' <span style="font-size:0.7em;color:#666;">/ ' + escHtml(alias) + '</span>';
+  h += ' <span class="count">' + indices.length + ' articles</span></div>';
   h += renderSourceFilter('showAuthorArticlesFiltered', "'" + esc(authorName) + "'");
   h += '<div id="article-container"></div>';
   mc.innerHTML = h;
