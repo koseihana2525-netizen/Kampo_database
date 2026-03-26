@@ -2300,6 +2300,129 @@
                 "Cough"
               ],
               "v2_mapping": "症候 > その他 > 咳・痰"
+            },
+            {
+              "id": "SX_nausea_vomiting",
+              "name_ja": "悪心・嘔吐",
+              "name_en": "Nausea / Vomiting",
+              "keywords_ja": [
+                "悪心",
+                "嘔吐",
+                "吐き気",
+                "吐気"
+              ],
+              "keywords_en": [
+                "nausea",
+                "vomiting",
+                "emesis",
+                "antiemetic"
+              ],
+              "mesh_terms": [
+                "Nausea",
+                "Vomiting"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "SX_pruritus",
+              "name_ja": "掻痒",
+              "name_en": "Pruritus / Itching",
+              "keywords_ja": [
+                "掻痒",
+                "かゆみ",
+                "痒み"
+              ],
+              "keywords_en": [
+                "pruritus",
+                "itching",
+                "itch"
+              ],
+              "mesh_terms": [
+                "Pruritus"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "SX_sweating",
+              "name_ja": "発汗・盗汗",
+              "name_en": "Sweating / Night sweats",
+              "keywords_ja": [
+                "発汗",
+                "盗汗",
+                "多汗",
+                "寝汗",
+                "汗"
+              ],
+              "keywords_en": [
+                "sweating",
+                "night sweat",
+                "hyperhidrosis",
+                "diaphoresis"
+              ],
+              "mesh_terms": [
+                "Sweating",
+                "Hyperhidrosis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "SX_dyspnea",
+              "name_ja": "呼吸困難",
+              "name_en": "Dyspnea",
+              "keywords_ja": [
+                "呼吸困難",
+                "息切れ",
+                "息苦しい"
+              ],
+              "keywords_en": [
+                "dyspnea",
+                "breathlessness",
+                "shortness of breath"
+              ],
+              "mesh_terms": [
+                "Dyspnea"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "SX_dry_mouth",
+              "name_ja": "口渇",
+              "name_en": "Dry mouth / Thirst",
+              "keywords_ja": [
+                "口渇",
+                "口乾",
+                "口内乾燥",
+                "口の渇き"
+              ],
+              "keywords_en": [
+                "dry mouth",
+                "xerostomia",
+                "thirst"
+              ],
+              "mesh_terms": [
+                "Xerostomia"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "SX_numbness",
+              "name_ja": "しびれ",
+              "name_en": "Numbness / Paresthesia",
+              "keywords_ja": [
+                "しびれ",
+                "痺れ",
+                "知覚異常"
+              ],
+              "keywords_en": [
+                "numbness",
+                "paresthesia",
+                "tingling"
+              ],
+              "mesh_terms": [
+                "Paresthesia",
+                "Hypesthesia"
+              ],
+              "v2_mapping": null
             }
           ]
         }
