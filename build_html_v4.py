@@ -443,6 +443,23 @@ function renderAxisChapters(mc, axisType) {
   const meta = AXIS_META[axisType];
   const chapters = DB.axis_chapters[axisType] || [];
   let h = '<div class="section-title">' + meta.icon + ' ' + meta.label + ' / ' + meta.labelEn + '</div>';
+
+  // グループが1つだけの場合（symptom等）は直接タグクラウド表示
+  if (chapters.length === 1) {
+    const ch = chapters[0];
+    const sorted = ch.leaves.map(lid => ({id:lid, ja:tagJa(lid), en:tagEn(lid), cnt:filterIndices(DB.ai[lid]||[]).length}))
+      .sort((a,b) => b.cnt - a.cnt);
+    h += '<div class="tag-cloud">';
+    sorted.forEach(t => {
+      const size = Math.max(13, Math.min(22, 13 + Math.log2(t.cnt+1)*1.5));
+      h += '<span class="tag-pill" style="font-size:' + size.toFixed(0) + 'px;" onclick="showTagArticles(\'' + t.id + '\')">' + t.ja + ' / ' + t.en + '<span class="cnt">' + t.cnt + '</span></span>';
+    });
+    h += '</div>';
+    mc.innerHTML = h;
+    return;
+  }
+
+  // 複数グループの場合はカード表示（disease等）
   h += '<div class="cat-grid">';
   chapters.forEach(ch => {
     let total = 0;

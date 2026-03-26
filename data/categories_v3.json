@@ -19,9 +19,23 @@
               "icd11_code": "CA00-CA02",
               "name_ja": "感冒",
               "name_en": "Common cold",
-              "keywords_ja": ["感冒", "風邪", "上気道炎", "インフルエンザ"],
-              "keywords_en": ["common cold", "upper respiratory infection", "influenza", "pharyngitis", "acute nasopharyngitis"],
-              "mesh_terms": ["Common Cold", "Influenza, Human"],
+              "keywords_ja": [
+                "感冒",
+                "風邪",
+                "上気道炎",
+                "インフルエンザ"
+              ],
+              "keywords_en": [
+                "common cold",
+                "upper respiratory infection",
+                "influenza",
+                "pharyngitis",
+                "acute nasopharyngitis"
+              ],
+              "mesh_terms": [
+                "Common Cold",
+                "Influenza, Human"
+              ],
               "v2_mapping": "I 感染症 > 感冒"
             },
             {
@@ -29,9 +43,17 @@
               "icd11_code": "1E30-1E32",
               "name_ja": "インフルエンザ",
               "name_en": "Influenza",
-              "keywords_ja": ["インフルエンザ"],
-              "keywords_en": ["influenza", "flu", "influenza virus"],
-              "mesh_terms": ["Influenza, Human"],
+              "keywords_ja": [
+                "インフルエンザ"
+              ],
+              "keywords_en": [
+                "influenza",
+                "flu",
+                "influenza virus"
+              ],
+              "mesh_terms": [
+                "Influenza, Human"
+              ],
               "v2_mapping": "I 感染症 > 感冒"
             },
             {
@@ -39,9 +61,23 @@
               "icd11_code": "RA01",
               "name_ja": "COVID-19",
               "name_en": "COVID-19",
-              "keywords_ja": ["COVID-19", "新型コロナ", "SARS-CoV-2", "コロナウイルス"],
-              "keywords_en": ["COVID-19", "SARS-CoV-2", "coronavirus", "post-COVID", "long COVID"],
-              "mesh_terms": ["COVID-19", "SARS-CoV-2"],
+              "keywords_ja": [
+                "COVID-19",
+                "新型コロナ",
+                "SARS-CoV-2",
+                "コロナウイルス"
+              ],
+              "keywords_en": [
+                "COVID-19",
+                "SARS-CoV-2",
+                "coronavirus",
+                "post-COVID",
+                "long COVID"
+              ],
+              "mesh_terms": [
+                "COVID-19",
+                "SARS-CoV-2"
+              ],
               "v2_mapping": null
             },
             {
@@ -49,9 +85,17 @@
               "icd11_code": "1E91",
               "name_ja": "帯状疱疹",
               "name_en": "Herpes zoster",
-              "keywords_ja": ["帯状疱疹"],
-              "keywords_en": ["herpes zoster", "shingles", "postherpetic neuralgia"],
-              "mesh_terms": ["Herpes Zoster"],
+              "keywords_ja": [
+                "帯状疱疹"
+              ],
+              "keywords_en": [
+                "herpes zoster",
+                "shingles",
+                "postherpetic neuralgia"
+              ],
+              "mesh_terms": [
+                "Herpes Zoster"
+              ],
               "v2_mapping": "I 感染症 > 帯状疱疹"
             }
           ]
@@ -67,9 +111,23 @@
               "icd11_code": null,
               "name_ja": "化学療法支持",
               "name_en": "Chemotherapy support",
-              "keywords_ja": ["化学療法", "抗がん剤"],
-              "keywords_en": ["chemotherapy", "chemotherapy-induced", "supportive care", "CINV", "anticancer", "anti-cancer", "chemo-"],
-              "mesh_terms": ["Antineoplastic Agents", "Drug Therapy"],
+              "keywords_ja": [
+                "化学療法",
+                "抗がん剤"
+              ],
+              "keywords_en": [
+                "chemotherapy",
+                "chemotherapy-induced",
+                "supportive care",
+                "CINV",
+                "anticancer",
+                "anti-cancer",
+                "chemo-"
+              ],
+              "mesh_terms": [
+                "Antineoplastic Agents",
+                "Drug Therapy"
+              ],
               "v2_mapping": "II 悪性腫瘍 > 化学療法支持"
             },
             {
@@ -77,9 +135,26 @@
               "icd11_code": "2B50-2B6Z",
               "name_ja": "消化器癌",
               "name_en": "GI cancer",
-              "keywords_ja": ["胃癌", "大腸癌", "肝癌"],
-              "keywords_en": ["gastric cancer", "colorectal cancer", "colon cancer", "hepatocellular carcinoma", "pancreatic cancer", "esophageal cancer", "liver cancer"],
-              "mesh_terms": ["Stomach Neoplasms", "Colorectal Neoplasms", "Liver Neoplasms", "Pancreatic Neoplasms"],
+              "keywords_ja": [
+                "胃癌",
+                "大腸癌",
+                "肝癌"
+              ],
+              "keywords_en": [
+                "gastric cancer",
+                "colorectal cancer",
+                "colon cancer",
+                "hepatocellular carcinoma",
+                "pancreatic cancer",
+                "esophageal cancer",
+                "liver cancer"
+              ],
+              "mesh_terms": [
+                "Stomach Neoplasms",
+                "Colorectal Neoplasms",
+                "Liver Neoplasms",
+                "Pancreatic Neoplasms"
+              ],
               "v2_mapping": "II 悪性腫瘍 > 消化器癌"
             },
             {
@@ -87,9 +162,29 @@
               "icd11_code": "2-",
               "name_ja": "その他腫瘍",
               "name_en": "Other neoplasms",
-              "keywords_ja": ["癌", "がん", "腫瘍", "白血病"],
-              "keywords_en": ["cancer", "tumor", "tumour", "carcinoma", "neoplasm", "leukemia", "lymphoma", "sarcoma", "malignant", "oncolog", "antitumor", "anti-tumor"],
-              "mesh_terms": ["Neoplasms"],
+              "keywords_ja": [
+                "癌",
+                "がん",
+                "腫瘍",
+                "白血病"
+              ],
+              "keywords_en": [
+                "cancer",
+                "tumor",
+                "tumour",
+                "carcinoma",
+                "neoplasm",
+                "leukemia",
+                "lymphoma",
+                "sarcoma",
+                "malignant",
+                "oncolog",
+                "antitumor",
+                "anti-tumor"
+              ],
+              "mesh_terms": [
+                "Neoplasms"
+              ],
               "v2_mapping": "II 悪性腫瘍 > その他腫瘍"
             }
           ]
@@ -105,9 +200,19 @@
               "icd11_code": "CA08",
               "name_ja": "アレルギー性鼻炎",
               "name_en": "Allergic rhinitis",
-              "keywords_ja": ["アレルギー性鼻炎", "花粉症"],
-              "keywords_en": ["allergic rhinitis", "hay fever", "pollinosis", "nasal allergy"],
-              "mesh_terms": ["Rhinitis, Allergic"],
+              "keywords_ja": [
+                "アレルギー性鼻炎",
+                "花粉症"
+              ],
+              "keywords_en": [
+                "allergic rhinitis",
+                "hay fever",
+                "pollinosis",
+                "nasal allergy"
+              ],
+              "mesh_terms": [
+                "Rhinitis, Allergic"
+              ],
               "v2_mapping": "VIII 耳鼻咽喉 > アレルギー性鼻炎"
             }
           ]
@@ -123,9 +228,22 @@
               "icd11_code": "5A10-5A14",
               "name_ja": "糖尿病",
               "name_en": "Diabetes mellitus",
-              "keywords_ja": ["糖尿病"],
-              "keywords_en": ["diabetes", "diabetic", "hyperglycemia", "insulin resistance", "blood glucose", "HbA1c", "type 2 diabetes"],
-              "mesh_terms": ["Diabetes Mellitus", "Diabetes Mellitus, Type 2"],
+              "keywords_ja": [
+                "糖尿病"
+              ],
+              "keywords_en": [
+                "diabetes",
+                "diabetic",
+                "hyperglycemia",
+                "insulin resistance",
+                "blood glucose",
+                "HbA1c",
+                "type 2 diabetes"
+              ],
+              "mesh_terms": [
+                "Diabetes Mellitus",
+                "Diabetes Mellitus, Type 2"
+              ],
               "v2_mapping": "IV 内分泌・代謝 > 糖尿病"
             },
             {
@@ -133,9 +251,20 @@
               "icd11_code": "5A00-5A0Z",
               "name_ja": "甲状腺疾患",
               "name_en": "Thyroid disorders",
-              "keywords_ja": ["甲状腺", "バセドウ"],
-              "keywords_en": ["thyroid", "graves", "hyperthyroidism", "hypothyroidism"],
-              "mesh_terms": ["Thyroid Diseases", "Graves Disease"],
+              "keywords_ja": [
+                "甲状腺",
+                "バセドウ"
+              ],
+              "keywords_en": [
+                "thyroid",
+                "graves",
+                "hyperthyroidism",
+                "hypothyroidism"
+              ],
+              "mesh_terms": [
+                "Thyroid Diseases",
+                "Graves Disease"
+              ],
               "v2_mapping": "IV 内分泌・代謝 > 甲状腺"
             },
             {
@@ -143,9 +272,23 @@
               "icd11_code": "5B80-5B81",
               "name_ja": "肥満",
               "name_en": "Obesity",
-              "keywords_ja": ["肥満", "メタボリックシンドローム", "体重減少"],
-              "keywords_en": ["obesity", "overweight", "metabolic syndrome", "weight loss", "body mass index", "BMI"],
-              "mesh_terms": ["Obesity", "Metabolic Syndrome"],
+              "keywords_ja": [
+                "肥満",
+                "メタボリックシンドローム",
+                "体重減少"
+              ],
+              "keywords_en": [
+                "obesity",
+                "overweight",
+                "metabolic syndrome",
+                "weight loss",
+                "body mass index",
+                "BMI"
+              ],
+              "mesh_terms": [
+                "Obesity",
+                "Metabolic Syndrome"
+              ],
               "v2_mapping": null
             },
             {
@@ -153,9 +296,23 @@
               "icd11_code": "5C80",
               "name_ja": "脂質異常症",
               "name_en": "Dyslipidemia",
-              "keywords_ja": ["脂質異常症", "高脂血症", "高コレステロール"],
-              "keywords_en": ["dyslipidemia", "hyperlipidemia", "hypercholesterolemia", "cholesterol", "triglyceride", "lipid metabolism"],
-              "mesh_terms": ["Dyslipidemias", "Hypercholesterolemia"],
+              "keywords_ja": [
+                "脂質異常症",
+                "高脂血症",
+                "高コレステロール"
+              ],
+              "keywords_en": [
+                "dyslipidemia",
+                "hyperlipidemia",
+                "hypercholesterolemia",
+                "cholesterol",
+                "triglyceride",
+                "lipid metabolism"
+              ],
+              "mesh_terms": [
+                "Dyslipidemias",
+                "Hypercholesterolemia"
+              ],
               "v2_mapping": null
             }
           ]
@@ -171,9 +328,20 @@
               "icd11_code": "6A70-6A73",
               "name_ja": "うつ",
               "name_en": "Depression",
-              "keywords_ja": ["うつ", "抑うつ"],
-              "keywords_en": ["depression", "depressive", "antidepressant", "major depressive"],
-              "mesh_terms": ["Depression", "Depressive Disorder"],
+              "keywords_ja": [
+                "うつ",
+                "抑うつ"
+              ],
+              "keywords_en": [
+                "depression",
+                "depressive",
+                "antidepressant",
+                "major depressive"
+              ],
+              "mesh_terms": [
+                "Depression",
+                "Depressive Disorder"
+              ],
               "v2_mapping": "V 精神・行動 > うつ"
             },
             {
@@ -181,9 +349,20 @@
               "icd11_code": "6B00-6B0Z",
               "name_ja": "不安障害",
               "name_en": "Anxiety disorders",
-              "keywords_ja": ["不安障害", "パニック障害"],
-              "keywords_en": ["anxiety", "panic disorder", "anxiolytic", "generalized anxiety"],
-              "mesh_terms": ["Anxiety Disorders", "Panic Disorder"],
+              "keywords_ja": [
+                "不安障害",
+                "パニック障害"
+              ],
+              "keywords_en": [
+                "anxiety",
+                "panic disorder",
+                "anxiolytic",
+                "generalized anxiety"
+              ],
+              "mesh_terms": [
+                "Anxiety Disorders",
+                "Panic Disorder"
+              ],
               "v2_mapping": "V 精神・行動 > 不安障害"
             },
             {
@@ -191,9 +370,25 @@
               "icd11_code": "6D80-6D86",
               "name_ja": "認知症",
               "name_en": "Dementia",
-              "keywords_ja": ["認知症", "BPSD", "アルツハイマー", "せん妄"],
-              "keywords_en": ["dementia", "alzheimer", "cognitive impairment", "BPSD", "delirium", "cognitive decline", "neurodegener"],
-              "mesh_terms": ["Dementia", "Alzheimer Disease"],
+              "keywords_ja": [
+                "認知症",
+                "BPSD",
+                "アルツハイマー",
+                "せん妄"
+              ],
+              "keywords_en": [
+                "dementia",
+                "alzheimer",
+                "cognitive impairment",
+                "BPSD",
+                "delirium",
+                "cognitive decline",
+                "neurodegener"
+              ],
+              "mesh_terms": [
+                "Dementia",
+                "Alzheimer Disease"
+              ],
               "v2_mapping": "V 精神・行動 > 認知症"
             }
           ]
@@ -209,9 +404,21 @@
               "icd11_code": "8B89.0",
               "name_ja": "顔面神経麻痺",
               "name_en": "Facial nerve palsy",
-              "keywords_ja": ["顔面神経麻痺", "ベル麻痺", "顔面麻痺"],
-              "keywords_en": ["facial palsy", "facial paralysis", "Bell palsy", "facial nerve"],
-              "mesh_terms": ["Facial Paralysis", "Bell Palsy"],
+              "keywords_ja": [
+                "顔面神経麻痺",
+                "ベル麻痺",
+                "顔面麻痺"
+              ],
+              "keywords_en": [
+                "facial palsy",
+                "facial paralysis",
+                "Bell palsy",
+                "facial nerve"
+              ],
+              "mesh_terms": [
+                "Facial Paralysis",
+                "Bell Palsy"
+              ],
               "v2_mapping": null
             },
             {
@@ -219,9 +426,25 @@
               "icd11_code": "8B00-8B2Z",
               "name_ja": "脳卒中",
               "name_en": "Stroke",
-              "keywords_ja": ["脳卒中", "脳梗塞", "脳出血", "脳血管障害"],
-              "keywords_en": ["stroke", "cerebral infarction", "cerebrovascular", "cerebral hemorrhage", "brain ischemia", "hemiplegia"],
-              "mesh_terms": ["Stroke", "Brain Ischemia", "Cerebral Hemorrhage"],
+              "keywords_ja": [
+                "脳卒中",
+                "脳梗塞",
+                "脳出血",
+                "脳血管障害"
+              ],
+              "keywords_en": [
+                "stroke",
+                "cerebral infarction",
+                "cerebrovascular",
+                "cerebral hemorrhage",
+                "brain ischemia",
+                "hemiplegia"
+              ],
+              "mesh_terms": [
+                "Stroke",
+                "Brain Ischemia",
+                "Cerebral Hemorrhage"
+              ],
               "v2_mapping": null
             },
             {
@@ -229,9 +452,20 @@
               "icd11_code": "8A60-8A6Z",
               "name_ja": "てんかん",
               "name_en": "Epilepsy",
-              "keywords_ja": ["てんかん", "痙攣"],
-              "keywords_en": ["epilepsy", "seizure", "anticonvulsant", "antiepileptic"],
-              "mesh_terms": ["Epilepsy", "Seizures"],
+              "keywords_ja": [
+                "てんかん",
+                "痙攣"
+              ],
+              "keywords_en": [
+                "epilepsy",
+                "seizure",
+                "anticonvulsant",
+                "antiepileptic"
+              ],
+              "mesh_terms": [
+                "Epilepsy",
+                "Seizures"
+              ],
               "v2_mapping": null
             }
           ]
@@ -247,9 +481,21 @@
               "icd11_code": "AB52",
               "name_ja": "耳鳴・難聴",
               "name_en": "Tinnitus / Hearing loss",
-              "keywords_ja": ["耳鳴", "難聴", "突発性難聴"],
-              "keywords_en": ["tinnitus", "hearing loss", "sudden deafness", "sensorineural"],
-              "mesh_terms": ["Tinnitus", "Hearing Loss"],
+              "keywords_ja": [
+                "耳鳴",
+                "難聴",
+                "突発性難聴"
+              ],
+              "keywords_en": [
+                "tinnitus",
+                "hearing loss",
+                "sudden deafness",
+                "sensorineural"
+              ],
+              "mesh_terms": [
+                "Tinnitus",
+                "Hearing Loss"
+              ],
               "v2_mapping": "VIII 耳鼻咽喉 > 耳鳴・難聴"
             },
             {
@@ -257,9 +503,20 @@
               "icd11_code": "CA0D",
               "name_ja": "咽喉頭疾患",
               "name_en": "Pharyngeal disorders",
-              "keywords_ja": ["咽頭", "梅核気"],
-              "keywords_en": ["pharynx", "larynx", "globus", "throat", "pharyngeal"],
-              "mesh_terms": ["Pharyngeal Diseases"],
+              "keywords_ja": [
+                "咽頭",
+                "梅核気"
+              ],
+              "keywords_en": [
+                "pharynx",
+                "larynx",
+                "globus",
+                "throat",
+                "pharyngeal"
+              ],
+              "mesh_terms": [
+                "Pharyngeal Diseases"
+              ],
               "v2_mapping": "VIII 耳鼻咽喉 > 咽喉頭"
             }
           ]
@@ -275,9 +532,19 @@
               "icd11_code": "BA00-BA0Z",
               "name_ja": "高血圧",
               "name_en": "Hypertension",
-              "keywords_ja": ["高血圧", "血圧"],
-              "keywords_en": ["hypertension", "high blood pressure", "antihypertensive", "blood pressure"],
-              "mesh_terms": ["Hypertension"],
+              "keywords_ja": [
+                "高血圧",
+                "血圧"
+              ],
+              "keywords_en": [
+                "hypertension",
+                "high blood pressure",
+                "antihypertensive",
+                "blood pressure"
+              ],
+              "mesh_terms": [
+                "Hypertension"
+              ],
               "v2_mapping": null
             }
           ]
@@ -293,9 +560,18 @@
               "icd11_code": "CA23",
               "name_ja": "喘息",
               "name_en": "Asthma",
-              "keywords_ja": ["喘息", "気管支喘息"],
-              "keywords_en": ["asthma", "bronchial asthma", "wheezing"],
-              "mesh_terms": ["Asthma"],
+              "keywords_ja": [
+                "喘息",
+                "気管支喘息"
+              ],
+              "keywords_en": [
+                "asthma",
+                "bronchial asthma",
+                "wheezing"
+              ],
+              "mesh_terms": [
+                "Asthma"
+              ],
               "v2_mapping": "X 呼吸器 > 喘息"
             },
             {
@@ -303,9 +579,20 @@
               "icd11_code": "CB01",
               "name_ja": "咳嗽",
               "name_en": "Cough",
-              "keywords_ja": ["咳嗽", "喀痰", "慢性咳嗽"],
-              "keywords_en": ["cough", "chronic cough", "sputum", "antitussive"],
-              "mesh_terms": ["Cough"],
+              "keywords_ja": [
+                "咳嗽",
+                "喀痰",
+                "慢性咳嗽"
+              ],
+              "keywords_en": [
+                "cough",
+                "chronic cough",
+                "sputum",
+                "antitussive"
+              ],
+              "mesh_terms": [
+                "Cough"
+              ],
               "v2_mapping": "X 呼吸器 > 咳嗽"
             },
             {
@@ -313,9 +600,18 @@
               "icd11_code": "CB04",
               "name_ja": "間質性肺炎",
               "name_en": "Interstitial lung disease",
-              "keywords_ja": ["間質性肺炎"],
-              "keywords_en": ["interstitial pneumonia", "interstitial lung", "pulmonary fibrosis", "drug-induced pneumonitis"],
-              "mesh_terms": ["Lung Diseases, Interstitial"],
+              "keywords_ja": [
+                "間質性肺炎"
+              ],
+              "keywords_en": [
+                "interstitial pneumonia",
+                "interstitial lung",
+                "pulmonary fibrosis",
+                "drug-induced pneumonitis"
+              ],
+              "mesh_terms": [
+                "Lung Diseases, Interstitial"
+              ],
               "v2_mapping": "X 呼吸器 > 間質性肺炎"
             },
             {
@@ -323,9 +619,19 @@
               "icd11_code": "CA22",
               "name_ja": "COPD",
               "name_en": "COPD",
-              "keywords_ja": ["COPD", "気管支炎"],
-              "keywords_en": ["COPD", "chronic obstructive", "bronchitis", "emphysema"],
-              "mesh_terms": ["Pulmonary Disease, Chronic Obstructive"],
+              "keywords_ja": [
+                "COPD",
+                "気管支炎"
+              ],
+              "keywords_en": [
+                "COPD",
+                "chronic obstructive",
+                "bronchitis",
+                "emphysema"
+              ],
+              "mesh_terms": [
+                "Pulmonary Disease, Chronic Obstructive"
+              ],
               "v2_mapping": "X 呼吸器 > COPD"
             }
           ]
@@ -341,9 +647,24 @@
               "icd11_code": "DA40-DA44",
               "name_ja": "胃炎・FD",
               "name_en": "Gastritis / Functional dyspepsia",
-              "keywords_ja": ["胃炎", "FD", "胃もたれ", "心窩部"],
-              "keywords_en": ["gastritis", "functional dyspepsia", "dyspepsia", "epigastric", "gastroparesis", "stomach"],
-              "mesh_terms": ["Gastritis", "Dyspepsia"],
+              "keywords_ja": [
+                "胃炎",
+                "FD",
+                "胃もたれ",
+                "心窩部"
+              ],
+              "keywords_en": [
+                "gastritis",
+                "functional dyspepsia",
+                "dyspepsia",
+                "epigastric",
+                "gastroparesis",
+                "stomach"
+              ],
+              "mesh_terms": [
+                "Gastritis",
+                "Dyspepsia"
+              ],
               "v2_mapping": "XI 消化器 > 胃炎・FD"
             },
             {
@@ -351,9 +672,19 @@
               "icd11_code": "DA22",
               "name_ja": "逆流性食道炎",
               "name_en": "GERD",
-              "keywords_ja": ["GERD", "胸やけ"],
-              "keywords_en": ["GERD", "gastroesophageal reflux", "heartburn", "reflux esophagitis"],
-              "mesh_terms": ["Gastroesophageal Reflux"],
+              "keywords_ja": [
+                "GERD",
+                "胸やけ"
+              ],
+              "keywords_en": [
+                "GERD",
+                "gastroesophageal reflux",
+                "heartburn",
+                "reflux esophagitis"
+              ],
+              "mesh_terms": [
+                "Gastroesophageal Reflux"
+              ],
               "v2_mapping": "XI 消化器 > 逆流性食道炎"
             },
             {
@@ -361,9 +692,28 @@
               "icd11_code": "DB90-DB9Z",
               "name_ja": "肝疾患",
               "name_en": "Liver diseases",
-              "keywords_ja": ["肝炎", "肝硬変", "肝障害", "肝機能"],
-              "keywords_en": ["hepatitis", "liver cirrhosis", "liver disease", "liver injury", "hepatic", "hepatoprotect", "liver fibrosis", "fatty liver", "NAFLD", "NASH"],
-              "mesh_terms": ["Liver Diseases", "Hepatitis"],
+              "keywords_ja": [
+                "肝炎",
+                "肝硬変",
+                "肝障害",
+                "肝機能"
+              ],
+              "keywords_en": [
+                "hepatitis",
+                "liver cirrhosis",
+                "liver disease",
+                "liver injury",
+                "hepatic",
+                "hepatoprotect",
+                "liver fibrosis",
+                "fatty liver",
+                "NAFLD",
+                "NASH"
+              ],
+              "mesh_terms": [
+                "Liver Diseases",
+                "Hepatitis"
+              ],
               "v2_mapping": "XI 消化器 > 肝疾患"
             },
             {
@@ -371,9 +721,22 @@
               "icd11_code": "DD70-DD7Z",
               "name_ja": "IBD",
               "name_en": "Inflammatory bowel disease",
-              "keywords_ja": ["クローン", "潰瘍性大腸炎"],
-              "keywords_en": ["crohn", "ulcerative colitis", "inflammatory bowel", "IBD", "colitis"],
-              "mesh_terms": ["Inflammatory Bowel Diseases", "Colitis, Ulcerative", "Crohn Disease"],
+              "keywords_ja": [
+                "クローン",
+                "潰瘍性大腸炎"
+              ],
+              "keywords_en": [
+                "crohn",
+                "ulcerative colitis",
+                "inflammatory bowel",
+                "IBD",
+                "colitis"
+              ],
+              "mesh_terms": [
+                "Inflammatory Bowel Diseases",
+                "Colitis, Ulcerative",
+                "Crohn Disease"
+              ],
               "v2_mapping": "XI 消化器 > IBD"
             },
             {
@@ -381,9 +744,17 @@
               "icd11_code": "DD91.0",
               "name_ja": "IBS",
               "name_en": "Irritable bowel syndrome",
-              "keywords_ja": ["過敏性腸", "IBS"],
-              "keywords_en": ["irritable bowel", "IBS"],
-              "mesh_terms": ["Irritable Bowel Syndrome"],
+              "keywords_ja": [
+                "過敏性腸",
+                "IBS"
+              ],
+              "keywords_en": [
+                "irritable bowel",
+                "IBS"
+              ],
+              "mesh_terms": [
+                "Irritable Bowel Syndrome"
+              ],
               "v2_mapping": "XI 消化器 > IBS"
             },
             {
@@ -391,9 +762,21 @@
               "icd11_code": "DC30",
               "name_ja": "イレウス",
               "name_en": "Ileus",
-              "keywords_ja": ["イレウス", "腸閉塞"],
-              "keywords_en": ["ileus", "bowel obstruction", "intestinal obstruction", "postoperative ileus", "paralytic ileus"],
-              "mesh_terms": ["Ileus", "Intestinal Obstruction"],
+              "keywords_ja": [
+                "イレウス",
+                "腸閉塞"
+              ],
+              "keywords_en": [
+                "ileus",
+                "bowel obstruction",
+                "intestinal obstruction",
+                "postoperative ileus",
+                "paralytic ileus"
+              ],
+              "mesh_terms": [
+                "Ileus",
+                "Intestinal Obstruction"
+              ],
               "v2_mapping": "XI 消化器 > イレウス"
             },
             {
@@ -401,9 +784,30 @@
               "icd11_code": "DA00-DA0Z",
               "name_ja": "口腔疾患",
               "name_en": "Oral diseases",
-              "keywords_ja": ["口内炎", "口腔", "嚥下", "口渇", "舌痛"],
-              "keywords_en": ["stomatitis", "oral mucositis", "oral ulcer", "dysphagia", "xerostomia", "dry mouth", "glossodynia", "glossalgia", "mouth ulcer", "oral candidiasis"],
-              "mesh_terms": ["Stomatitis", "Deglutition Disorders", "Xerostomia"],
+              "keywords_ja": [
+                "口内炎",
+                "口腔",
+                "嚥下",
+                "口渇",
+                "舌痛"
+              ],
+              "keywords_en": [
+                "stomatitis",
+                "oral mucositis",
+                "oral ulcer",
+                "dysphagia",
+                "xerostomia",
+                "dry mouth",
+                "glossodynia",
+                "glossalgia",
+                "mouth ulcer",
+                "oral candidiasis"
+              ],
+              "mesh_terms": [
+                "Stomatitis",
+                "Deglutition Disorders",
+                "Xerostomia"
+              ],
               "v2_mapping": "症候 > その他 > 口腔・舌"
             }
           ]
@@ -419,9 +823,17 @@
               "icd11_code": "EA80",
               "name_ja": "アトピー性皮膚炎",
               "name_en": "Atopic dermatitis",
-              "keywords_ja": ["アトピー"],
-              "keywords_en": ["atopic dermatitis", "atopic eczema", "eczema"],
-              "mesh_terms": ["Dermatitis, Atopic"],
+              "keywords_ja": [
+                "アトピー"
+              ],
+              "keywords_en": [
+                "atopic dermatitis",
+                "atopic eczema",
+                "eczema"
+              ],
+              "mesh_terms": [
+                "Dermatitis, Atopic"
+              ],
               "v2_mapping": "XII 皮膚 > アトピー"
             },
             {
@@ -429,9 +841,16 @@
               "icd11_code": "EB05",
               "name_ja": "蕁麻疹",
               "name_en": "Urticaria",
-              "keywords_ja": ["蕁麻疹"],
-              "keywords_en": ["urticaria", "hives"],
-              "mesh_terms": ["Urticaria"],
+              "keywords_ja": [
+                "蕁麻疹"
+              ],
+              "keywords_en": [
+                "urticaria",
+                "hives"
+              ],
+              "mesh_terms": [
+                "Urticaria"
+              ],
               "v2_mapping": "XII 皮膚 > 蕁麻疹"
             },
             {
@@ -439,9 +858,15 @@
               "icd11_code": "EA90",
               "name_ja": "乾癬",
               "name_en": "Psoriasis",
-              "keywords_ja": ["乾癬"],
-              "keywords_en": ["psoriasis"],
-              "mesh_terms": ["Psoriasis"],
+              "keywords_ja": [
+                "乾癬"
+              ],
+              "keywords_en": [
+                "psoriasis"
+              ],
+              "mesh_terms": [
+                "Psoriasis"
+              ],
               "v2_mapping": "XII 皮膚 > 乾癬"
             },
             {
@@ -449,9 +874,18 @@
               "icd11_code": "EC90",
               "name_ja": "掻痒症",
               "name_en": "Pruritus",
-              "keywords_ja": ["掻痒", "かゆみ"],
-              "keywords_en": ["pruritus", "itch", "itching"],
-              "mesh_terms": ["Pruritus"],
+              "keywords_ja": [
+                "掻痒",
+                "かゆみ"
+              ],
+              "keywords_en": [
+                "pruritus",
+                "itch",
+                "itching"
+              ],
+              "mesh_terms": [
+                "Pruritus"
+              ],
               "v2_mapping": "XII 皮膚 > 掻痒症"
             }
           ]
@@ -467,9 +901,17 @@
               "icd11_code": "FA20",
               "name_ja": "関節リウマチ",
               "name_en": "Rheumatoid arthritis",
-              "keywords_ja": ["関節リウマチ", "リウマチ"],
-              "keywords_en": ["rheumatoid arthritis", "rheumatoid"],
-              "mesh_terms": ["Arthritis, Rheumatoid"],
+              "keywords_ja": [
+                "関節リウマチ",
+                "リウマチ"
+              ],
+              "keywords_en": [
+                "rheumatoid arthritis",
+                "rheumatoid"
+              ],
+              "mesh_terms": [
+                "Arthritis, Rheumatoid"
+              ],
               "v2_mapping": "XIII 筋骨格 > 関節リウマチ"
             },
             {
@@ -477,9 +919,17 @@
               "icd11_code": "FA00-FA02",
               "name_ja": "変形性関節症",
               "name_en": "Osteoarthritis",
-              "keywords_ja": ["変形性膝"],
-              "keywords_en": ["osteoarthritis", "knee osteoarthritis", "degenerative joint"],
-              "mesh_terms": ["Osteoarthritis"],
+              "keywords_ja": [
+                "変形性膝"
+              ],
+              "keywords_en": [
+                "osteoarthritis",
+                "knee osteoarthritis",
+                "degenerative joint"
+              ],
+              "mesh_terms": [
+                "Osteoarthritis"
+              ],
               "v2_mapping": "XIII 筋骨格 > 変形性関節症"
             },
             {
@@ -487,9 +937,18 @@
               "icd11_code": "ME84",
               "name_ja": "腰痛",
               "name_en": "Low back pain",
-              "keywords_ja": ["腰痛"],
-              "keywords_en": ["low back pain", "lumbago", "lumbar pain", "back pain"],
-              "mesh_terms": ["Low Back Pain"],
+              "keywords_ja": [
+                "腰痛"
+              ],
+              "keywords_en": [
+                "low back pain",
+                "lumbago",
+                "lumbar pain",
+                "back pain"
+              ],
+              "mesh_terms": [
+                "Low Back Pain"
+              ],
               "v2_mapping": "XIII 筋骨格 > 腰痛"
             },
             {
@@ -497,9 +956,15 @@
               "icd11_code": "MG30.0",
               "name_ja": "線維筋痛症",
               "name_en": "Fibromyalgia",
-              "keywords_ja": ["線維筋痛"],
-              "keywords_en": ["fibromyalgia"],
-              "mesh_terms": ["Fibromyalgia"],
+              "keywords_ja": [
+                "線維筋痛"
+              ],
+              "keywords_en": [
+                "fibromyalgia"
+              ],
+              "mesh_terms": [
+                "Fibromyalgia"
+              ],
               "v2_mapping": "XIII 筋骨格 > 線維筋痛症"
             },
             {
@@ -507,9 +972,21 @@
               "icd11_code": "FB50.1",
               "name_ja": "肩関節周囲炎",
               "name_en": "Frozen shoulder",
-              "keywords_ja": ["肩関節周囲炎", "五十肩", "四十肩", "凍結肩"],
-              "keywords_en": ["frozen shoulder", "adhesive capsulitis", "periarthritis of shoulder", "shoulder stiffness"],
-              "mesh_terms": ["Bursitis"],
+              "keywords_ja": [
+                "肩関節周囲炎",
+                "五十肩",
+                "四十肩",
+                "凍結肩"
+              ],
+              "keywords_en": [
+                "frozen shoulder",
+                "adhesive capsulitis",
+                "periarthritis of shoulder",
+                "shoulder stiffness"
+              ],
+              "mesh_terms": [
+                "Bursitis"
+              ],
               "v2_mapping": null
             }
           ]
@@ -525,9 +1002,26 @@
               "icd11_code": "GB60-GB6Z",
               "name_ja": "腎疾患",
               "name_en": "Renal diseases",
-              "keywords_ja": ["腎炎", "ネフローゼ", "CKD", "腎不全"],
-              "keywords_en": ["nephritis", "nephrotic", "CKD", "chronic kidney", "renal failure", "renal disease", "kidney disease", "glomerulonephritis"],
-              "mesh_terms": ["Kidney Diseases", "Renal Insufficiency"],
+              "keywords_ja": [
+                "腎炎",
+                "ネフローゼ",
+                "CKD",
+                "腎不全"
+              ],
+              "keywords_en": [
+                "nephritis",
+                "nephrotic",
+                "CKD",
+                "chronic kidney",
+                "renal failure",
+                "renal disease",
+                "kidney disease",
+                "glomerulonephritis"
+              ],
+              "mesh_terms": [
+                "Kidney Diseases",
+                "Renal Insufficiency"
+              ],
               "v2_mapping": "XIV 泌尿・生殖器 > 腎疾患"
             },
             {
@@ -535,9 +1029,18 @@
               "icd11_code": "GC00",
               "name_ja": "膀胱炎",
               "name_en": "Cystitis",
-              "keywords_ja": ["膀胱炎", "尿路感染"],
-              "keywords_en": ["cystitis", "urinary tract infection"],
-              "mesh_terms": ["Cystitis", "Urinary Tract Infections"],
+              "keywords_ja": [
+                "膀胱炎",
+                "尿路感染"
+              ],
+              "keywords_en": [
+                "cystitis",
+                "urinary tract infection"
+              ],
+              "mesh_terms": [
+                "Cystitis",
+                "Urinary Tract Infections"
+              ],
               "v2_mapping": "XIV 泌尿・生殖器 > 膀胱炎"
             },
             {
@@ -545,9 +1048,19 @@
               "icd11_code": "GA80-GA8Z",
               "name_ja": "前立腺疾患",
               "name_en": "Prostatic diseases",
-              "keywords_ja": ["前立腺"],
-              "keywords_en": ["prostate", "prostatic", "BPH", "benign prostatic"],
-              "mesh_terms": ["Prostatic Diseases", "Prostatic Hyperplasia"],
+              "keywords_ja": [
+                "前立腺"
+              ],
+              "keywords_en": [
+                "prostate",
+                "prostatic",
+                "BPH",
+                "benign prostatic"
+              ],
+              "mesh_terms": [
+                "Prostatic Diseases",
+                "Prostatic Hyperplasia"
+              ],
               "v2_mapping": "XIV 泌尿・生殖器 > 前立腺"
             },
             {
@@ -555,9 +1068,19 @@
               "icd11_code": "GB30-GB3Z",
               "name_ja": "不妊",
               "name_en": "Infertility",
-              "keywords_ja": ["不妊"],
-              "keywords_en": ["infertility", "subfertility", "IVF", "in vitro fertilization", "reproductive"],
-              "mesh_terms": ["Infertility"],
+              "keywords_ja": [
+                "不妊"
+              ],
+              "keywords_en": [
+                "infertility",
+                "subfertility",
+                "IVF",
+                "in vitro fertilization",
+                "reproductive"
+              ],
+              "mesh_terms": [
+                "Infertility"
+              ],
               "v2_mapping": "XIV 泌尿・生殖器 > 不妊"
             }
           ]
@@ -570,19 +1093,29 @@
       "name_en": "Symptom Classification",
       "description": "ICD-11 Chapter 21 (Symptoms) aligned + Kampo-specific concepts",
       "groups": {
-        "pain": {
-          "group_id": "pain",
-          "name_ja": "痛み",
-          "name_en": "Pain",
+        "all_symptoms": {
+          "name_ja": "症候・東洋医学的概念",
+          "name_en": "Symptoms & Traditional Medicine Concepts",
           "children": [
             {
               "id": "SX_headache",
               "icd11_code": "MB43",
               "name_ja": "頭痛",
               "name_en": "Headache",
-              "keywords_ja": ["頭痛", "片頭痛"],
-              "keywords_en": ["headache", "migraine", "cephalalgia", "tension-type headache"],
-              "mesh_terms": ["Headache", "Migraine Disorders"],
+              "keywords_ja": [
+                "頭痛",
+                "片頭痛"
+              ],
+              "keywords_en": [
+                "headache",
+                "migraine",
+                "cephalalgia",
+                "tension-type headache"
+              ],
+              "mesh_terms": [
+                "Headache",
+                "Migraine Disorders"
+              ],
               "v2_mapping": "症候 > 痛み > 頭痛"
             },
             {
@@ -590,9 +1123,17 @@
               "icd11_code": "MD81",
               "name_ja": "腹痛",
               "name_en": "Abdominal pain",
-              "keywords_ja": ["腹痛"],
-              "keywords_en": ["abdominal pain", "stomachache", "visceral pain"],
-              "mesh_terms": ["Abdominal Pain"],
+              "keywords_ja": [
+                "腹痛"
+              ],
+              "keywords_en": [
+                "abdominal pain",
+                "stomachache",
+                "visceral pain"
+              ],
+              "mesh_terms": [
+                "Abdominal Pain"
+              ],
               "v2_mapping": "症候 > 痛み > 腹痛"
             },
             {
@@ -600,9 +1141,20 @@
               "icd11_code": "MB40.0",
               "name_ja": "神経痛",
               "name_en": "Neuralgia",
-              "keywords_ja": ["神経痛", "三叉神経痛"],
-              "keywords_en": ["neuralgia", "trigeminal neuralgia", "neuropathic pain", "neuropathy", "peripheral neuropathy"],
-              "mesh_terms": ["Neuralgia"],
+              "keywords_ja": [
+                "神経痛",
+                "三叉神経痛"
+              ],
+              "keywords_en": [
+                "neuralgia",
+                "trigeminal neuralgia",
+                "neuropathic pain",
+                "neuropathy",
+                "peripheral neuropathy"
+              ],
+              "mesh_terms": [
+                "Neuralgia"
+              ],
               "v2_mapping": "症候 > 痛み > 神経痛"
             },
             {
@@ -610,25 +1162,45 @@
               "icd11_code": "MG30",
               "name_ja": "その他疼痛",
               "name_en": "Other pain",
-              "keywords_ja": ["疼痛", "しびれ"],
-              "keywords_en": ["chronic pain", "musculoskeletal pain", "shoulder pain", "neck pain", "pain management", "pain relief", "analgesic effect", "antinociceptive", "knee pain"],
-              "mesh_terms": ["Chronic Pain", "Musculoskeletal Pain"],
+              "keywords_ja": [
+                "疼痛",
+                "しびれ"
+              ],
+              "keywords_en": [
+                "chronic pain",
+                "musculoskeletal pain",
+                "shoulder pain",
+                "neck pain",
+                "pain management",
+                "pain relief",
+                "analgesic effect",
+                "antinociceptive",
+                "knee pain"
+              ],
+              "mesh_terms": [
+                "Chronic Pain",
+                "Musculoskeletal Pain"
+              ],
               "v2_mapping": "症候 > 痛み > その他疼痛"
-            }
-          ]
-        },
-        "general": {
-          "group_id": "general",
-          "name_ja": "全身症状",
-          "name_en": "General symptoms",
-          "children": [
+            },
             {
               "id": "SX_hiesho",
               "icd11_code": null,
               "name_ja": "冷え症",
               "name_en": "Cold sensitivity (hiesho)",
-              "keywords_ja": ["冷え", "冷え症"],
-              "keywords_en": ["cold hypersensitivity", "cold intolerance", "cold sensation", "peripheral circulation", "chilliness", "hiesho", "sensitivity to cold"],
+              "keywords_ja": [
+                "冷え",
+                "冷え症"
+              ],
+              "keywords_en": [
+                "cold hypersensitivity",
+                "cold intolerance",
+                "cold sensation",
+                "peripheral circulation",
+                "chilliness",
+                "hiesho",
+                "sensitivity to cold"
+              ],
               "mesh_terms": [],
               "v2_mapping": "症候 > 全身症状 > 冷え"
             },
@@ -637,9 +1209,22 @@
               "icd11_code": "MG22",
               "name_ja": "倦怠感",
               "name_en": "Fatigue",
-              "keywords_ja": ["倦怠", "疲労", "易疲労"],
-              "keywords_en": ["fatigue", "malaise", "lassitude", "tiredness", "exhaustion", "chronic fatigue"],
-              "mesh_terms": ["Fatigue"],
+              "keywords_ja": [
+                "倦怠",
+                "疲労",
+                "易疲労"
+              ],
+              "keywords_en": [
+                "fatigue",
+                "malaise",
+                "lassitude",
+                "tiredness",
+                "exhaustion",
+                "chronic fatigue"
+              ],
+              "mesh_terms": [
+                "Fatigue"
+              ],
               "v2_mapping": "症候 > 全身症状 > 倦怠感"
             },
             {
@@ -647,9 +1232,20 @@
               "icd11_code": "MG29",
               "name_ja": "浮腫",
               "name_en": "Edema",
-              "keywords_ja": ["浮腫", "むくみ"],
-              "keywords_en": ["edema", "oedema", "swelling", "water retention", "lymphedema"],
-              "mesh_terms": ["Edema"],
+              "keywords_ja": [
+                "浮腫",
+                "むくみ"
+              ],
+              "keywords_en": [
+                "edema",
+                "oedema",
+                "swelling",
+                "water retention",
+                "lymphedema"
+              ],
+              "mesh_terms": [
+                "Edema"
+              ],
               "v2_mapping": "症候 > 全身症状 > 浮腫"
             },
             {
@@ -657,9 +1253,21 @@
               "icd11_code": "ME05",
               "name_ja": "食欲不振",
               "name_en": "Anorexia",
-              "keywords_ja": ["食欲不振", "食欲低下"],
-              "keywords_en": ["anorexia", "appetite loss", "loss of appetite", "poor appetite", "cachexia"],
-              "mesh_terms": ["Anorexia", "Cachexia"],
+              "keywords_ja": [
+                "食欲不振",
+                "食欲低下"
+              ],
+              "keywords_en": [
+                "anorexia",
+                "appetite loss",
+                "loss of appetite",
+                "poor appetite",
+                "cachexia"
+              ],
+              "mesh_terms": [
+                "Anorexia",
+                "Cachexia"
+              ],
               "v2_mapping": "症候 > 全身症状 > 食欲不振"
             },
             {
@@ -667,9 +1275,21 @@
               "icd11_code": "MB48",
               "name_ja": "めまい",
               "name_en": "Dizziness",
-              "keywords_ja": ["めまい", "眩暈", "ふらつき"],
-              "keywords_en": ["dizziness", "vertigo", "lightheadedness", "disequilibrium"],
-              "mesh_terms": ["Dizziness", "Vertigo"],
+              "keywords_ja": [
+                "めまい",
+                "眩暈",
+                "ふらつき"
+              ],
+              "keywords_en": [
+                "dizziness",
+                "vertigo",
+                "lightheadedness",
+                "disequilibrium"
+              ],
+              "mesh_terms": [
+                "Dizziness",
+                "Vertigo"
+              ],
               "v2_mapping": "症候 > 自律神経・精神 > めまい"
             },
             {
@@ -677,8 +1297,15 @@
               "icd11_code": "MC81",
               "name_ja": "動悸",
               "name_en": "Palpitation",
-              "keywords_ja": ["動悸", "自律神経"],
-              "keywords_en": ["palpitation", "autonomic dysfunction", "dysautonomia"],
+              "keywords_ja": [
+                "動悸",
+                "自律神経"
+              ],
+              "keywords_en": [
+                "palpitation",
+                "autonomic dysfunction",
+                "dysautonomia"
+              ],
               "mesh_terms": [],
               "v2_mapping": "症候 > 自律神経・精神 > 動悸"
             },
@@ -687,26 +1314,36 @@
               "icd11_code": "MG40",
               "name_ja": "不眠",
               "name_en": "Insomnia",
-              "keywords_ja": ["不眠", "睡眠障害"],
-              "keywords_en": ["insomnia", "sleep disorder", "sleep disturbance", "sleep quality"],
-              "mesh_terms": ["Sleep Initiation and Maintenance Disorders"],
+              "keywords_ja": [
+                "不眠",
+                "睡眠障害"
+              ],
+              "keywords_en": [
+                "insomnia",
+                "sleep disorder",
+                "sleep disturbance",
+                "sleep quality"
+              ],
+              "mesh_terms": [
+                "Sleep Initiation and Maintenance Disorders"
+              ],
               "v2_mapping": "症候 > 自律神経・精神 > 不眠"
-            }
-          ]
-        },
-        "gi_symptoms": {
-          "group_id": "gi_symptoms",
-          "name_ja": "消化器症状",
-          "name_en": "GI symptoms",
-          "children": [
+            },
             {
               "id": "SX_constipation",
               "icd11_code": "ME04.0",
               "name_ja": "便秘",
               "name_en": "Constipation",
-              "keywords_ja": ["便秘"],
-              "keywords_en": ["constipation", "laxative"],
-              "mesh_terms": ["Constipation"],
+              "keywords_ja": [
+                "便秘"
+              ],
+              "keywords_en": [
+                "constipation",
+                "laxative"
+              ],
+              "mesh_terms": [
+                "Constipation"
+              ],
               "v2_mapping": "症候 > 消化器症状 > 便秘"
             },
             {
@@ -714,42 +1351,61 @@
               "icd11_code": "ME04.1",
               "name_ja": "下痢",
               "name_en": "Diarrhea",
-              "keywords_ja": ["下痢", "軟便"],
-              "keywords_en": ["diarrhea", "diarrhoea", "loose stool"],
-              "mesh_terms": ["Diarrhea"],
+              "keywords_ja": [
+                "下痢",
+                "軟便"
+              ],
+              "keywords_en": [
+                "diarrhea",
+                "diarrhoea",
+                "loose stool"
+              ],
+              "mesh_terms": [
+                "Diarrhea"
+              ],
               "v2_mapping": "症候 > 消化器症状 > 下痢"
-            }
-          ]
-        },
-        "urinary": {
-          "group_id": "urinary",
-          "name_ja": "泌尿器症状",
-          "name_en": "Urinary symptoms",
-          "children": [
+            },
             {
               "id": "SX_urinary_frequency",
               "icd11_code": "MF50",
               "name_ja": "頻尿",
               "name_en": "Urinary frequency",
-              "keywords_ja": ["頻尿", "夜間頻尿", "排尿障害", "過活動膀胱"],
-              "keywords_en": ["urinary frequency", "nocturia", "overactive bladder", "OAB", "lower urinary tract", "LUTS"],
-              "mesh_terms": ["Urinary Bladder, Overactive", "Nocturia"],
+              "keywords_ja": [
+                "頻尿",
+                "夜間頻尿",
+                "排尿障害",
+                "過活動膀胱"
+              ],
+              "keywords_en": [
+                "urinary frequency",
+                "nocturia",
+                "overactive bladder",
+                "OAB",
+                "lower urinary tract",
+                "LUTS"
+              ],
+              "mesh_terms": [
+                "Urinary Bladder, Overactive",
+                "Nocturia"
+              ],
               "v2_mapping": "症候 > 泌尿器症状 > 頻尿"
-            }
-          ]
-        },
-        "kampo_concepts": {
-          "group_id": "kampo_concepts",
-          "name_ja": "漢方病態概念",
-          "name_en": "Kampo pathological concepts",
-          "children": [
+            },
             {
               "id": "SX_qi_deficiency",
               "icd11_code": null,
               "name_ja": "気虚",
               "name_en": "Qi deficiency",
-              "keywords_ja": ["気虚", "気力低下", "元気がない"],
-              "keywords_en": ["qi deficiency", "ki-kyo", "vital energy deficiency", "qi xu"],
+              "keywords_ja": [
+                "気虚",
+                "気力低下",
+                "元気がない"
+              ],
+              "keywords_en": [
+                "qi deficiency",
+                "ki-kyo",
+                "vital energy deficiency",
+                "qi xu"
+              ],
               "mesh_terms": [],
               "v2_mapping": null
             },
@@ -758,8 +1414,17 @@
               "icd11_code": null,
               "name_ja": "瘀血",
               "name_en": "Blood stasis (oketsu)",
-              "keywords_ja": ["瘀血", "おけつ", "駆瘀血"],
-              "keywords_en": ["blood stasis", "oketsu", "blood stagnation", "yu xue"],
+              "keywords_ja": [
+                "瘀血",
+                "おけつ",
+                "駆瘀血"
+              ],
+              "keywords_en": [
+                "blood stasis",
+                "oketsu",
+                "blood stagnation",
+                "yu xue"
+              ],
               "mesh_terms": [],
               "v2_mapping": null
             },
@@ -768,8 +1433,18 @@
               "icd11_code": null,
               "name_ja": "水毒",
               "name_en": "Water retention (suidoku)",
-              "keywords_ja": ["水毒", "水滞", "水飲"],
-              "keywords_en": ["water retention", "suidoku", "fluid retention", "shui du", "water toxin"],
+              "keywords_ja": [
+                "水毒",
+                "水滞",
+                "水飲"
+              ],
+              "keywords_en": [
+                "water retention",
+                "suidoku",
+                "fluid retention",
+                "shui du",
+                "water toxin"
+              ],
               "mesh_terms": [],
               "v2_mapping": null
             },
@@ -778,26 +1453,47 @@
               "icd11_code": null,
               "name_ja": "不定愁訴",
               "name_en": "Medically unexplained symptoms",
-              "keywords_ja": ["不定愁訴", "未病"],
-              "keywords_en": ["medically unexplained symptoms", "MUS", "somatoform", "functional somatic", "mi-byo"],
-              "mesh_terms": ["Medically Unexplained Symptoms"],
+              "keywords_ja": [
+                "不定愁訴",
+                "未病"
+              ],
+              "keywords_en": [
+                "medically unexplained symptoms",
+                "MUS",
+                "somatoform",
+                "functional somatic",
+                "mi-byo"
+              ],
+              "mesh_terms": [
+                "Medically Unexplained Symptoms"
+              ],
               "v2_mapping": null
-            }
-          ]
-        },
-        "womens_health": {
-          "group_id": "womens_health",
-          "name_ja": "女性の健康",
-          "name_en": "Women's health",
-          "children": [
+            },
             {
               "id": "SX_menstrual",
               "icd11_code": "GA30-GA3Z",
               "name_ja": "月経関連",
               "name_en": "Menstrual disorders",
-              "keywords_ja": ["月経痛", "月経不順", "月経困難", "生理痛", "PMS"],
-              "keywords_en": ["dysmenorrhea", "menstrual", "premenstrual", "PMS", "PMDD", "menstrual irregularity", "amenorrhea"],
-              "mesh_terms": ["Dysmenorrhea", "Premenstrual Syndrome"],
+              "keywords_ja": [
+                "月経痛",
+                "月経不順",
+                "月経困難",
+                "生理痛",
+                "PMS"
+              ],
+              "keywords_en": [
+                "dysmenorrhea",
+                "menstrual",
+                "premenstrual",
+                "PMS",
+                "PMDD",
+                "menstrual irregularity",
+                "amenorrhea"
+              ],
+              "mesh_terms": [
+                "Dysmenorrhea",
+                "Premenstrual Syndrome"
+              ],
               "v2_mapping": "症候 > 婦人科 > 月経関連"
             },
             {
@@ -805,9 +1501,23 @@
               "icd11_code": "GA31",
               "name_ja": "更年期",
               "name_en": "Menopause",
-              "keywords_ja": ["不定愁訴", "更年期", "のぼせ"],
-              "keywords_en": ["menopause", "menopausal", "climacteric", "hot flash", "hot flush", "postmenopausal"],
-              "mesh_terms": ["Menopause", "Hot Flashes"],
+              "keywords_ja": [
+                "不定愁訴",
+                "更年期",
+                "のぼせ"
+              ],
+              "keywords_en": [
+                "menopause",
+                "menopausal",
+                "climacteric",
+                "hot flash",
+                "hot flush",
+                "postmenopausal"
+              ],
+              "mesh_terms": [
+                "Menopause",
+                "Hot Flashes"
+              ],
               "v2_mapping": "症候 > 自律神経・精神 > 更年期"
             },
             {
@@ -815,9 +1525,23 @@
               "icd11_code": "JA-",
               "name_ja": "妊娠関連",
               "name_en": "Pregnancy-related",
-              "keywords_ja": ["妊娠", "つわり"],
-              "keywords_en": ["pregnancy", "pregnant", "morning sickness", "hyperemesis", "gestational", "prenatal", "nausea of pregnancy"],
-              "mesh_terms": ["Pregnancy", "Pregnancy Complications"],
+              "keywords_ja": [
+                "妊娠",
+                "つわり"
+              ],
+              "keywords_en": [
+                "pregnancy",
+                "pregnant",
+                "morning sickness",
+                "hyperemesis",
+                "gestational",
+                "prenatal",
+                "nausea of pregnancy"
+              ],
+              "mesh_terms": [
+                "Pregnancy",
+                "Pregnancy Complications"
+              ],
               "v2_mapping": "XV 産科 > 妊娠"
             },
             {
@@ -825,26 +1549,44 @@
               "icd11_code": "JB-",
               "name_ja": "産後",
               "name_en": "Postpartum",
-              "keywords_ja": ["産後", "産褥", "母乳"],
-              "keywords_en": ["postpartum", "postnatal", "lactation", "breastfeeding", "puerperal", "breast milk"],
-              "mesh_terms": ["Postpartum Period", "Lactation"],
+              "keywords_ja": [
+                "産後",
+                "産褥",
+                "母乳"
+              ],
+              "keywords_en": [
+                "postpartum",
+                "postnatal",
+                "lactation",
+                "breastfeeding",
+                "puerperal",
+                "breast milk"
+              ],
+              "mesh_terms": [
+                "Postpartum Period",
+                "Lactation"
+              ],
               "v2_mapping": "XV 産科 > 産後"
-            }
-          ]
-        },
-        "other": {
-          "group_id": "other",
-          "name_ja": "その他",
-          "name_en": "Other",
-          "children": [
+            },
             {
               "id": "SX_muscle_cramp",
               "icd11_code": "MB47",
               "name_ja": "こむら返り",
               "name_en": "Muscle cramp",
-              "keywords_ja": ["こむら返り", "筋痙攣", "腓腹筋"],
-              "keywords_en": ["muscle cramp", "leg cramp", "calf cramp", "muscle spasm"],
-              "mesh_terms": ["Muscle Cramp"],
+              "keywords_ja": [
+                "こむら返り",
+                "筋痙攣",
+                "腓腹筋"
+              ],
+              "keywords_en": [
+                "muscle cramp",
+                "leg cramp",
+                "calf cramp",
+                "muscle spasm"
+              ],
+              "mesh_terms": [
+                "Muscle Cramp"
+              ],
               "v2_mapping": "症候 > その他 > こむら返り"
             },
             {
@@ -852,9 +1594,22 @@
               "icd11_code": "MD12",
               "name_ja": "咳・痰",
               "name_en": "Cough / Sputum",
-              "keywords_ja": ["咳嗽", "喀痰", "咳", "痰"],
-              "keywords_en": ["cough", "sputum", "expectoration", "antitussive", "phlegm"],
-              "mesh_terms": ["Cough"],
+              "keywords_ja": [
+                "咳嗽",
+                "喀痰",
+                "咳",
+                "痰"
+              ],
+              "keywords_en": [
+                "cough",
+                "sputum",
+                "expectoration",
+                "antitussive",
+                "phlegm"
+              ],
+              "mesh_terms": [
+                "Cough"
+              ],
               "v2_mapping": "症候 > その他 > 咳・痰"
             }
           ]
@@ -883,33 +1638,82 @@
               "id": "INT_manual_acu",
               "name_ja": "鍼治療",
               "name_en": "Manual acupuncture",
-              "keywords_ja": ["鍼治療", "刺鍼", "置鍼", "円皮鍼", "皮内鍼"],
-              "keywords_en": ["acupuncture treatment", "acupuncture therapy", "needle", "needling"],
-              "mesh_terms": ["Acupuncture Therapy"]
+              "keywords_ja": [
+                "鍼治療",
+                "刺鍼",
+                "置鍼",
+                "円皮鍼",
+                "皮内鍼"
+              ],
+              "keywords_en": [
+                "acupuncture treatment",
+                "acupuncture therapy",
+                "needle",
+                "needling"
+              ],
+              "mesh_terms": [
+                "Acupuncture Therapy"
+              ]
             },
             {
               "id": "INT_moxibustion",
               "name_ja": "灸治療",
               "name_en": "Moxibustion",
-              "keywords_ja": ["灸治療", "施灸", "温灸", "艾", "お灸"],
-              "keywords_en": ["moxibustion", "moxa", "mugwort"],
-              "mesh_terms": ["Moxibustion"]
+              "keywords_ja": [
+                "灸治療",
+                "施灸",
+                "温灸",
+                "艾",
+                "お灸"
+              ],
+              "keywords_en": [
+                "moxibustion",
+                "moxa",
+                "mugwort"
+              ],
+              "mesh_terms": [
+                "Moxibustion"
+              ]
             },
             {
               "id": "INT_electroacu",
               "name_ja": "電気鍼",
               "name_en": "Electroacupuncture",
-              "keywords_ja": ["電気鍼", "低周波", "TENS", "SSP", "パルス鍼"],
-              "keywords_en": ["electroacupuncture", "electro-acupuncture"],
-              "mesh_terms": ["Electroacupuncture"]
+              "keywords_ja": [
+                "電気鍼",
+                "低周波",
+                "TENS",
+                "SSP",
+                "パルス鍼"
+              ],
+              "keywords_en": [
+                "electroacupuncture",
+                "electro-acupuncture"
+              ],
+              "mesh_terms": [
+                "Electroacupuncture"
+              ]
             },
             {
               "id": "INT_massage",
               "name_ja": "あん摩・指圧",
               "name_en": "Massage / Acupressure",
-              "keywords_ja": ["あん摩", "マッサージ", "指圧", "推拿"],
-              "keywords_en": ["massage", "shiatsu", "acupressure", "tuina"],
-              "mesh_terms": ["Massage", "Acupressure"]
+              "keywords_ja": [
+                "あん摩",
+                "マッサージ",
+                "指圧",
+                "推拿"
+              ],
+              "keywords_en": [
+                "massage",
+                "shiatsu",
+                "acupressure",
+                "tuina"
+              ],
+              "mesh_terms": [
+                "Massage",
+                "Acupressure"
+              ]
             }
           ]
         },
@@ -922,17 +1726,42 @@
               "id": "INT_acupoints",
               "name_ja": "経穴",
               "name_en": "Acupoints",
-              "keywords_ja": ["経穴", "ツボ", "足三里", "合谷", "百会"],
-              "keywords_en": ["acupuncture point", "acupoint", "ST36", "LI4", "BL23", "Zusanli", "Hegu"],
-              "mesh_terms": ["Acupuncture Points"]
+              "keywords_ja": [
+                "経穴",
+                "ツボ",
+                "足三里",
+                "合谷",
+                "百会"
+              ],
+              "keywords_en": [
+                "acupuncture point",
+                "acupoint",
+                "ST36",
+                "LI4",
+                "BL23",
+                "Zusanli",
+                "Hegu"
+              ],
+              "mesh_terms": [
+                "Acupuncture Points"
+              ]
             },
             {
               "id": "INT_meridians",
               "name_ja": "経絡",
               "name_en": "Meridians",
-              "keywords_ja": ["経絡", "奇経", "十二経"],
-              "keywords_en": ["meridian", "channel theory"],
-              "mesh_terms": ["Meridians"]
+              "keywords_ja": [
+                "経絡",
+                "奇経",
+                "十二経"
+              ],
+              "keywords_en": [
+                "meridian",
+                "channel theory"
+              ],
+              "mesh_terms": [
+                "Meridians"
+              ]
             }
           ]
         }
@@ -949,10 +1778,21 @@
           "name_ja": "SR・メタアナリシス",
           "name_en": "Systematic review / Meta-analysis",
           "evidence_level": 1,
-          "keywords_ja": ["システマティック", "メタアナリシス", "メタ解析"],
-          "keywords_en": ["systematic review", "meta-analysis", "meta analysis"],
+          "keywords_ja": [
+            "システマティック",
+            "メタアナリシス",
+            "メタ解析"
+          ],
+          "keywords_en": [
+            "systematic review",
+            "meta-analysis",
+            "meta analysis"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Systematic Review", "Meta-Analysis"],
+          "pub_type_match": [
+            "Systematic Review",
+            "Meta-Analysis"
+          ],
           "v2_mapping": "エビデンス > SR・メタ"
         },
         {
@@ -960,10 +1800,21 @@
           "name_ja": "ランダム化比較試験",
           "name_en": "Randomized controlled trial",
           "evidence_level": 2,
-          "keywords_ja": ["RCT", "ランダム化", "無作為化比較"],
-          "keywords_en": ["randomized controlled trial", "randomised controlled trial", "RCT", "randomization"],
+          "keywords_ja": [
+            "RCT",
+            "ランダム化",
+            "無作為化比較"
+          ],
+          "keywords_en": [
+            "randomized controlled trial",
+            "randomised controlled trial",
+            "RCT",
+            "randomization"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Randomized Controlled Trial"],
+          "pub_type_match": [
+            "Randomized Controlled Trial"
+          ],
           "v2_mapping": "エビデンス > RCT"
         },
         {
@@ -971,10 +1822,26 @@
           "name_ja": "臨床試験（非RCT）",
           "name_en": "Clinical trial (non-RCT)",
           "evidence_level": 3,
-          "keywords_ja": ["臨床試験", "比較試験", "介入試験"],
-          "keywords_en": ["clinical trial", "controlled trial", "intervention study", "open-label"],
+          "keywords_ja": [
+            "臨床試験",
+            "比較試験",
+            "介入試験"
+          ],
+          "keywords_en": [
+            "clinical trial",
+            "controlled trial",
+            "intervention study",
+            "open-label"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Clinical Trial", "Clinical Trial, Phase I", "Clinical Trial, Phase II", "Clinical Trial, Phase III", "Clinical Trial, Phase IV", "Controlled Clinical Trial"],
+          "pub_type_match": [
+            "Clinical Trial",
+            "Clinical Trial, Phase I",
+            "Clinical Trial, Phase II",
+            "Clinical Trial, Phase III",
+            "Clinical Trial, Phase IV",
+            "Controlled Clinical Trial"
+          ],
           "v2_mapping": null
         },
         {
@@ -982,10 +1849,26 @@
           "name_ja": "観察研究",
           "name_en": "Observational study",
           "evidence_level": 4,
-          "keywords_ja": ["観察研究", "コホート", "症例対照", "横断研究", "前向き", "後ろ向き"],
-          "keywords_en": ["observational study", "cohort", "case-control", "cross-sectional", "prospective", "retrospective"],
+          "keywords_ja": [
+            "観察研究",
+            "コホート",
+            "症例対照",
+            "横断研究",
+            "前向き",
+            "後ろ向き"
+          ],
+          "keywords_en": [
+            "observational study",
+            "cohort",
+            "case-control",
+            "cross-sectional",
+            "prospective",
+            "retrospective"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Observational Study"],
+          "pub_type_match": [
+            "Observational Study"
+          ],
           "v2_mapping": null
         },
         {
@@ -993,10 +1876,20 @@
           "name_ja": "症例報告",
           "name_en": "Case report",
           "evidence_level": 5,
-          "keywords_ja": ["症例報告", "症例", "一例"],
-          "keywords_en": ["case report", "case series", "case study"],
+          "keywords_ja": [
+            "症例報告",
+            "症例",
+            "一例"
+          ],
+          "keywords_en": [
+            "case report",
+            "case series",
+            "case study"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Case Reports"],
+          "pub_type_match": [
+            "Case Reports"
+          ],
           "v2_mapping": null
         },
         {
@@ -1004,8 +1897,21 @@
           "name_ja": "基礎研究",
           "name_en": "Basic research",
           "evidence_level": 6,
-          "keywords_ja": ["基礎研究", "動物実験", "in vitro", "in vivo", "作用機序"],
-          "keywords_en": ["basic research", "animal study", "in vitro", "in vivo", "mechanism", "experimental"],
+          "keywords_ja": [
+            "基礎研究",
+            "動物実験",
+            "in vitro",
+            "in vivo",
+            "作用機序"
+          ],
+          "keywords_en": [
+            "basic research",
+            "animal study",
+            "in vitro",
+            "in vivo",
+            "mechanism",
+            "experimental"
+          ],
           "mesh_terms": [],
           "pub_type_match": [],
           "v2_mapping": null
@@ -1015,10 +1921,20 @@
           "name_ja": "総説",
           "name_en": "Review",
           "evidence_level": 7,
-          "keywords_ja": ["総説", "レビュー", "展望"],
-          "keywords_en": ["review", "narrative review", "overview"],
+          "keywords_ja": [
+            "総説",
+            "レビュー",
+            "展望"
+          ],
+          "keywords_en": [
+            "review",
+            "narrative review",
+            "overview"
+          ],
           "mesh_terms": [],
-          "pub_type_match": ["Review"],
+          "pub_type_match": [
+            "Review"
+          ],
           "v2_mapping": null
         },
         {
@@ -1026,10 +1942,23 @@
           "name_ja": "ガイドライン",
           "name_en": "Guideline",
           "evidence_level": 0,
-          "keywords_ja": ["ガイドライン", "診療指針"],
-          "keywords_en": ["guideline", "clinical practice guideline", "recommendation", "consensus statement"],
-          "mesh_terms": ["Practice Guidelines as Topic"],
-          "pub_type_match": ["Guideline", "Practice Guideline"],
+          "keywords_ja": [
+            "ガイドライン",
+            "診療指針"
+          ],
+          "keywords_en": [
+            "guideline",
+            "clinical practice guideline",
+            "recommendation",
+            "consensus statement"
+          ],
+          "mesh_terms": [
+            "Practice Guidelines as Topic"
+          ],
+          "pub_type_match": [
+            "Guideline",
+            "Practice Guideline"
+          ],
           "v2_mapping": "エビデンス > ガイドライン"
         }
       ]
@@ -1044,89 +1973,238 @@
           "id": "SET_perioperative",
           "name_ja": "周術期",
           "name_en": "Perioperative",
-          "keywords_ja": ["術後", "手術後", "周術期"],
-          "keywords_en": ["postoperative", "perioperative", "after surgery", "surgical"],
-          "mesh_terms": ["Postoperative Complications", "Perioperative Care"],
+          "keywords_ja": [
+            "術後",
+            "手術後",
+            "周術期"
+          ],
+          "keywords_en": [
+            "postoperative",
+            "perioperative",
+            "after surgery",
+            "surgical"
+          ],
+          "mesh_terms": [
+            "Postoperative Complications",
+            "Perioperative Care"
+          ],
           "v2_mapping": "その他 > 周術期 > 術後"
         },
         {
           "id": "SET_palliative",
           "name_ja": "緩和ケア",
           "name_en": "Palliative care",
-          "keywords_ja": ["緩和", "終末期", "QOL"],
-          "keywords_en": ["palliative care", "end-of-life", "terminal care", "hospice", "cancer supportive care"],
-          "mesh_terms": ["Palliative Care", "Terminal Care", "Hospice Care"],
+          "keywords_ja": [
+            "緩和",
+            "終末期",
+            "QOL"
+          ],
+          "keywords_en": [
+            "palliative care",
+            "end-of-life",
+            "terminal care",
+            "hospice",
+            "cancer supportive care"
+          ],
+          "mesh_terms": [
+            "Palliative Care",
+            "Terminal Care",
+            "Hospice Care"
+          ],
           "v2_mapping": "その他 > 緩和ケア > 緩和"
         },
         {
           "id": "SET_dialysis",
           "name_ja": "透析",
           "name_en": "Dialysis",
-          "keywords_ja": ["透析", "血液透析"],
-          "keywords_en": ["dialysis", "hemodialysis", "haemodialysis"],
-          "mesh_terms": ["Renal Dialysis"],
+          "keywords_ja": [
+            "透析",
+            "血液透析"
+          ],
+          "keywords_en": [
+            "dialysis",
+            "hemodialysis",
+            "haemodialysis"
+          ],
+          "mesh_terms": [
+            "Renal Dialysis"
+          ],
           "v2_mapping": "その他 > 透析 > 透析"
         },
         {
           "id": "SET_pediatrics",
           "name_ja": "小児",
           "name_en": "Pediatrics",
-          "keywords_ja": ["小児", "乳児", "新生児", "学童"],
-          "keywords_en": ["pediatric", "paediatric", "child", "infant", "neonatal", "children"],
-          "mesh_terms": ["Pediatrics", "Child"],
+          "keywords_ja": [
+            "小児",
+            "乳児",
+            "新生児",
+            "学童"
+          ],
+          "keywords_en": [
+            "pediatric",
+            "paediatric",
+            "child",
+            "infant",
+            "neonatal",
+            "children"
+          ],
+          "mesh_terms": [
+            "Pediatrics",
+            "Child"
+          ],
           "v2_mapping": null
         },
         {
           "id": "SET_geriatrics",
           "name_ja": "高齢者",
           "name_en": "Geriatrics",
-          "keywords_ja": ["高齢者", "老年", "フレイル", "サルコペニア"],
-          "keywords_en": ["elderly", "geriatric", "aged", "older adult", "frailty", "sarcopenia"],
-          "mesh_terms": ["Geriatrics", "Aged"],
+          "keywords_ja": [
+            "高齢者",
+            "老年",
+            "フレイル",
+            "サルコペニア"
+          ],
+          "keywords_en": [
+            "elderly",
+            "geriatric",
+            "aged",
+            "older adult",
+            "frailty",
+            "sarcopenia"
+          ],
+          "mesh_terms": [
+            "Geriatrics",
+            "Aged"
+          ],
           "v2_mapping": null
         },
         {
           "id": "SET_sports",
           "name_ja": "スポーツ",
           "name_en": "Sports",
-          "keywords_ja": ["スポーツ", "アスリート", "運動器", "コンディショニング"],
-          "keywords_en": ["sports medicine", "athlete", "athletic performance", "sports injury"],
-          "mesh_terms": ["Sports Medicine", "Athletic Performance"],
+          "keywords_ja": [
+            "スポーツ",
+            "アスリート",
+            "運動器",
+            "コンディショニング"
+          ],
+          "keywords_en": [
+            "sports medicine",
+            "athlete",
+            "athletic performance",
+            "sports injury"
+          ],
+          "mesh_terms": [
+            "Sports Medicine",
+            "Athletic Performance"
+          ],
           "v2_mapping": "鍼灸 > スポーツ鍼灸 > スポーツ"
         },
         {
           "id": "SET_pregnancy_postpartum",
           "name_ja": "妊娠・産後",
           "name_en": "Pregnancy / Postpartum",
-          "keywords_ja": ["妊娠", "産後", "産褥", "妊婦"],
-          "keywords_en": ["pregnancy", "postpartum", "prenatal", "perinatal", "maternal"],
-          "mesh_terms": ["Pregnancy", "Postpartum Period"],
+          "keywords_ja": [
+            "妊娠",
+            "産後",
+            "産褥",
+            "妊婦"
+          ],
+          "keywords_en": [
+            "pregnancy",
+            "postpartum",
+            "prenatal",
+            "perinatal",
+            "maternal"
+          ],
+          "mesh_terms": [
+            "Pregnancy",
+            "Postpartum Period"
+          ],
           "v2_mapping": "XV 産科"
         },
         {
           "id": "SET_safety",
           "name_ja": "安全性",
           "name_en": "Safety / ADR",
-          "keywords_ja": ["副作用", "偽アルドステロン", "横紋筋融解", "薬疹", "有害事象", "気胸", "折鍼", "鍼事故"],
-          "keywords_en": ["adverse drug reaction", "side effect of herbal", "pseudoaldosteronism", "rhabdomyolysis", "drug eruption", "drug-induced liver injury", "hepatotoxicity", "herbal toxicity", "kampo adverse", "adverse event", "pneumothorax", "needle breakage", "acupuncture safety", "acupuncture complication"],
-          "mesh_terms": ["Drug-Related Side Effects and Adverse Reactions"],
+          "keywords_ja": [
+            "副作用",
+            "偽アルドステロン",
+            "横紋筋融解",
+            "薬疹",
+            "有害事象",
+            "気胸",
+            "折鍼",
+            "鍼事故"
+          ],
+          "keywords_en": [
+            "adverse drug reaction",
+            "side effect of herbal",
+            "pseudoaldosteronism",
+            "rhabdomyolysis",
+            "drug eruption",
+            "drug-induced liver injury",
+            "hepatotoxicity",
+            "herbal toxicity",
+            "kampo adverse",
+            "adverse event",
+            "pneumothorax",
+            "needle breakage",
+            "acupuncture safety",
+            "acupuncture complication"
+          ],
+          "mesh_terms": [
+            "Drug-Related Side Effects and Adverse Reactions"
+          ],
           "v2_mapping": "漢方医学 > 安全性 > 副作用"
         },
         {
           "id": "SET_drug_interaction",
           "name_ja": "相互作用",
           "name_en": "Drug interaction",
-          "keywords_ja": ["相互作用", "併用"],
-          "keywords_en": ["drug interaction", "herb-drug interaction", "drug combination", "concomitant", "co-administration", "CYP", "cytochrome"],
-          "mesh_terms": ["Drug Interactions", "Herb-Drug Interactions"],
+          "keywords_ja": [
+            "相互作用",
+            "併用"
+          ],
+          "keywords_en": [
+            "drug interaction",
+            "herb-drug interaction",
+            "drug combination",
+            "concomitant",
+            "co-administration",
+            "CYP",
+            "cytochrome"
+          ],
+          "mesh_terms": [
+            "Drug Interactions",
+            "Herb-Drug Interactions"
+          ],
           "v2_mapping": "漢方医学 > 安全性 > 相互作用"
         },
         {
           "id": "SET_education",
           "name_ja": "教育",
           "name_en": "Education",
-          "keywords_ja": ["漢方教育", "鍼灸教育", "カリキュラム", "研修", "養成", "鍼灸師", "国家試験"],
-          "keywords_en": ["Kampo education", "Kampo training", "Kampo curriculum", "medical education", "acupuncture education", "training", "curriculum", "competency"],
+          "keywords_ja": [
+            "漢方教育",
+            "鍼灸教育",
+            "カリキュラム",
+            "研修",
+            "養成",
+            "鍼灸師",
+            "国家試験"
+          ],
+          "keywords_en": [
+            "Kampo education",
+            "Kampo training",
+            "Kampo curriculum",
+            "medical education",
+            "acupuncture education",
+            "training",
+            "curriculum",
+            "competency"
+          ],
           "mesh_terms": [],
           "v2_mapping": "漢方医学 > 教育 > 漢方教育"
         },
@@ -1134,8 +2212,39 @@
           "id": "SET_kampo_theory",
           "name_ja": "漢方理論",
           "name_en": "Kampo theory",
-          "keywords_ja": ["傷寒論", "金匱", "弁証", "八綱", "気血水", "陰陽", "虚実", "腹証", "腹診"],
-          "keywords_en": ["Shang Han Lun", "Shanghan", "treatise on cold damage", "Jin Gui", "Jingui", "essential prescriptions", "pattern identification", "qi-blood-water", "yin-yang", "deficiency-excess", "Kampo diagnosis", "pattern diagnosis", "TCM pattern", "sho diagnosis", "kampo pattern", "zheng classification", "abdominal diagnosis", "Fukushin", "abdominal palpation", "abdominal examination"],
+          "keywords_ja": [
+            "傷寒論",
+            "金匱",
+            "弁証",
+            "八綱",
+            "気血水",
+            "陰陽",
+            "虚実",
+            "腹証",
+            "腹診"
+          ],
+          "keywords_en": [
+            "Shang Han Lun",
+            "Shanghan",
+            "treatise on cold damage",
+            "Jin Gui",
+            "Jingui",
+            "essential prescriptions",
+            "pattern identification",
+            "qi-blood-water",
+            "yin-yang",
+            "deficiency-excess",
+            "Kampo diagnosis",
+            "pattern diagnosis",
+            "TCM pattern",
+            "sho diagnosis",
+            "kampo pattern",
+            "zheng classification",
+            "abdominal diagnosis",
+            "Fukushin",
+            "abdominal palpation",
+            "abdominal examination"
+          ],
           "mesh_terms": [],
           "v2_mapping": "漢方医学 > 古典・理論"
         },
@@ -1143,8 +2252,16 @@
           "id": "SET_cosmetic",
           "name_ja": "美容",
           "name_en": "Cosmetic",
-          "keywords_ja": ["美容鍼", "美容", "顔面鍼"],
-          "keywords_en": ["cosmetic acupuncture", "facial acupuncture", "aesthetic"],
+          "keywords_ja": [
+            "美容鍼",
+            "美容",
+            "顔面鍼"
+          ],
+          "keywords_en": [
+            "cosmetic acupuncture",
+            "facial acupuncture",
+            "aesthetic"
+          ],
           "mesh_terms": [],
           "v2_mapping": "鍼灸 > 美容鍼灸 > 美容鍼"
         }
