@@ -1773,6 +1773,278 @@
               "v2_mapping": "XIV 泌尿・生殖器 > 不妊"
             }
           ]
+        },
+        "ICD03": {
+          "name_ja": "血液疾患",
+          "name_en": "Diseases of the Blood",
+          "icd11_code": "3",
+          "children": [
+            {
+              "id": "ICD03_anemia",
+              "icd11_code": "3A00",
+              "name_ja": "貧血",
+              "name_en": "Anemia",
+              "keywords_ja": [
+                "貧血",
+                "鉄欠乏",
+                "ヘモグロビン"
+              ],
+              "keywords_en": [
+                "anemia",
+                "anaemia",
+                "iron deficiency",
+                "hemoglobin"
+              ],
+              "mesh_terms": [
+                "Anemia",
+                "Anemia, Iron-Deficiency"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD03_coagulation",
+              "icd11_code": "3B10",
+              "name_ja": "凝固障害・出血",
+              "name_en": "Coagulation / Bleeding disorders",
+              "keywords_ja": [
+                "凝固",
+                "出血",
+                "血友病",
+                "DIC"
+              ],
+              "keywords_en": [
+                "coagulation",
+                "bleeding disorder",
+                "hemophilia",
+                "disseminated intravascular"
+              ],
+              "mesh_terms": [
+                "Blood Coagulation Disorders",
+                "Hemorrhage"
+              ],
+              "v2_mapping": null
+            }
+          ]
+        },
+        "ICD07": {
+          "name_ja": "眼疾患",
+          "name_en": "Diseases of the Eye",
+          "icd11_code": "9",
+          "children": [
+            {
+              "id": "ICD07_glaucoma",
+              "icd11_code": "9A61",
+              "name_ja": "緑内障",
+              "name_en": "Glaucoma",
+              "keywords_ja": [
+                "緑内障",
+                "眼圧"
+              ],
+              "keywords_en": [
+                "glaucoma",
+                "intraocular pressure"
+              ],
+              "mesh_terms": [
+                "Glaucoma"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD07_dry_eye",
+              "icd11_code": "9A15",
+              "name_ja": "ドライアイ・眼精疲労",
+              "name_en": "Dry eye / Eye strain",
+              "keywords_ja": [
+                "ドライアイ",
+                "眼精疲労",
+                "眼乾燥",
+                "涙液"
+              ],
+              "keywords_en": [
+                "dry eye",
+                "eye strain",
+                "asthenopia",
+                "tear film",
+                "xerophthalmia"
+              ],
+              "mesh_terms": [
+                "Dry Eye Syndromes",
+                "Asthenopia"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD07_retinal",
+              "icd11_code": "9B70",
+              "name_ja": "網膜・視神経疾患",
+              "name_en": "Retinal / Optic nerve diseases",
+              "keywords_ja": [
+                "網膜",
+                "視神経",
+                "白内障",
+                "ぶどう膜"
+              ],
+              "keywords_en": [
+                "retinal",
+                "optic nerve",
+                "cataract",
+                "uveitis",
+                "macular degeneration"
+              ],
+              "mesh_terms": [
+                "Retinal Diseases",
+                "Optic Nerve Diseases",
+                "Cataract",
+                "Uveitis"
+              ],
+              "v2_mapping": null
+            }
+          ]
+        },
+        "ICD18": {
+          "name_ja": "妊娠・周産期",
+          "name_en": "Pregnancy, Childbirth or the Puerperium",
+          "icd11_code": "JA",
+          "children": [
+            {
+              "id": "ICD18_morning_sickness",
+              "icd11_code": "JA00",
+              "name_ja": "つわり・妊娠悪阻",
+              "name_en": "Morning sickness / Hyperemesis",
+              "keywords_ja": [
+                "つわり",
+                "妊娠悪阻",
+                "妊娠嘔吐"
+              ],
+              "keywords_en": [
+                "morning sickness",
+                "hyperemesis gravidarum",
+                "nausea of pregnancy"
+              ],
+              "mesh_terms": [
+                "Hyperemesis Gravidarum",
+                "Morning Sickness"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD18_labor",
+              "icd11_code": "JB00",
+              "name_ja": "分娩・陣痛",
+              "name_en": "Labor / Delivery",
+              "keywords_ja": [
+                "分娩",
+                "陣痛",
+                "出産",
+                "安産"
+              ],
+              "keywords_en": [
+                "labor",
+                "delivery",
+                "childbirth",
+                "parturition"
+              ],
+              "mesh_terms": [
+                "Labor, Obstetric",
+                "Delivery, Obstetric"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD18_preeclampsia",
+              "icd11_code": "JA20",
+              "name_ja": "妊娠高血圧・子癇",
+              "name_en": "Preeclampsia / Gestational hypertension",
+              "keywords_ja": [
+                "妊娠高血圧",
+                "子癇",
+                "妊娠中毒"
+              ],
+              "keywords_en": [
+                "preeclampsia",
+                "eclampsia",
+                "gestational hypertension",
+                "pregnancy-induced hypertension"
+              ],
+              "mesh_terms": [
+                "Pre-Eclampsia",
+                "Eclampsia"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD18_lactation",
+              "icd11_code": "KB00",
+              "name_ja": "授乳・母乳",
+              "name_en": "Lactation / Breastfeeding",
+              "keywords_ja": [
+                "授乳",
+                "母乳",
+                "乳汁"
+              ],
+              "keywords_en": [
+                "lactation",
+                "breastfeeding",
+                "breast milk",
+                "galactogogue"
+              ],
+              "mesh_terms": [
+                "Lactation",
+                "Breast Feeding"
+              ],
+              "v2_mapping": null
+            }
+          ]
+        },
+        "ICD19": {
+          "name_ja": "損傷・中毒・薬剤性障害",
+          "name_en": "Injury, Poisoning or Drug-induced Disorders",
+          "icd11_code": "NE",
+          "children": [
+            {
+              "id": "ICD19_drug_induced",
+              "icd11_code": "NE60",
+              "name_ja": "薬剤性障害",
+              "name_en": "Drug-induced disorders",
+              "keywords_ja": [
+                "薬剤性",
+                "薬物性肝障害",
+                "薬疹"
+              ],
+              "keywords_en": [
+                "drug-induced",
+                "drug-related",
+                "adverse drug reaction",
+                "drug toxicity"
+              ],
+              "mesh_terms": [
+                "Drug-Related Side Effects and Adverse Reactions",
+                "Chemical and Drug Induced Liver Injury"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD19_poisoning",
+              "icd11_code": "NE80",
+              "name_ja": "中毒・過量投与",
+              "name_en": "Poisoning / Overdose",
+              "keywords_ja": [
+                "中毒",
+                "過量投与",
+                "誤飲"
+              ],
+              "keywords_en": [
+                "poisoning",
+                "overdose",
+                "intoxication",
+                "toxicity"
+              ],
+              "mesh_terms": [
+                "Poisoning"
+              ],
+              "v2_mapping": null
+            }
+          ]
         }
       }
     },
