@@ -1,2 +1,12 @@
 desktop.ini
 Thumbs.db
+
+# Large data files (regeneratable via scripts)
+data/pubmed/
+data/tagged/
+data/integrated_db.json
+data/integrated_db_v4.json
+evidence_map_integrated.html
+
+# Claude settings
+.claude/
