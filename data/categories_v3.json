@@ -320,38 +320,17 @@
           "icd11_chapter": "02",
           "children": [
             {
-              "id": "ICD02_chemo_support",
-              "icd11_code": null,
-              "name_ja": "化学療法支持",
-              "name_en": "Chemotherapy support",
-              "keywords_ja": [
-                "化学療法",
-                "抗がん剤"
-              ],
-              "keywords_en": [
-                "chemotherapy",
-                "chemotherapy-induced",
-                "supportive care",
-                "CINV",
-                "anticancer",
-                "anti-cancer",
-                "chemo-"
-              ],
-              "mesh_terms": [
-                "Antineoplastic Agents",
-                "Drug Therapy"
-              ],
-              "v2_mapping": "II 悪性腫瘍 > 化学療法支持"
-            },
-            {
               "id": "ICD02_gi_cancer",
-              "icd11_code": "2B50-2B6Z",
+              "icd11_code": "2B5-2B6",
               "name_ja": "消化器癌",
-              "name_en": "GI cancer",
+              "name_en": "Gastrointestinal cancer",
               "keywords_ja": [
                 "胃癌",
                 "大腸癌",
-                "肝癌"
+                "肝癌",
+                "膵癌",
+                "食道癌",
+                "胆管癌"
               ],
               "keywords_en": [
                 "gastric cancer",
@@ -360,26 +339,90 @@
                 "hepatocellular carcinoma",
                 "pancreatic cancer",
                 "esophageal cancer",
-                "liver cancer"
+                "liver cancer",
+                "cholangiocarcinoma"
               ],
               "mesh_terms": [
                 "Stomach Neoplasms",
                 "Colorectal Neoplasms",
                 "Liver Neoplasms",
-                "Pancreatic Neoplasms"
+                "Pancreatic Neoplasms",
+                "Esophageal Neoplasms"
               ],
-              "v2_mapping": "II 悪性腫瘍 > 消化器癌"
+              "v2_mapping": "消化器癌"
             },
             {
-              "id": "ICD02_other_neoplasms",
-              "icd11_code": "2-",
-              "name_ja": "その他腫瘍",
-              "name_en": "Other neoplasms",
+              "id": "ICD02_lung_cancer",
+              "icd11_code": "2C25",
+              "name_ja": "肺癌",
+              "name_en": "Lung cancer",
+              "keywords_ja": [
+                "肺癌",
+                "肺がん"
+              ],
+              "keywords_en": [
+                "lung cancer",
+                "lung neoplasm",
+                "non-small cell lung",
+                "small cell lung"
+              ],
+              "mesh_terms": [
+                "Lung Neoplasms",
+                "Carcinoma, Non-Small-Cell Lung"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_breast_cancer",
+              "icd11_code": "2C6",
+              "name_ja": "乳癌",
+              "name_en": "Breast cancer",
+              "keywords_ja": [
+                "乳癌",
+                "乳がん"
+              ],
+              "keywords_en": [
+                "breast cancer",
+                "breast neoplasm",
+                "mammary"
+              ],
+              "mesh_terms": [
+                "Breast Neoplasms"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_hematologic",
+              "icd11_code": "2A-2B",
+              "name_ja": "血液腫瘍",
+              "name_en": "Hematologic malignancies",
+              "keywords_ja": [
+                "白血病",
+                "リンパ腫",
+                "骨髄腫"
+              ],
+              "keywords_en": [
+                "leukemia",
+                "lymphoma",
+                "myeloma",
+                "hematologic malignancy"
+              ],
+              "mesh_terms": [
+                "Leukemia",
+                "Lymphoma",
+                "Multiple Myeloma"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_other_cancer",
+              "name_ja": "その他の癌種",
+              "name_en": "Other cancer types",
               "keywords_ja": [
                 "癌",
                 "がん",
                 "腫瘍",
-                "白血病"
+                "悪性"
               ],
               "keywords_en": [
                 "cancer",
@@ -387,18 +430,181 @@
                 "tumour",
                 "carcinoma",
                 "neoplasm",
-                "leukemia",
-                "lymphoma",
-                "sarcoma",
                 "malignant",
-                "oncolog",
-                "antitumor",
-                "anti-tumor"
+                "sarcoma",
+                "melanoma"
               ],
               "mesh_terms": [
                 "Neoplasms"
               ],
-              "v2_mapping": "II 悪性腫瘍 > その他腫瘍"
+              "v2_mapping": "その他腫瘍"
+            },
+            {
+              "id": "ICD02_antitumor_basic",
+              "name_ja": "抗腫瘍活性（基礎研究）",
+              "name_en": "Antitumor activity (basic research)",
+              "keywords_ja": [
+                "抗腫瘍",
+                "抗がん作用",
+                "細胞毒性",
+                "アポトーシス"
+              ],
+              "keywords_en": [
+                "antitumor",
+                "anti-tumor",
+                "anticancer",
+                "anti-cancer",
+                "cytotoxic",
+                "apoptosis",
+                "cell proliferation inhibit"
+              ],
+              "mesh_terms": [
+                "Antineoplastic Agents, Phytogenic",
+                "Drug Screening Assays, Antitumor"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_cinv",
+              "name_ja": "悪心・嘔吐（CINV）",
+              "name_en": "Chemotherapy-induced nausea/vomiting",
+              "keywords_ja": [
+                "悪心",
+                "嘔吐",
+                "制吐",
+                "CINV"
+              ],
+              "keywords_en": [
+                "nausea",
+                "vomiting",
+                "cinv",
+                "emesis",
+                "antiemetic",
+                "chemotherapy-induced nausea"
+              ],
+              "mesh_terms": [
+                "Nausea",
+                "Vomiting"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_cipn",
+              "name_ja": "末梢神経障害（CIPN）",
+              "name_en": "Chemotherapy-induced peripheral neuropathy",
+              "keywords_ja": [
+                "末梢神経障害",
+                "しびれ",
+                "CIPN"
+              ],
+              "keywords_en": [
+                "peripheral neuropathy",
+                "cipn",
+                "chemotherapy-induced peripheral neuropathy",
+                "oxaliplatin-induced"
+              ],
+              "mesh_terms": [
+                "Peripheral Nervous System Diseases"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_oral_mucositis",
+              "name_ja": "口内炎・粘膜炎",
+              "name_en": "Oral mucositis",
+              "keywords_ja": [
+                "口内炎",
+                "粘膜炎"
+              ],
+              "keywords_en": [
+                "oral mucositis",
+                "stomatitis",
+                "mucositis"
+              ],
+              "mesh_terms": [
+                "Mucositis",
+                "Stomatitis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_cachexia",
+              "name_ja": "食欲不振・悪液質",
+              "name_en": "Cancer anorexia-cachexia",
+              "keywords_ja": [
+                "食欲不振",
+                "悪液質",
+                "体重減少"
+              ],
+              "keywords_en": [
+                "anorexia",
+                "cachexia",
+                "appetite loss",
+                "weight loss",
+                "malnutrition",
+                "cancer anorexia"
+              ],
+              "mesh_terms": [
+                "Cachexia",
+                "Anorexia"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_cancer_fatigue",
+              "name_ja": "癌性疲労",
+              "name_en": "Cancer-related fatigue",
+              "keywords_ja": [
+                "癌性疲労"
+              ],
+              "keywords_en": [
+                "cancer-related fatigue",
+                "cancer fatigue"
+              ],
+              "mesh_terms": [],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_cancer_pain",
+              "name_ja": "癌性疼痛",
+              "name_en": "Cancer pain",
+              "keywords_ja": [
+                "癌性疼痛",
+                "がん性疼痛"
+              ],
+              "keywords_en": [
+                "cancer pain",
+                "tumor pain",
+                "oncologic pain"
+              ],
+              "mesh_terms": [
+                "Cancer Pain"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD02_myelosuppression",
+              "name_ja": "骨髄抑制",
+              "name_en": "Myelosuppression",
+              "keywords_ja": [
+                "骨髄抑制",
+                "白血球減少",
+                "血小板減少",
+                "好中球減少"
+              ],
+              "keywords_en": [
+                "myelosuppression",
+                "leukopenia",
+                "thrombocytopenia",
+                "neutropenia",
+                "febrile neutropenia"
+              ],
+              "mesh_terms": [
+                "Leukopenia",
+                "Neutropenia",
+                "Thrombocytopenia"
+              ],
+              "v2_mapping": null
             }
           ]
         },
@@ -427,6 +633,63 @@
                 "Rhinitis, Allergic"
               ],
               "v2_mapping": "VIII 耳鼻咽喉 > アレルギー性鼻炎"
+            },
+            {
+              "id": "ICD04_autoimmune",
+              "icd11_code": "4A40-4A4Z",
+              "name_ja": "自己免疫疾患・膠原病",
+              "name_en": "Autoimmune / Collagen diseases",
+              "keywords_ja": [
+                "自己免疫",
+                "膠原病",
+                "SLE",
+                "ループス",
+                "シェーグレン",
+                "血管炎",
+                "強皮症",
+                "多発性筋炎"
+              ],
+              "keywords_en": [
+                "autoimmune",
+                "lupus",
+                "sle",
+                "sjogren",
+                "vasculitis",
+                "scleroderma",
+                "polymyositis",
+                "dermatomyositis",
+                "collagen disease",
+                "connective tissue disease"
+              ],
+              "mesh_terms": [
+                "Autoimmune Diseases",
+                "Lupus Erythematosus, Systemic",
+                "Sjogren's Syndrome",
+                "Vasculitis",
+                "Scleroderma, Systemic"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD04_food_allergy",
+              "icd11_code": "4A80",
+              "name_ja": "食物アレルギー",
+              "name_en": "Food allergy",
+              "keywords_ja": [
+                "食物アレルギー",
+                "食品アレルギー",
+                "アナフィラキシー"
+              ],
+              "keywords_en": [
+                "food allergy",
+                "food hypersensitivity",
+                "anaphylaxis"
+              ],
+              "mesh_terms": [
+                "Food Hypersensitivity",
+                "Anaphylaxis"
+              ],
+              "v2_mapping": null
             }
           ]
         },
@@ -603,6 +866,25 @@
                 "Alzheimer Disease"
               ],
               "v2_mapping": "V 精神・行動 > 認知症"
+            },
+            {
+              "id": "ICD06_schizophrenia",
+              "icd11_code": "6A20",
+              "name_ja": "統合失調症",
+              "name_en": "Schizophrenia",
+              "keywords_ja": [
+                "統合失調",
+                "精神分裂"
+              ],
+              "keywords_en": [
+                "schizophrenia",
+                "schizophrenic",
+                "antipsychotic"
+              ],
+              "mesh_terms": [
+                "Schizophrenia"
+              ],
+              "v2_mapping": null
             }
           ]
         },
@@ -680,6 +962,41 @@
                 "Seizures"
               ],
               "v2_mapping": null
+            },
+            {
+              "id": "ICD08_parkinson",
+              "icd11_code": "8A00",
+              "name_ja": "パーキンソン病",
+              "name_en": "Parkinson disease",
+              "keywords_ja": [
+                "パーキンソン"
+              ],
+              "keywords_en": [
+                "parkinson",
+                "parkinsonian",
+                "dopaminergic neuron"
+              ],
+              "mesh_terms": [
+                "Parkinson Disease"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD08_migraine",
+              "icd11_code": "8A80",
+              "name_ja": "片頭痛",
+              "name_en": "Migraine",
+              "keywords_ja": [
+                "片頭痛",
+                "偏頭痛"
+              ],
+              "keywords_en": [
+                "migraine"
+              ],
+              "mesh_terms": [
+                "Migraine Disorders"
+              ],
+              "v2_mapping": null
             }
           ]
         },
@@ -731,6 +1048,54 @@
                 "Pharyngeal Diseases"
               ],
               "v2_mapping": "VIII 耳鼻咽喉 > 咽喉頭"
+            },
+            {
+              "id": "ICD10_sinusitis",
+              "icd11_code": "CA00-CA01",
+              "name_ja": "副鼻腔炎",
+              "name_en": "Sinusitis",
+              "keywords_ja": [
+                "副鼻腔",
+                "蓄膿"
+              ],
+              "keywords_en": [
+                "sinusitis",
+                "paranasal sinus"
+              ],
+              "mesh_terms": [
+                "Sinusitis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD10_smell_taste",
+              "icd11_code": "AB10-AB30",
+              "name_ja": "嗅覚・味覚障害",
+              "name_en": "Smell / Taste disorders",
+              "keywords_ja": [
+                "嗅覚障害",
+                "味覚障害",
+                "嗅覚低下",
+                "味覚低下",
+                "嗅覚",
+                "味覚異常"
+              ],
+              "keywords_en": [
+                "anosmia",
+                "dysgeusia",
+                "ageusia",
+                "smell disorder",
+                "taste disorder",
+                "olfactory",
+                "gustatory"
+              ],
+              "mesh_terms": [
+                "Olfaction Disorders",
+                "Taste Disorders",
+                "Anosmia",
+                "Dysgeusia"
+              ],
+              "v2_mapping": null
             }
           ]
         },
@@ -757,6 +1122,117 @@
               ],
               "mesh_terms": [
                 "Hypertension"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD11_atherosclerosis",
+              "icd11_code": "BA80",
+              "name_ja": "動脈硬化",
+              "name_en": "Atherosclerosis",
+              "keywords_ja": [
+                "動脈硬化",
+                "粥状硬化"
+              ],
+              "keywords_en": [
+                "atherosclerosis",
+                "arteriosclerosis",
+                "atherosclerotic"
+              ],
+              "mesh_terms": [
+                "Atherosclerosis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD11_heart_failure",
+              "icd11_code": "BD10",
+              "name_ja": "心不全",
+              "name_en": "Heart failure",
+              "keywords_ja": [
+                "心不全",
+                "うっ血性心不全"
+              ],
+              "keywords_en": [
+                "heart failure",
+                "cardiac failure",
+                "congestive heart failure"
+              ],
+              "mesh_terms": [
+                "Heart Failure"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD11_ihd",
+              "icd11_code": "BA40-BA6Z",
+              "name_ja": "虚血性心疾患",
+              "name_en": "Ischemic heart disease",
+              "keywords_ja": [
+                "冠動脈",
+                "狭心症",
+                "心筋梗塞",
+                "虚血性心疾患"
+              ],
+              "keywords_en": [
+                "coronary",
+                "angina",
+                "myocardial infarction",
+                "ischemic heart",
+                "ischaemic heart"
+              ],
+              "mesh_terms": [
+                "Coronary Disease",
+                "Myocardial Infarction",
+                "Angina Pectoris"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD11_arrhythmia",
+              "icd11_code": "BC60-BC9Z",
+              "name_ja": "不整脈",
+              "name_en": "Arrhythmia",
+              "keywords_ja": [
+                "不整脈",
+                "心房細動",
+                "頻脈",
+                "徐脈"
+              ],
+              "keywords_en": [
+                "arrhythmia",
+                "atrial fibrillation",
+                "tachycardia",
+                "bradycardia"
+              ],
+              "mesh_terms": [
+                "Arrhythmias, Cardiac",
+                "Atrial Fibrillation"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD11_thrombosis",
+              "icd11_code": "BD70-BD7Z",
+              "name_ja": "血栓症",
+              "name_en": "Thrombosis",
+              "keywords_ja": [
+                "血栓",
+                "深部静脈血栓",
+                "肺塞栓",
+                "塞栓症"
+              ],
+              "keywords_en": [
+                "thrombosis",
+                "deep vein thrombosis",
+                "pulmonary embolism",
+                "embolism",
+                "thromboembolism"
+              ],
+              "mesh_terms": [
+                "Thrombosis",
+                "Venous Thromboembolism",
+                "Pulmonary Embolism"
               ],
               "v2_mapping": null
             }
