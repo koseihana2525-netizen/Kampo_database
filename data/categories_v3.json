@@ -97,6 +97,219 @@
                 "Herpes Zoster"
               ],
               "v2_mapping": "I 感染症 > 帯状疱疹"
+            },
+            {
+              "id": "ICD01_viral_hepatitis",
+              "icd11_code": "1E50-1E51",
+              "name_ja": "ウイルス性肝炎",
+              "name_en": "Viral hepatitis",
+              "keywords_ja": [
+                "C型肝炎",
+                "B型肝炎",
+                "ウイルス性肝炎",
+                "HCV",
+                "HBV"
+              ],
+              "keywords_en": [
+                "hepatitis c",
+                "hepatitis b",
+                "hcv",
+                "hbv",
+                "viral hepatitis"
+              ],
+              "mesh_terms": [
+                "Hepatitis C",
+                "Hepatitis C, Chronic",
+                "Hepatitis B",
+                "Hepatitis B, Chronic"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_hiv",
+              "icd11_code": "1C60-1C62",
+              "name_ja": "HIV/AIDS",
+              "name_en": "HIV/AIDS",
+              "keywords_ja": [
+                "HIV",
+                "AIDS",
+                "エイズ"
+              ],
+              "keywords_en": [
+                "hiv",
+                "aids",
+                "human immunodeficiency virus",
+                "anti-hiv",
+                "antiretroviral"
+              ],
+              "mesh_terms": [
+                "HIV Infections",
+                "Acquired Immunodeficiency Syndrome"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_pneumonia",
+              "icd11_code": "CA40",
+              "name_ja": "肺炎",
+              "name_en": "Pneumonia",
+              "keywords_ja": [
+                "肺炎",
+                "誤嚥性肺炎"
+              ],
+              "keywords_en": [
+                "pneumonia",
+                "aspiration pneumonia",
+                "community-acquired pneumonia"
+              ],
+              "mesh_terms": [
+                "Pneumonia",
+                "Pneumonia, Aspiration"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_helicobacter",
+              "icd11_code": "1A86",
+              "name_ja": "ヘリコバクター・ピロリ",
+              "name_en": "Helicobacter pylori",
+              "keywords_ja": [
+                "ヘリコバクター",
+                "ピロリ菌",
+                "ピロリ"
+              ],
+              "keywords_en": [
+                "helicobacter",
+                "h. pylori",
+                "helicobacter pylori"
+              ],
+              "mesh_terms": [
+                "Helicobacter Infections",
+                "Helicobacter pylori"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_tuberculosis",
+              "icd11_code": "1B10-1B14",
+              "name_ja": "結核",
+              "name_en": "Tuberculosis",
+              "keywords_ja": [
+                "結核",
+                "抗酸菌"
+              ],
+              "keywords_en": [
+                "tuberculosis",
+                "mycobacterium tuberculosis",
+                "anti-tuberculosis"
+              ],
+              "mesh_terms": [
+                "Tuberculosis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_sepsis",
+              "icd11_code": "1G40",
+              "name_ja": "敗血症",
+              "name_en": "Sepsis",
+              "keywords_ja": [
+                "敗血症"
+              ],
+              "keywords_en": [
+                "sepsis",
+                "septicemia",
+                "bacteremia",
+                "endotoxemia"
+              ],
+              "mesh_terms": [
+                "Sepsis"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_mrsa",
+              "icd11_code": "1C10",
+              "name_ja": "MRSA",
+              "name_en": "MRSA",
+              "keywords_ja": [
+                "MRSA",
+                "メチシリン耐性"
+              ],
+              "keywords_en": [
+                "mrsa",
+                "methicillin-resistant",
+                "staphylococcus aureus"
+              ],
+              "mesh_terms": [
+                "Methicillin-Resistant Staphylococcus aureus",
+                "Staphylococcal Infections"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_fungal",
+              "icd11_code": "1F23",
+              "name_ja": "真菌感染症",
+              "name_en": "Fungal infections",
+              "keywords_ja": [
+                "カンジダ",
+                "真菌",
+                "白癬"
+              ],
+              "keywords_en": [
+                "candida",
+                "candidiasis",
+                "fungal infection",
+                "antifungal",
+                "aspergillus",
+                "dermatophyte"
+              ],
+              "mesh_terms": [
+                "Candidiasis",
+                "Mycoses"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_malaria",
+              "icd11_code": "1F40",
+              "name_ja": "マラリア",
+              "name_en": "Malaria",
+              "keywords_ja": [
+                "マラリア"
+              ],
+              "keywords_en": [
+                "malaria",
+                "plasmodium",
+                "antimalarial"
+              ],
+              "mesh_terms": [
+                "Malaria"
+              ],
+              "v2_mapping": null
+            },
+            {
+              "id": "ICD01_parasitic",
+              "icd11_code": "1F6-1F9",
+              "name_ja": "寄生虫感染症",
+              "name_en": "Parasitic infections",
+              "keywords_ja": [
+                "寄生虫"
+              ],
+              "keywords_en": [
+                "parasit",
+                "helminth",
+                "schistosom",
+                "antiparasitic",
+                "anthelmintic",
+                "leishmania"
+              ],
+              "mesh_terms": [
+                "Parasitic Diseases",
+                "Helminthiasis"
+              ],
+              "v2_mapping": null
             }
           ]
         },
