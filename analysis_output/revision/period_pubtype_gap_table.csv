@@ -1,0 +1,13 @@
+﻿Period,Source,PubType,Q1,Q3,Q1+Q3,Gap(%)
+P1 (1982-2000),kampo,Case Report,37,54,91,59.3
+P1 (1982-2000),kampo,Non-Case Report,94,173,267,64.8
+P2 (2001-2010),kampo,Case Report,50,42,92,45.7
+P2 (2001-2010),kampo,Non-Case Report,66,76,142,53.5
+P3 (2011-2026),kampo,Case Report,132,96,228,42.1
+P3 (2011-2026),kampo,Non-Case Report,139,146,285,51.2
+P1 (1982-2000),pubmed_kampo,Case Report,0,6,6,100.0
+P1 (1982-2000),pubmed_kampo,Non-Case Report,0,94,94,100.0
+P2 (2001-2010),pubmed_kampo,Case Report,0,13,13,100.0
+P2 (2001-2010),pubmed_kampo,Non-Case Report,7,147,154,95.5
+P3 (2011-2026),pubmed_kampo,Case Report,4,84,88,95.5
+P3 (2011-2026),pubmed_kampo,Non-Case Report,23,997,1020,97.7
