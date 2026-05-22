@@ -96,7 +96,7 @@ for i, a in enumerate(articles):
         "y": year,
         "a": ", ".join(author_names) if author_names else "",
         "l": a.get("link", ""),
-        "ab": abstract[:500] if abstract else "",
+        "ab": abstract or "",
         "f": formulas,
         "c": matched_categories,  # lv3 category names
         "j": journal_short,  # journal source

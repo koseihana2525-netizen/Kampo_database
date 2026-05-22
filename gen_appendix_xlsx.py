@@ -9,6 +9,7 @@ from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
 
 OUTPUT = 'analysis_output/revision'
 
+# === Build ALL_TERMS_V2 identically to phase3_analysis.py ===
 cognition_ja = {}
 PTERM_MAP = {'八綱弁証':'pathology','気血津液弁証':'pathology','臓腑弁証':'pathology','六経弁証':'classical'}
 for top, subcats in PATTERN_TERMS.items():
@@ -27,15 +28,23 @@ extra_ja = {
     '未病':'epistemological','養生':'epistemological','心身一如':'epistemological',
     '同病異治':'epistemological','異病同治':'epistemological','君臣佐使':'epistemological',
     '傷寒論':'classical','金匱要略':'classical','温病':'classical',
-    '転方':'sho_core','奔豚':'pathology','煩躁':'pathology',
-    '裏寒':'pathology','表熱':'pathology','血の道':'pathology','水毒':'pathology',
 }
 cognition_ja.update(extra_ja)
+# T1_ADDITIONS (v2.1): same as phase3_analysis.py
+t1_additions_ja = {
+    '奔豚':'classical','奔豚気':'classical','奔豚病':'classical','煩躁':'classical',
+    '転方':'sho_core',
+    '尿自利':'examination','小便自利':'examination','小便不利':'examination','尿不利':'examination',
+    '瞑眩':'epistemological',
+    '脾虚':'pathology','腎虚':'pathology','肝鬱':'pathology',
+}
+cognition_ja.update(t1_additions_ja)
 cognition_en = {
     'sho ':'sho_core','sho-based':'sho_core',
     'sho pattern':'sho_core','pattern diagnosis':'sho_core',
     'pattern identification':'sho_core','pattern differentiation':'sho_core',
     'ho-sho-sotai':'sho_core','hoshotai':'sho_core',
+    'switching formula':'sho_core',
     'qi deficiency':'pathology','blood deficiency':'pathology',
     'qi stagnation':'pathology','qi counterflow':'pathology',
     'blood stasis':'pathology','blood stagnation':'pathology',
@@ -48,18 +57,22 @@ cognition_en = {
     'excess pattern':'pathology','kyo-jitsu':'pathology',
     'kyojitsu':'pathology','spleen deficiency':'pathology',
     'kidney deficiency':'pathology','liver qi':'pathology',
+    'heat syndrome':'pathology','liver stagnation':'pathology',
     'taiyang':'classical','shaoyang':'classical','yangming':'classical',
     'taiyin':'classical','shaoyin':'classical','jueyin':'classical',
     'six stages':'classical','shanghan':'classical','shang han':'classical',
     'jingui':'classical','jin gui yao lue':'classical',
+    'hontonki':'classical','honton':'classical','running piglet':'classical',
     'abdominal diagnosis':'examination','fukushin':'examination',
     'pulse diagnosis':'examination','tongue diagnosis':'examination',
     'hypochondriac fullness':'examination','kyokyo-kuman':'examination',
     'splashing sound':'examination','abdominal palpation':'examination',
+    'urinary dysfunction':'examination',
     'mibyou':'epistemological','mibyo':'epistemological',
     'yangsheng':'epistemological','yojo ':'epistemological',
     'mind-body unity':'epistemological',
     'same disease different treatment':'epistemological',
+    'menken':'epistemological','healing crisis':'epistemological',
 }
 
 liberal_only = set()

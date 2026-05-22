@@ -195,6 +195,9 @@ T1_ADDITIONS = {
     '瞑眩':'epistemological','menken':'epistemological','healing crisis':'epistemological',
     # pathology
     'heat syndrome':'pathology',
+    # pathology (v2.1追加)
+    '脾虚':'pathology', '腎虚':'pathology', '肝鬱':'pathology',
+    'liver stagnation':'pathology',
 }
 
 ALL_TERMS_V2 = dict(ALL_TERMS_BASE)

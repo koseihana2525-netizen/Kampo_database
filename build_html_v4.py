@@ -7,17 +7,17 @@ import sys
 sys.stdout.reconfigure(encoding='utf-8')
 
 import json
-import os
+from pathlib import Path
+from config import INTEGRATED_DB_PATH, EVIDENCE_MAP_PATH
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DB_PATH = os.path.join(BASE_DIR, "data", "integrated_db_v4.json")
-OUT_PATH = os.path.join(BASE_DIR, "index.html")
+DB_PATH = INTEGRATED_DB_PATH
+OUT_PATH = EVIDENCE_MAP_PATH
 
 # ── Load DB ──
 with open(DB_PATH, "r", encoding="utf-8") as f:
     db = json.load(f)
 
-in_size = os.path.getsize(DB_PATH)
+in_size = DB_PATH.stat().st_size
 print(f"Input : {DB_PATH} ({in_size/1024/1024:.1f} MB)")
 print(f"Articles: {db['stats']['total']}")
 
@@ -52,19 +52,31 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 /* Nav */
 .nav-bar{background:#fff;padding:10px 28px;box-shadow:0 2px 8px rgba(0,0,0,.06);position:sticky;top:0;z-index:100;display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
 .nav-tabs{display:flex;gap:3px;flex-wrap:wrap;}
-.nav-tab{padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px;background:#f0f0f0;border:none;transition:all .15s;white-space:nowrap;}
+.nav-tab{padding:6px 12px;border-radius:6px;cursor:pointer;font-size:13px;background:#f0f0f0;border:none;transition:all .15s;white-space:nowrap;position:relative;}
 .nav-tab:hover{background:#e0e0e0;}
 .nav-tab.active{background:var(--primary);color:#fff;}
+.nav-tab .tab-hint{display:none;font-size:9px;opacity:.7;}
+.nav-tab.active .tab-hint{display:inline;margin-left:2px;}
 .search-wrap{margin-left:auto;position:relative;}
 .search-wrap input{padding:8px 14px 8px 32px;border:2px solid #e0e0e0;border-radius:6px;font-size:14px;width:260px;outline:none;transition:border .2s;}
 .search-wrap input:focus{border-color:var(--blue);}
 .search-wrap::before{content:'\1F50D';position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:14px;}
+.suggest-box{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #ddd;border-top:none;border-radius:0 0 6px 6px;box-shadow:0 4px 12px rgba(0,0,0,.1);max-height:320px;overflow-y:auto;z-index:150;display:none;}
+.suggest-box.open{display:block;}
+.suggest-item{padding:8px 14px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:8px;border-bottom:1px solid #f5f5f5;}
+.suggest-item:hover,.suggest-item.selected{background:#ebf5fb;}
+.suggest-item .stype{font-size:10px;padding:1px 6px;border-radius:6px;flex-shrink:0;}
+.suggest-item .stype-f{background:#fff3e0;color:#e65100;}
+.suggest-item .stype-a{background:#e8f5e9;color:#2e7d32;}
+.suggest-item .stype-t{background:#e8f0fe;color:#1a73e8;}
+.suggest-item .sname{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.suggest-item .scnt{font-size:11px;color:var(--muted);flex-shrink:0;}
 
 /* Main */
 .main{max-width:1200px;margin:0 auto;padding:20px 28px;}
-.breadcrumb{font-size:13px;color:var(--muted);margin-bottom:12px;}
-.breadcrumb span{cursor:pointer;color:var(--blue);}
-.breadcrumb span:hover{text-decoration:underline;}
+.breadcrumb{font-size:13px;color:var(--text);margin-bottom:14px;background:#eef2f7;padding:8px 14px;border-radius:6px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.breadcrumb span{cursor:pointer;color:var(--blue);font-weight:500;}
+.breadcrumb span:hover{text-decoration:underline;background:rgba(52,152,219,.08);border-radius:4px;padding:0 2px;margin:0 -2px;}
 .section-title{font-size:17px;font-weight:600;margin:18px 0 12px;display:flex;align-items:center;gap:8px;}
 .section-title:first-child{margin-top:0;}
 .section-title .count{font-size:13px;color:var(--muted);font-weight:400;}
@@ -121,6 +133,7 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 .author-card{background:var(--card);border-radius:var(--radius);padding:10px 14px;box-shadow:var(--shadow);cursor:pointer;transition:all .15s;}
 .author-card:hover{background:#ebf5fb;}
 .author-card .aname{font-size:14px;font-weight:500;}
+.author-card .aname-en{font-size:13px;font-weight:400;color:#555;}
 .author-card .aalias{font-size:11px;color:#888;font-style:italic;}
 .author-card .acnt{font-size:12px;color:var(--muted);}
 
@@ -132,6 +145,10 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 .article-item .atitle a:hover{color:var(--blue);text-decoration:underline;}
 .article-item .ameta{font-size:12px;color:var(--muted);margin-top:3px;}
 .article-item .atags{margin-top:5px;display:flex;flex-wrap:wrap;gap:3px;}
+.tags-more{font-size:11px;display:inline-block;padding:2px 8px;border-radius:8px;background:#f0f0f0;color:var(--blue);border:1px solid #ddd;cursor:pointer;margin:1px;}
+.tags-more:hover{background:#e8f0fe;}
+.tags-extra{display:none;}
+.tags-extra.open{display:contents;}
 .article-item .aformula{font-size:12px;margin-top:4px;color:#e65100;}
 .toggle-ab{font-size:12px;color:var(--blue);cursor:pointer;margin-top:4px;display:inline-block;}
 .abstract-text{font-size:13px;color:#555;margin-top:6px;line-height:1.6;display:none;white-space:pre-wrap;word-break:break-word;}
@@ -184,6 +201,11 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 .legend{display:flex;gap:16px;margin:8px 0;font-size:12px;color:var(--muted);align-items:center;}
 .legend-dot{width:12px;height:12px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:middle;}
 
+/* Back button */
+.back-btn{position:fixed;bottom:24px;left:24px;z-index:200;background:var(--primary);color:#fff;border:none;padding:10px 18px;border-radius:24px;font-size:13px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,.2);transition:all .2s;display:none;}
+.back-btn:hover{background:#1a2a3a;transform:translateY(-1px);}
+.back-btn.visible{display:flex;align-items:center;gap:6px;}
+
 .footer{text-align:center;padding:28px;font-size:11px;color:var(--muted);}
 
 /* Inst filter */
@@ -212,11 +234,14 @@ body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',san
 <div class="nav-bar">
   <div class="nav-tabs" id="nav-tabs"></div>
   <div class="search-wrap">
-    <input type="text" id="search-input" placeholder="タイトル・著者・抄録を検索...">
+    <input type="text" id="search-input" placeholder="タイトル・著者・抄録を検索..." autocomplete="off">
+    <div class="suggest-box" id="suggest-box"></div>
   </div>
 </div>
 
 <div class="main" id="main-content"></div>
+
+<button class="back-btn" id="back-btn" onclick="goBack()">&#x2190; 戻る</button>
 
 <div class="footer">
   日本の東洋医学エビデンスマップ v4 &mdash; Data: J-STAGE + PubMed &mdash; Generated with Python
@@ -242,14 +267,36 @@ Object.entries(AXIS_META).forEach(([ax, m]) => {
 
 /* ── Tab definitions ── */
 const TABS = [
-  {id:'home',   label:'\uD83C\uDFE0 ホーム'},
-  {id:'disease',label:'\uD83C\uDFE5 疾患'},
-  {id:'symptom',label:'\uD83E\uDE7A 症候'},
-  {id:'sd',     label:'\uD83D\uDCCA 研究デザイン'},
-  {id:'formula',label:'\uD83D\uDC8A 方剤'},
-  {id:'author', label:'\uD83D\uDC64 著者'},
-  {id:'timeline',label:'\uD83D\uDCC8 タイムライン'}
+  {id:'home',   label:'\uD83C\uDFE0 ホーム', hint:''},
+  {id:'disease',label:'\uD83C\uDFE5 疾患', hint:'章\u2192\u75BE\u60A3'},
+  {id:'symptom',label:'\uD83E\uDE7A 症候', hint:'\u4E00\u89A7'},
+  {id:'sd',     label:'\uD83D\uDCCA \u7814\u7A76\u30C7\u30B6\u30A4\u30F3', hint:'\u4E00\u89A7'},
+  {id:'formula',label:'\uD83D\uDC8A 方剤', hint:'\u30BD\u30FC\u30C8'},
+  {id:'author', label:'\uD83D\uDC64 著者', hint:'\u691C\u7D22'},
+  {id:'timeline',label:'\uD83D\uDCC8 \u30BF\u30A4\u30E0\u30E9\u30A4\u30F3', hint:''}
 ];
+
+let activeParentTab = 'home'; // track parent tab for detail views
+
+/* ── View history stack ── */
+const viewStack = [];
+function pushView(fn) {
+  viewStack.push(fn);
+  updateBackBtn();
+}
+function goBack() {
+  if (viewStack.length > 1) {
+    viewStack.pop(); // remove current
+    const prev = viewStack[viewStack.length - 1];
+    viewStack.pop(); // will be re-pushed when prev() executes
+    prev();
+  }
+  updateBackBtn();
+}
+function updateBackBtn() {
+  const btn = document.getElementById('back-btn');
+  if (btn) btn.classList.toggle('visible', viewStack.length > 1);
+}
 
 let currentTab = 'home';
 let currentSourceFilter = 'all'; // all | jp | pm
@@ -295,7 +342,7 @@ function init() {
     const btn = document.createElement('button');
     btn.className = 'nav-tab';
     btn.dataset.id = t.id;
-    btn.textContent = t.label;
+    btn.innerHTML = t.label + (t.hint ? '<span class="tab-hint">' + t.hint + '</span>' : '');
     btn.onclick = () => showTab(t.id);
     nt.appendChild(btn);
   });
@@ -308,14 +355,66 @@ function init() {
   jtBtn.onclick = toggleJapanOnly;
   nt.appendChild(jtBtn);
 
-  // Search
-  document.getElementById('search-input').addEventListener('keydown', e => {
-    if (e.key === 'Enter') {
-      const q = e.target.value.trim();
-      if (!q) { showTab('home'); return; }
-      doSearch(q);
+  // Search with suggestions
+  const searchInput = document.getElementById('search-input');
+  const suggestBox = document.getElementById('suggest-box');
+  let suggestIdx = -1;
+
+  searchInput.addEventListener('keydown', e => {
+    const items = suggestBox.querySelectorAll('.suggest-item');
+    if (e.key === 'ArrowDown') { e.preventDefault(); suggestIdx = Math.min(suggestIdx+1, items.length-1); updateSuggestHighlight(items); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); suggestIdx = Math.max(suggestIdx-1, -1); updateSuggestHighlight(items); }
+    else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (suggestIdx >= 0 && items[suggestIdx]) { items[suggestIdx].click(); }
+      else { const q = searchInput.value.trim(); if (!q) { showTab('home'); } else { doSearch(q); } }
+      closeSuggest();
     }
+    else if (e.key === 'Escape') { closeSuggest(); }
   });
+  searchInput.addEventListener('input', () => { suggestIdx = -1; showSuggestions(searchInput.value.trim()); });
+  searchInput.addEventListener('blur', () => { setTimeout(closeSuggest, 200); });
+
+  function updateSuggestHighlight(items) {
+    items.forEach((el,i) => el.classList.toggle('selected', i===suggestIdx));
+    if (suggestIdx >= 0 && items[suggestIdx]) items[suggestIdx].scrollIntoView({block:'nearest'});
+  }
+  function closeSuggest() { suggestBox.classList.remove('open'); suggestBox.innerHTML = ''; suggestIdx = -1; }
+  function showSuggestions(q) {
+    if (!q || q.length < 2) { closeSuggest(); return; }
+    const ql = q.toLowerCase();
+    const results = [];
+    // Formulas
+    Object.keys(DB.fi).forEach(f => {
+      if (f.includes(q) && results.length < 5) results.push({type:'f',label:'\uD83D\uDC8A',cls:'stype-f',name:f,cnt:(DB.fi[f]||[]).length,action:()=>showFormulaDetail(f)});
+    });
+    // Tags (categories)
+    Object.keys(DB.ai).forEach(t => {
+      const ax = DB.axes[t]; if(!ax) return;
+      if ((ax.ja.includes(q)||ax.en.toLowerCase().includes(ql)) && results.length < 8)
+        results.push({type:'t',label:'\uD83C\uDFF7',cls:'stype-t',name:ax.ja+' / '+ax.en,cnt:(DB.ai[t]||[]).length,action:()=>showTagArticles(t)});
+    });
+    // Authors
+    const al = DB.au_aliases || {};
+    Object.keys(DB.au).forEach(a => {
+      if (results.length >= 10) return;
+      if (a.toLowerCase().includes(ql) || a.includes(q) || (al[a]&&al[a].toLowerCase().includes(ql)))
+        results.push({type:'a',label:'\uD83D\uDC64',cls:'stype-a',name:a+(al[a]?' / '+al[a]:''),cnt:DB.au[a].length,action:()=>showAuthorArticles(a)});
+    });
+    if (results.length === 0) { closeSuggest(); return; }
+    let h = '';
+    results.forEach((r,i) => {
+      h += '<div class="suggest-item" data-idx="' + i + '">';
+      h += '<span class="stype ' + r.cls + '">' + r.label + '</span>';
+      h += '<span class="sname">' + escHtml(r.name) + '</span>';
+      h += '<span class="scnt">' + r.cnt + '</span></div>';
+    });
+    suggestBox.innerHTML = h;
+    suggestBox.classList.add('open');
+    suggestBox.querySelectorAll('.suggest-item').forEach((el,i) => {
+      el.onclick = () => { results[i].action(); closeSuggest(); searchInput.value = ''; };
+    });
+  }
 
   showTab('home');
 }
@@ -331,7 +430,9 @@ function setActiveTab(id) {
 
 function showTab(tabId) {
   currentTab = tabId;
+  activeParentTab = tabId;
   setActiveTab(tabId);
+  pushView(() => showTab(tabId));
   const mc = document.getElementById('main-content');
   switch(tabId) {
     case 'home': renderHome(mc); break;
@@ -485,6 +586,8 @@ function showChapterLeaves(axisType, chId) {
   const chapters = DB.axis_chapters[axisType] || [];
   const ch = chapters.find(c => c.id === chId);
   if (!ch) return;
+  setActiveTab(axisType);
+  pushView(() => showChapterLeaves(axisType, chId));
   const mc = document.getElementById('main-content');
   let h = '<div class="breadcrumb"><span onclick="showTab(\'' + axisType + '\')">' + meta.icon + ' ' + meta.label + '</span> &gt; ' + ch.ja + ' / ' + ch.en + '</div>';
   h += '<div class="section-title">' + ch.ja + ' <span class="count">' + ch.en + '</span></div>';
@@ -512,6 +615,8 @@ function showTagArticles(tagId) {
     }
     if (parentAxis) break;
   }
+  if (parentAxis) setActiveTab(parentAxis);
+  pushView(() => showTagArticles(tagId));
   let h = '<div class="breadcrumb">';
   if (parentAxis) {
     const m = AXIS_META[parentAxis];
@@ -612,6 +717,8 @@ function showFormulaDetail(fname) {
   const info = DB.formulas[fname];
   const indices = DB.fi[fname] || [];
   if (!info && !indices.length) return;
+  setActiveTab('formula');
+  pushView(() => showFormulaDetail(fname));
   const mc = document.getElementById('main-content');
   const originCls = (info && info.origin === '経方') ? 'keipo' : 'gosei';
   let h = '<div class="breadcrumb"><span onclick="showTab(\'formula\')">\uD83D\uDC8A 方剤</span> &gt; ' + escHtml(fname) + '</div>';
@@ -660,6 +767,7 @@ function showFormulaCrossArticles(fname, tagId) {
   const fSet = new Set(DB.fi[fname]||[]);
   const tIdxs = DB.ai[tagId]||[];
   const cross = tIdxs.filter(i => fSet.has(i));
+  pushView(() => showFormulaCrossArticles(fname, tagId));
   const mc = document.getElementById('main-content');
   let h = '<div class="breadcrumb"><span onclick="showTab(\'formula\')">\uD83D\uDC8A 方剤</span> &gt; <span onclick="showFormulaDetail(\'' + esc(fname) + '\')">' + escHtml(fname) + '</span> &gt; ' + tagJa(tagId) + '</div>';
   h += '<div class="section-title">' + escHtml(fname) + ' \u00D7 ' + tagJa(tagId) + ' <span class="count">' + cross.length + ' articles</span></div>';
@@ -694,18 +802,33 @@ function authorAlias(name) {
   const al = DB.au_aliases || {};
   return al[name] || null;
 }
+function isJaName(name) {
+  return /[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9fff]/.test(name);
+}
+function authorNameHtml(name) {
+  if (isJaName(name)) {
+    return '<div class="aname">' + escHtml(name) + '</div>';
+  }
+  return '<div class="aname-en">' + escHtml(name) + '</div>';
+}
 function authorAliasHtml(name) {
   const alias = authorAlias(name);
   return alias ? '<div class="aalias">' + escHtml(alias) + '</div>' : '';
 }
 
 function showTopAuthors() {
-  const sorted = Object.entries(DB.au).sort((a,b) => b[1].length - a[1].length).slice(0,20);
+  const sorted = Object.entries(DB.au).sort((a,b) => {
+    // Japanese names first, then by count
+    const aJa = isJaName(a[0]) ? 0 : 1;
+    const bJa = isJaName(b[0]) ? 0 : 1;
+    if (aJa !== bJa) return aJa - bJa;
+    return b[1].length - a[1].length;
+  }).slice(0,20);
   let h = '<div class="section-title">Top 20 著者</div>';
   h += '<div class="author-grid">';
   sorted.forEach(([name, idxs]) => {
     h += '<div class="author-card" onclick="showAuthorArticles(\'' + esc(name) + '\')">';
-    h += '<div class="aname">' + escHtml(name) + '</div>';
+    h += authorNameHtml(name);
     h += authorAliasHtml(name);
     h += '<div class="acnt">' + idxs.length + ' articles</div></div>';
   });
@@ -733,7 +856,7 @@ function filterAuthors(q) {
   h += '<div class="author-grid">';
   matches.forEach(([name, idxs]) => {
     h += '<div class="author-card" onclick="showAuthorArticles(\'' + esc(name) + '\')">';
-    h += '<div class="aname">' + escHtml(name) + '</div>';
+    h += authorNameHtml(name);
     h += authorAliasHtml(name);
     h += '<div class="acnt">' + idxs.length + ' articles</div></div>';
   });
@@ -769,6 +892,8 @@ function filterByInst(instName) {
 
 function showAuthorArticles(authorName) {
   const indices = DB.au[authorName] || [];
+  setActiveTab('author');
+  pushView(() => showAuthorArticles(authorName));
   const mc = document.getElementById('main-content');
   const alias = authorAlias(authorName);
   let h = '<div class="breadcrumb"><span onclick="showTab(\'author\')">\uD83D\uDC64 著者</span> &gt; ' + escHtml(authorName) + '</div>';
@@ -840,6 +965,8 @@ function renderTimelineChart(height, mini) {
 function showYearArticles(year) {
   const indices = [];
   DB.articles.forEach((a, i) => { if (a.y === year) indices.push(i); });
+  setActiveTab('timeline');
+  pushView(() => showYearArticles(year));
   const mc = document.getElementById('main-content');
   let h = '<div class="breadcrumb"><span onclick="showTab(\'timeline\')">\uD83D\uDCC8 タイムライン</span> &gt; ' + year + '年</div>';
   h += '<div class="section-title">' + year + '年 <span class="count">' + indices.length + ' articles</span></div>';
@@ -862,6 +989,7 @@ function showYearArticlesFiltered(year, src) {
 /* ── SEARCH ── */
 function doSearch(query) {
   setActiveTab('');
+  pushView(() => doSearch(query));
   const mc = document.getElementById('main-content');
   const q = query.toLowerCase();
 
@@ -998,10 +1126,17 @@ function renderArticlesInto(indices, container, startFrom) {
     h += '<div class="ameta">' + escHtml(a.a||'') + ' \u00B7 ' + escHtml(a.j||'') + ' \u00B7 ' + (a.y||'') + '</div>';
     h += '<div class="atags">';
     (a.d||[]).forEach(t => { h += '<span class="tag-d" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
-    (a.sx||[]).forEach(t => { h += '<span class="tag-sx" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
-    (a.int||[]).forEach(t => { h += '<span class="tag-int" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
-    (a.sd||[]).forEach(t => { h += '<span class="tag-sd" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
-    (a.set||[]).forEach(t => { h += '<span class="tag-set" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
+    const extraTags = [...(a.sx||[]), ...(a.int||[]), ...(a.sd||[]), ...(a.set||[])];
+    if (extraTags.length > 0) {
+      const extraId = 'ext-' + idx;
+      h += '<span class="tags-more" onclick="event.stopPropagation();var el=document.getElementById(\'' + extraId + '\');el.classList.toggle(\'open\');this.style.display=\'none\';">+' + extraTags.length + '</span>';
+      h += '<span class="tags-extra" id="' + extraId + '">';
+      (a.sx||[]).forEach(t => { h += '<span class="tag-sx" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
+      (a.int||[]).forEach(t => { h += '<span class="tag-int" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
+      (a.sd||[]).forEach(t => { h += '<span class="tag-sd" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
+      (a.set||[]).forEach(t => { h += '<span class="tag-set" style="cursor:pointer" onclick="event.stopPropagation();showTagArticles(\'' + t + '\')">' + tagJa(t) + '</span>'; });
+      h += '</span>';
+    }
     h += '</div>';
     if (a.f && a.f.length > 0) {
       h += '<div class="aformula">\uD83D\uDC8A ';
@@ -1056,7 +1191,7 @@ html = HTML_TEMPLATE.replace('%%DB_JSON%%', db_json)
 with open(OUT_PATH, "w", encoding="utf-8") as f:
     f.write(html)
 
-out_size = os.path.getsize(OUT_PATH)
+out_size = OUT_PATH.stat().st_size
 print(f"Output: {OUT_PATH} ({out_size/1024/1024:.1f} MB)")
 print(f"Articles: {db['stats']['total']}")
 print("Done.")

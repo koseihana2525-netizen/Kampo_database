@@ -21,7 +21,12 @@ JSTAGE_API_URL = "https://api.jstage.jst.go.jp/searchapi/do"
 JSTAGE_ISSN = "0287-4857"  # 日本東洋医学雑誌
 JSTAGE_REQUEST_INTERVAL = 1.5  # 秒（robots.txt遵守）
 
-# ファイルパス
+# 主要パイプラインのファイルパス
+INTEGRATED_DB_PATH = DATA_DIR / "integrated_db_v4.json"
+EVIDENCE_MAP_PATH = PROJECT_ROOT / "index.html"
+AUTHOR_ALIASES_PATH = DATA_DIR / "author_aliases.json"
+
+# その他のファイルパス
 METADATA_PATH = DATA_DIR / "metadata.json"
 EXTRACTED_DATA_PATH = OUTPUT_DIR / "extracted_data.json"
 NETWORK_HTML_PATH = OUTPUT_DIR / "pilot_demo.html"

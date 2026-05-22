@@ -8,5 +8,28 @@ data/integrated_db.json
 data/integrated_db_v4.json
 evidence_map_integrated.html
 
+# Build artifacts (regeneratable)
+index.html
+output/*.html
+output/*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup files
+*.bak
+
+# OS files
+.DS_Store
+
 # Claude settings
 .claude/
+
+# Third-party reference PDFs (copyright; never publish)
+202604_Kampodatabase/
+references_pdf/
+
+# Large regeneratable data
+data/integrated_db_japan.json

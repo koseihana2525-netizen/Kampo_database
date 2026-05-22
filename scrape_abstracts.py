@@ -7,6 +7,7 @@ Usage:
 """
 
 import json
+import logging
 import time
 import re
 import sys
@@ -15,6 +16,13 @@ import requests
 from bs4 import BeautifulSoup
 
 from config import DATA_DIR, JSTAGE_REQUEST_INTERVAL
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    datefmt="%H:%M:%S",
+)
+log = logging.getLogger(__name__)
 
 METADATA_PATH = DATA_DIR / "metadata.json"
 OUTPUT_PATH = DATA_DIR / "metadata_with_abstracts.json"
@@ -69,6 +77,7 @@ def scrape_abstract(url):
         return abstract_ja, abstract_en
 
     except Exception as e:
+        log.warning("抄録取得失敗 %s: %s", url, e)
         return "", ""
 
 
@@ -89,10 +98,10 @@ def main():
         if OUTPUT_PATH.exists():
             with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
                 articles = json.load(f)
-        print(f"前回の続きから再開: {start_idx}/{total}")
+        log.info("前回の続きから再開: %d/%d", start_idx, total)
 
-    print(f"抄録スクレイピング開始: {total}件")
-    print(f"予想時間: 約{int(total * JSTAGE_REQUEST_INTERVAL / 60)}分")
+    log.info("抄録スクレイピング開始: %d件", total)
+    log.info("予想時間: 約%d分", int(total * JSTAGE_REQUEST_INTERVAL / 60))
 
     abstracts_found = 0
     for i in range(start_idx, total):
@@ -116,7 +125,7 @@ def main():
         # 進捗表示（20件ごと）
         if (i + 1) % 20 == 0 or i == total - 1:
             pct = (i + 1) / total * 100
-            print(f"  [{i+1}/{total}] {pct:.1f}% | 抄録あり: {abstracts_found} | {art.get('title_ja','')[:30]}")
+            log.info("[%d/%d] %.1f%% | 抄録あり: %d | %s", i+1, total, pct, abstracts_found, art.get('title_ja','')[:30])
 
             # 中間保存（20件ごと）
             with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
@@ -134,8 +143,8 @@ def main():
     if PROGRESS_PATH.exists():
         PROGRESS_PATH.unlink()
 
-    print(f"\n完了！ 抄録あり: {abstracts_found}/{total}件")
-    print(f"保存: {OUTPUT_PATH}")
+    log.info("完了！ 抄録あり: %d/%d件", abstracts_found, total)
+    log.info("保存: %s", OUTPUT_PATH)
 
 
 if __name__ == "__main__":

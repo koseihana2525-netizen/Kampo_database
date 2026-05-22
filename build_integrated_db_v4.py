@@ -577,6 +577,9 @@ def main():
     for ja_name, info in author_aliases.items():
         en_name = info["en"]
         en_to_ja[en_name] = ja_name
+        # 追加エイリアス（旧姓・表記揺れ等）も登録
+        for alias in info.get("aliases", []):
+            en_to_ja[alias] = ja_name
 
     # 統合著者インデックスを構築
     merged_author_articles = defaultdict(list)
