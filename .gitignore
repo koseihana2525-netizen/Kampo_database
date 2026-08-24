@@ -33,3 +33,11 @@ references_pdf/
 
 # Large regeneratable data
 data/integrated_db_japan.json
+
+# Unpublished manuscripts and working documents (never publish)
+manuscript/
+analysis_output/
+paper/
+
+# Third-party reference PDFs (copyright; never publish)
+references for duagnosis/
