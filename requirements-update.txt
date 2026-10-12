@@ -1,0 +1,4 @@
+# 定期更新（run_update.py）に必要な最小構成。解析・図表用の requirements.txt とは別
+requests>=2.28,<3
+beautifulsoup4>=4.12,<5
+lxml>=4.9,<6

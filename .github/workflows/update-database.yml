@@ -1,0 +1,67 @@
+name: update-database
+
+# 毎月1日 12:17 JST（03:17 UTC）に PubMed / J-STAGE から最新論文を取得し、
+# 更新結果をプルリクエストにする。自動では公開しない（マージで公開）。
+on:
+  schedule:
+    - cron: '17 3 1 * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'PubMed の検索ヒット件数だけ確認する（DBは更新しない）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: update-database
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      NCBI_API_KEY: ${{ secrets.NCBI_API_KEY }}
+      NCBI_EMAIL: ${{ vars.NCBI_EMAIL }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-update.txt
+
+      - run: pip install -r requirements-update.txt
+
+      - name: テスト
+        run: python -m unittest discover -s tests -v
+
+      - name: PubMed 件数の確認（dry run）
+        if: ${{ inputs.dry_run }}
+        run: python scrape_pubmed.py --dry-run
+
+      - name: DB 更新
+        if: ${{ !inputs.dry_run }}
+        env:
+          PR_BODY_PATH: ${{ runner.temp }}/pr_body.md
+        run: python run_update.py
+
+      - name: プルリクエスト作成
+        if: ${{ !inputs.dry_run }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: auto/database-update
+          base: main
+          add-paths: |
+            index.html
+            data/merged_metadata.json
+            update_reports/*.md
+          commit-message: 'DB自動更新: PubMed / J-STAGE の最新論文を反映'
+          title: 'DB自動更新（PubMed / J-STAGE）'
+          body-path: ${{ runner.temp }}/pr_body.md
+          delete-branch: true
