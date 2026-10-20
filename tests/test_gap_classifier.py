@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 import gap_classifier as G
-from romaji import yomi_to_romaji
+from romaji import yomi_to_romaji, yomi_to_romaji_variants
 
 
 def art(title="", abstract="", lang="en"):
@@ -35,6 +35,18 @@ class FormulaDetectionEnglish(unittest.TestCase):
     def test_spaced_and_hyphenated_variants(self):
         for title in ("Oren-gedoku-to inhibits calcification", "Hochu ekki to in the long-term management", "Rikkunshi-to (TJ-43) relaxation"):
             self.assertTrue(G.classify(art(title), "primary")["formula"], title)
+
+    def test_conventional_romanization_of_all_formulas(self):
+        # 読みから作る綴りは、長音を畳んだ形（Shosaikoto）と、促音を重ねた形（Rikkunshito, Hochuekkito）を含む
+        for title in ("Juzen-taiho-to for anemia", "Hochu-ekki-to in frailty", "Rikkunshito and appetite", "Ninjin'yoei-to in older adults",
+                      "Orengedoku-to for dermatitis", "Shimotsu-to in vitro", "Uyaku-junki-san for neuralgia"):
+            self.assertTrue(G.classify(art(title), "primary")["formula"], title)
+
+    def test_shorter_name_inside_longer_formula_name_is_attributed_to_the_longer(self):
+        c = G.classify(art("Saikokeishito was given"), "primary")
+        self.assertTrue(c["formula"])
+        self.assertNotIn("keishito", c["formulas"])
+        self.assertTrue(G.classify(art("Keishito was given"), "primary")["formula"])
 
     def test_tj_codes_are_detected_only_in_primary(self):
         # legacy はパターン側にハイフンを残したまま、テキスト側だけ空白に置換していたため、TJ コードを検出できなかった
@@ -150,6 +162,13 @@ class Romaji(unittest.TestCase):
         self.assertEqual(yomi_to_romaji("よくかんさん"), "yokukansan")
         self.assertEqual(yomi_to_romaji("ごれいさん"), "goreisan")
         self.assertEqual(yomi_to_romaji("しょ"), "sho")
+
+    def test_romaji_variants_match_english_conventions(self):
+        self.assertEqual(yomi_to_romaji_variants("しょうさいことう"), {"shousaikotou", "shosaikoto"})
+        self.assertIn("rikkunshito", yomi_to_romaji_variants("りっくんしとう"))        # 促音は次の子音を重ねる
+        self.assertIn("hochuekkito", yomi_to_romaji_variants("ほちゅうえっきとう"))
+        self.assertIn("ninjinyoeito", yomi_to_romaji_variants("にんじんようえいとう"))
+        self.assertEqual(yomi_to_romaji_variants("よくかんさん"), {"yokukansan"})
 
     def test_romaji_names_for_compact_matching_are_long_enough(self):
         self.assertTrue(G._COMPACT_NAMES)

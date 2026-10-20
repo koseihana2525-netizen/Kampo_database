@@ -9,8 +9,9 @@ gap_classifier.py - 「処方名への言及」×「漢方思考概念への言�
 variant
   "legacy"   phase3_analysis.py の処理の再現（投稿版 v3 の値を作った処理）。比較・感度分析用。
   "primary"  主解析。legacy からの修正点は次の4つ。
-    1. 英語の処方名検出を広げた。空白とハイフンを除いて照合する（Sho-saiko-to, Oren-gedoku-to など）。
-       全ツムラ処方のローマ字名（clean_pubmed.py と同じ読みから作る）と、0埋めなしの TJ コード（TJ-54）も検出する。
+    1. 英語の処方名検出を広げた。空白・ハイフン・アポストロフィを除いて照合する（Sho-saiko-to, Oren-gedoku-to, Ninjin'yoei-to など）。
+       全方剤（ツムラ128＋追加141）の読みから、英語論文の綴り（長音を畳んだ shosaikoto と、残した shousaikotou）を作って照合する。
+       0埋めなしの TJ コード（TJ-54）も検出する。
        legacy は「ハイフン→空白」に置換した後、ハイフンなしの名前で照合していたため、ハイフン付きの表記を検出できなかった。
     2. 英語の思考概念語のうち、ハイフン語（yin-yang, kyo-jitsu, ho-sho-sotai, sho-based, mind-body unity）と
        末尾空白語（'sho ', 'hie '）が検出できなかった・偶然に当たっていた問題を修正した。語境界で照合する。
@@ -27,7 +28,7 @@ import re
 import unicodedata
 
 import dictionaries as _dic
-from romaji import yomi_to_romaji
+from romaji import yomi_to_romaji_variants
 
 VARIANTS = ("legacy", "primary")
 CATEGORIES = ("sho_core", "pathology", "classical", "examination", "epistemological")
@@ -204,14 +205,13 @@ def tsumura_formula_names():
     return sorted(set(names), key=len, reverse=True)
 
 
-def _tsumura_romaji():
+def _formula_romaji():
+    """全方剤（ツムラ128＋追加141）の読みから、英語論文の綴り（shosaikoto / shousaikotou）を作る。8文字以上のみ"""
     out = set()
-    for info in _dic.FORMULAS.values():
+    for info in list(_dic.FORMULAS.values()) + list(_dic.EXTRA_FORMULAS.values()):
         yomi = info.get("yomi", "")
         if yomi:
-            r = yomi_to_romaji(yomi)
-            if len(r) >= 6:
-                out.add(r)
+            out |= {r for r in yomi_to_romaji_variants(yomi) if len(r) >= 8}
     return out
 
 
@@ -243,7 +243,8 @@ def fold_diacritics(text):
 
 
 def _compact(text):
-    return re.sub(r"[\s\-]+", "", text)
+    """空白・ハイフン・アポストロフィを除く（Ninjin'yoeito → ninjinyoeito）"""
+    return re.sub(r"[\s\-'’‘]+", "", text)
 
 
 def _norm_primary(text):
@@ -288,7 +289,7 @@ def _filters(lib):
 # ── primary ────────────────────────────────────
 _ROMAJI_PRIMARY = sorted({_norm_legacy(r) for r in ROMAJI_LEGACY if r != "running piglet"}, key=len, reverse=True)
 _COMPACT_NAMES = sorted(
-    {r for r in _tsumura_romaji() if len(r) >= 8}
+    _formula_romaji()
     | {_compact(_norm_legacy(r)) for r in ROMAJI_LEGACY
        if r != "running piglet" and not r.startswith(("tj-", "tsumura")) and len(r) >= 8},
     key=len, reverse=True)
@@ -319,7 +320,10 @@ def _formulas_primary(text, lang):
     norm = _norm_primary(text)
     found = [n for n in _ROMAJI_PRIMARY if n in norm]
     comp = _compact(norm)
-    found += [n for n in _COMPACT_NAMES if n in comp]
+    for n in _COMPACT_NAMES:   # 長い名前から照合し、見つけた箇所は伏せる（keishito が saikokeishito の一部に当たらないように）
+        if n in comp:
+            found.append(n)
+            comp = comp.replace(n, "\x00" * len(n))
     m = _TJ_CODE.search(norm)
     if m and 1 <= int(m.group(1)) <= 153:
         found.append("tj-" + m.group(1))
