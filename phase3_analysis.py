@@ -2,6 +2,10 @@
 """
 phase3_analysis.py
 DB再構築 + 辞書v2 + 全分析再実行
+
+NOTE（旧版）: このスクリプトは、投稿版 v3 の値を作った処理の記録として残している。
+      主解析は run_gap_analysis.py（gap_classifier.py の "primary"）。旧処理の再現は variant="legacy"。
+      英語の処方名検出などに修正があるため、数値は一致しない。詳細は ANALYSIS.md。
 """
 
 import os, sys, json, random, importlib.util, re

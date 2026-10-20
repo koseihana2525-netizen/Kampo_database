@@ -16,6 +16,7 @@ Usage:
 
 import argparse
 import json
+import os
 import time
 import sys
 from pathlib import Path
@@ -33,6 +34,17 @@ EFETCH_URL = f"{EUTILS_BASE}/efetch.fcgi"
 # APIキーなし: 3 req/sec → 安全に 0.4秒間隔
 REQUEST_INTERVAL = 0.4
 BATCH_SIZE = 200
+
+# 環境変数（任意）: NCBI_API_KEY があれば 10 req/sec まで可。NCBI_EMAIL は NCBI 推奨の連絡先
+NCBI_API_KEY = os.environ.get("NCBI_API_KEY", "")
+NCBI_EMAIL = os.environ.get("NCBI_EMAIL", "")
+NCBI_TOOL = "kampo_database"
+if NCBI_API_KEY:
+    REQUEST_INTERVAL = 0.11
+
+MAX_RETRIES = 5         # 通信エラー・429・5xx の再試行回数（指数バックオフ 2,4,8,16秒）
+BATCH_ATTEMPTS = 3      # 取得またはXML解析に失敗したバッチの再取得回数
+MIN_COMPLETENESS = 0.95 # ヒット件数に対する取得件数の下限。下回れば欠落とみなして停止
 
 # 出力先
 PUBMED_DIR = DATA_DIR / "pubmed"
@@ -279,6 +291,29 @@ ALL_LAYERS = {
 # PubMed API 関数
 # ================================================================
 
+def _get(url: str, params: dict, timeout: int) -> requests.Response:
+    """E-utilities へ GET。通信エラー・429・5xx は指数バックオフで再試行し、尽きたら例外を投げる"""
+    params = {**params, "tool": NCBI_TOOL}
+    if NCBI_EMAIL:
+        params["email"] = NCBI_EMAIL
+    if NCBI_API_KEY:
+        params["api_key"] = NCBI_API_KEY
+
+    last_err = None
+    for attempt in range(MAX_RETRIES):
+        try:
+            resp = requests.get(url, params=params, timeout=timeout)
+            if resp.status_code == 429 or resp.status_code >= 500:
+                raise requests.HTTPError(f"HTTP {resp.status_code}", response=resp)
+            resp.raise_for_status()
+            return resp
+        except requests.RequestException as e:
+            last_err = e
+            if attempt < MAX_RETRIES - 1:
+                time.sleep(2 ** (attempt + 1))
+    raise RuntimeError(f"E-utilities への接続に失敗（{MAX_RETRIES}回試行）: {last_err}")
+
+
 def esearch(query: str) -> tuple:
     """PubMed検索 → WebEnvキーを返す"""
     params = {
@@ -288,8 +323,7 @@ def esearch(query: str) -> tuple:
         "usehistory": "y",
         "retmode": "json",
     }
-    resp = requests.get(ESEARCH_URL, params=params, timeout=30)
-    resp.raise_for_status()
+    resp = _get(ESEARCH_URL, params, timeout=30)
     data = resp.json()["esearchresult"]
     count = int(data["count"])
     webenv = data["webenv"]
@@ -308,8 +342,7 @@ def efetch_batch(webenv: str, query_key: str, retstart: int, retmax: int) -> str
         "rettype": "xml",
         "retmode": "xml",
     }
-    resp = requests.get(EFETCH_URL, params=params, timeout=60)
-    resp.raise_for_status()
+    resp = _get(EFETCH_URL, params, timeout=60)
     return resp.text
 
 
@@ -428,17 +461,29 @@ def fetch_all(query_name: str, query_str: str, dry_run: bool = False) -> list:
         end = min(start + BATCH_SIZE, count)
         print(f"    取得中: {start+1}-{end} / {count}", end="", flush=True)
 
-        try:
-            xml_text = efetch_batch(webenv, query_key, start, BATCH_SIZE)
-            batch = parse_articles(xml_text)
-            all_articles.extend(batch)
-            print(f"  -> {len(batch)} 件")
-        except Exception as e:
-            print(f"  -> ERROR: {e}")
+        batch = None
+        for attempt in range(BATCH_ATTEMPTS):
+            try:
+                xml_text = efetch_batch(webenv, query_key, start, BATCH_SIZE)
+                batch = parse_articles(xml_text)
+                break
+            except Exception as e:
+                print(f"  -> ERROR({attempt + 1}/{BATCH_ATTEMPTS}): {e}", end="", flush=True)
+                time.sleep(2 ** (attempt + 1))
+        if batch is None:
+            # 定期実行で欠落データを黙って通さないよう、取得できなかったバッチがあれば停止する
+            raise RuntimeError(f"{query_name}: {start+1}-{end} 件目を取得できませんでした")
+        all_articles.extend(batch)
+        print(f"  -> {len(batch)} 件")
 
         time.sleep(REQUEST_INTERVAL)
 
     print(f"    完了: {len(all_articles)} 件")
+    if count and len(all_articles) < count * MIN_COMPLETENESS:
+        raise RuntimeError(
+            f"{query_name}: 取得 {len(all_articles)} 件 < ヒット {count} 件の"
+            f"{MIN_COMPLETENESS:.0%}（欠落の疑い）"
+        )
     return all_articles
 
 

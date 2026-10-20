@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-"""査読対応: Task 1-3 統合実行スクリプト"""
+"""査読対応: Task 1-3 統合実行スクリプト
+
+NOTE（旧版）: このスクリプトは、投稿版 v3 の値を作った処理の記録として残している。
+      主解析は run_gap_analysis.py（gap_classifier.py の "primary"）。旧処理の再現は variant="legacy"。
+      英語の処方名検出などに修正があるため、数値は一致しない。詳細は ANALYSIS.md。
+"""
 import sys, io, os, json, random
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 import pandas as pd
