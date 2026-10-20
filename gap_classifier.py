@@ -8,7 +8,9 @@ gap_classifier.py - 「処方名への言及」×「漢方思考概念への言�
 
 variant
   "legacy"   phase3_analysis.py の処理の再現（投稿版 v3 の値を作った処理）。比較・感度分析用。
-  "primary"  主解析。legacy からの修正点は次の4つ。
+  "base"     legacy からの修正（下の1〜4）だけを入れた版。辞書Bは投稿版（181語）のまま。感度分析用。
+  "primary"  主解析 = base + 日本語の草稿が辞書Bにあると説明していた語（虚実・陰陽・寒熱・表裏・腹診・腹証・舌診・脈診・「○○湯証」）。
+  base / primary に共通の、legacy からの修正点は次の4つ。
     1. 英語の処方名検出を広げた。空白・ハイフン・アポストロフィを除いて照合する（Sho-saiko-to, Oren-gedoku-to, Ninjin'yoei-to など）。
        全方剤（ツムラ128＋追加141）の読みから、英語論文の綴り（長音を畳んだ shosaikoto と、残した shousaikotou）を作って照合する。
        0埋めなしの TJ コード（TJ-54）も検出する。
@@ -19,7 +21,7 @@ variant
        これを数えると、ハイフン付きの処方名を検出できるようにした分だけ、偽の「証」言及（Q1）が生じる。
     3. ラテン文字の発音記号を畳み込む（shō → sho）。日本語（濁点など）には触れない。
     4. 'running piglet'（奔豚の英訳。処方名ではない）を処方名リストから除いた。思考概念語としては残る。
-  辞書B（思考概念語）の語の追加・削除は行っていない。
+  辞書B（181語）の語の追加・削除は base では行っていない。primary は上の語を日本語側にだけ足す（英語側は足さない）。
 
 標準ライブラリ + dictionaries.py + romaji.py だけで動く（テストとCIで使うため）。
 """
@@ -30,7 +32,7 @@ import unicodedata
 import dictionaries as _dic
 from romaji import yomi_to_romaji_variants
 
-VARIANTS = ("legacy", "primary", "primary_ext")
+VARIANTS = ("legacy", "base", "primary")
 CATEGORIES = ("sho_core", "pathology", "classical", "examination", "epistemological")
 
 # ── 辞書B（漢方思考概念） ───────────────────────────
@@ -424,12 +426,12 @@ def _concepts_primary(text):
     return _filters(lib)
 
 
-# 日本語の拡張（primary_ext）。日本語の草稿の説明（証の核心概念に 虚実・陰陽・寒熱・表裏、診察法に 腹診・腹証・舌診・脈診）にあるが、
-# 実装の辞書B（181語）には無い語と、「○○湯証」の形。主解析には入れず、感度分析として別に出す。採否は漢方の専門家の判断。
-EXTENSION_TERMS_JA = {
+# 日本語の草稿が辞書Bに含まれると説明していた語のうち、実装の辞書B（181語）に無かったもの。主解析（primary）には入れ、
+# 入れない版（base）を感度分析に出す。説明にあった語だけで、結果を見てから選んだ語は入れていない。
+#   証の核心概念: 虚実・陰陽・寒熱・表裏（と、証そのものは誤検出が多いので「○○湯証」の形で）  診察法: 腹診・腹証・舌診・脈診
+DECLARED_TERMS_JA = {
     "腹診": "examination", "腹証": "examination", "脈診": "examination", "舌診": "examination",
     "虚実": "sho_core", "陰陽": "sho_core", "寒熱": "sho_core", "表裏": "sho_core",
-    "気血両虚": "pathology", "裏寒": "pathology",
 }
 _FORMULA_SHO = re.compile(r"[湯散丸飲]証")
 
@@ -464,8 +466,8 @@ def classify(article, variant="primary"):
             formulas, spans = _english_formulas(folded)
             masked = _mask(folded, spans)   # 処方名の中の sho などを概念語として数えない
         lib, cons, strict = _concepts_primary(masked)
-        if variant == "primary_ext" and lang == "ja":
-            add = [(t, c) for t, c in EXTENSION_TERMS_JA.items() if t in text]
+        if variant == "primary" and lang == "ja":
+            add = [(t, c) for t, c in DECLARED_TERMS_JA.items() if t in text]
             if _FORMULA_SHO.search(text):
                 add.append(("○○湯証", "sho_core"))
             lib, cons, strict = lib + add, cons + add, strict + add

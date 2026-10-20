@@ -281,12 +281,13 @@ def analyses(df):
     col = "quad_conservative_primary"
     kk, pp = q13(km, col), q13(pm, col)
     out.append("\n## 感度分析（primary）\n")
-    ke = q13(km, "quad_conservative_primary_ext")
-    o, lo_, hi_, pv, _ = exact_or(ke, pp)
-    hits = km[(km[col] == "Q3_formula_only") & (km["quad_conservative_primary_ext"] == "Q1_both")]
-    out += ["### 7. 日本語側に概念語を足した場合（primary_ext）", "",
-            "足した語: 腹診・腹証・脈診・舌診・虚実・陰陽・寒熱・表裏・気血両虚・裏寒・○○湯証（日本語の草稿の説明にあるが辞書Bに無い語）。採否は専門家の判断。", "",
-            f"kampo群: Q1={ke[0]}、Q3={ke[1]}、ギャップ{gap_pct(*ke):.1f}%（primary {gap_pct(*kk):.1f}%、Q3→Q1 に移った {len(hits)}件）／"
+    kb = q13(km, "quad_conservative_base")
+    o, lo_, hi_, pv, _ = exact_or(kb, pp)
+    hits = km[(km["quad_conservative_base"] == "Q3_formula_only") & (km[col] == "Q1_both")]
+    out += ["### 7. 日本語側に概念語を足さない場合（base）", "",
+            "primary は、日本語の草稿が辞書Bにあると説明していた語（腹診・腹証・舌診・脈診・虚実・陰陽・寒熱・表裏・「○○湯証」）を日本語側に足している。"
+            "足さない版（辞書Bは投稿版の181語のまま）の結果:", "",
+            f"kampo群: Q1={kb[0]}、Q3={kb[1]}、ギャップ{gap_pct(*kb):.1f}%（primary {gap_pct(*kk):.1f}%、足した語で Q3→Q1 に移った {len(hits)}件）／"
             f"日英OR {o:.2f}（{lo_:.2f}–{hi_:.2f}）", ""]
     pm_en = pm[~pm.bracketed]
     pe = q13(pm_en, col)

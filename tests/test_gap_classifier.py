@@ -138,15 +138,19 @@ class ConceptDetection(unittest.TestCase):
         self.assertIn("sho ", terms(G.classify(art("Goreisan was selected by Sho."), "primary")))
         self.assertIn("hie ", terms(G.classify(art("Goreisan for hie in women"), "primary")))
 
-    def test_extension_terms_only_in_primary_ext(self):
+    def test_declared_generic_terms_are_in_primary_but_not_in_base(self):
         a = art("桂枝茯苓丸を投与した。腹診で臍傍圧痛を認め、桂枝湯証と考えた。", lang="ja")
-        self.assertEqual(G.classify(a, "primary")["quad_conservative"], "Q3_formula_only")
-        c = G.classify(a, "primary_ext")
+        self.assertEqual(G.classify(a, "base")["quad_conservative"], "Q3_formula_only")
+        c = G.classify(a, "primary")
         self.assertEqual(c["quad_conservative"], "Q1_both")
         self.assertIn("腹診", terms(c))
         self.assertIn("○○湯証", terms(c))
-        for variant in ("primary", "primary_ext"):   # 拡張は日本語側だけ
+        for text in ("八味地黄丸を処方。虚実を考慮した。", "柴胡桂枝湯は陰陽を調整", "寒熱の判断で当帰芍薬散", "表裏の区別と補中益気湯", "舌診と脈診を行い六君子湯"):
+            self.assertEqual(G.classify(art(text, lang="ja"), "primary")["quad_conservative"], "Q1_both", text)
+            self.assertEqual(G.classify(art(text, lang="ja"), "base")["quad_conservative"], "Q3_formula_only", text)
+        for variant in ("base", "primary"):   # 追加は日本語側だけ。結果を見てから選んだ語（気血両虚・裏寒）は入れていない
             self.assertEqual(G.classify(art("Keishibukuryogan was prescribed; abdominal findings were noted"), variant)["quad_conservative"], "Q3_formula_only")
+        self.assertEqual(G.classify(art("補中益気湯を投与。気血両虚の状態であった。", lang="ja"), "primary")["quad_conservative"], "Q3_formula_only")
 
     def test_macron_is_folded(self):
         a = art("Kampo diagnosis by shō")
