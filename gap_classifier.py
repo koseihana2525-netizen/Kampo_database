@@ -14,6 +14,8 @@ variant
        legacy は「ハイフン→空白」に置換した後、ハイフンなしの名前で照合していたため、ハイフン付きの表記を検出できなかった。
     2. 英語の思考概念語のうち、ハイフン語（yin-yang, kyo-jitsu, ho-sho-sotai, sho-based, mind-body unity）と
        末尾空白語（'sho ', 'hie '）が検出できなかった・偶然に当たっていた問題を修正した。語境界で照合する。
+       末尾空白語は、ハイフンで他の語につながっている場合（Sho-saiko-to の Sho は小柴胡湯の「小」）には数えない。
+       これを数えると、ハイフン付きの処方名を検出できるようにした分だけ、偽の「証」言及（Q1）が生じる。
     3. ラテン文字の発音記号を畳み込む（shō → sho）。日本語（濁点など）には触れない。
     4. 'running piglet'（奔豚の英訳。処方名ではない）を処方名リストから除いた。思考概念語としては残る。
   辞書B（思考概念語）の語の追加・削除は行っていない。
@@ -292,12 +294,17 @@ _COMPACT_NAMES = sorted(
     key=len, reverse=True)
 
 
+_HYPHENS = "-‐‑‒–—"
+
+
 def _compile_terms():
     out = []
     for t, c in CONCEPT_TERMS.items():
-        if t.endswith(" "):   # 'sho ' 'hie ' は語境界で照合する
+        if t.endswith(" "):
+            # 'sho ' 'hie ' は語境界で照合する。ハイフンで他の語につながる場合は除く
+            # （Sho-saiko-to の Sho は小柴胡湯の「小」で、証ではない）。ハイフンを残した文字列に対して照合する。
             core = _norm_legacy(t.strip())
-            out.append((t, c, re.compile(r"(?<![a-z])" + re.escape(core) + r"(?![a-z])")))
+            out.append((t, c, re.compile(r"(?<![a-z" + _HYPHENS + "])" + re.escape(core) + r"(?![a-z" + _HYPHENS + "])")))
         else:
             out.append((t, c, _norm_legacy(t)))
     return out
@@ -321,7 +328,8 @@ def _formulas_primary(text, lang):
 
 def _concepts_primary(text):
     norm = _norm_primary(text)
-    lib = [(t, c) for t, c, m in _TERMS_PRIMARY if (m.search(norm) if hasattr(m, "search") else m in norm)]
+    folded = fold_diacritics(text.lower())   # ハイフンを残したまま（語境界の判定用）
+    lib = [(t, c) for t, c, m in _TERMS_PRIMARY if (m.search(folded) if hasattr(m, "search") else m in norm)]
     return _filters(lib)
 
 

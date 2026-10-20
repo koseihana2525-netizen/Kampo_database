@@ -86,6 +86,20 @@ class ConceptDetection(unittest.TestCase):
         self.assertIn("sho ", terms(G.classify(a, "primary")))
         self.assertIn("sho ", terms(G.classify(art("Treatment was selected by sho."), "primary")))
 
+    def test_sho_in_hyphenated_formula_name_is_not_a_concept(self):
+        # Sho-saiko-to の Sho は小柴胡湯の「小」。ハイフン付きの処方名を検出できるようにした分、これを証と数えると偽の Q1 が生じる
+        for text in ("Sho-saiko-to was administered", "Effects of Sho-seiryu-to and Sho-hange-ka-bukuryo-to"):
+            c = G.classify(art(text), "primary")
+            self.assertTrue(c["formula"], text)
+            self.assertNotIn("sho ", terms(c), text)
+            self.assertEqual(c["quad_conservative"], "Q3_formula_only", text)
+        c = G.classify(art("Sho-saiko-to was selected according to sho."), "primary")
+        self.assertIn("sho ", terms(c))                                   # 独立した sho は数える
+        self.assertEqual(c["quad_conservative"], "Q1_both")
+        c = G.classify(art("sho-based selection of Kamishoyosan"), "primary")
+        self.assertIn("sho-based", terms(c))
+        self.assertNotIn("sho ", terms(c))
+
     def test_macron_is_folded(self):
         a = art("Kampo diagnosis by shō")
         self.assertNotIn("sho ", terms(G.classify(a, "legacy")))
