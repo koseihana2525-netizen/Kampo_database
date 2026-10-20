@@ -31,15 +31,13 @@ from scipy.stats.contingency import odds_ratio
 from statsmodels.stats.contingency_tables import StratifiedTable
 
 import gap_classifier as G
+from analysis_set import GROUPS, NON_ARTICLE_TYPES, exclusion_reasons  # noqa: F401
 from config import GAP_OUTPUT_DIR, PAPER_DB_PATH
 
 sys.stdout.reconfigure(encoding="utf-8")
 
-GROUPS = ("kampo", "pubmed_kampo")
 PERIODS = (("P1(~2000)", 0, 2000), ("P2(2001-10)", 2001, 2010), ("P3(2011-26)", 2011, 9999))
 BINS = ((1960, 1985), (1986, 1990), (1991, 1995), (1996, 2000), (2001, 2005), (2006, 2010), (2011, 2015), (2016, 2020), (2021, 2026))
-# 解析対象から外す PubMed の記録: 正誤表・撤回通知・コメントは研究論文ではない。抄録が同一の記録は最初の1件だけ残す
-NON_ARTICLE_TYPES = {"published erratum", "retraction notice", "retraction of publication", "comment"}
 
 # 症例報告の定義（コード上に2つ存在した。どちらを主とするかは未決定なので両方を出す）
 _CASE_A = [r"一例", r"一症例", r"1例", r"１例", r"二例", r"2例", r"２例", r"三例", r"3例", r"３例", r"\d+例", r"\d+症例",
@@ -115,22 +113,6 @@ def md_table(headers, rows):
     out = ["| " + " | ".join(headers) + " |", "|" + "|".join("---" for _ in headers) + "|"]
     out += ["| " + " | ".join(str(c) for c in r) + " |" for r in rows]
     return "\n".join(out)
-
-
-def exclusion_reasons(articles):
-    """解析対象の2群（抄録あり）から外す記録: {id: 理由}。正誤表などは研究論文ではない。抄録が同一の記録は最初の1件だけ残す"""
-    out, seen = {}, set()
-    for a in articles:
-        if a["source"] not in GROUPS or not (a.get("abstract") or "").strip():
-            continue
-        reason = next((t for t in (x.lower() for x in (a.get("pub_types") or [])) if t in NON_ARTICLE_TYPES), "")
-        key = (a["source"], re.sub(r"\s+", " ", a["abstract"].strip().lower()))
-        if not reason and key in seen:
-            reason = "duplicate abstract"
-        seen.add(key)
-        if reason:
-            out[a["id"]] = reason
-    return out
 
 
 # ── データ ─────────────────────────────────────
