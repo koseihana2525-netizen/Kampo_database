@@ -37,6 +37,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 GROUPS = ("kampo", "pubmed_kampo")
 PERIODS = (("P1(~2000)", 0, 2000), ("P2(2001-10)", 2001, 2010), ("P3(2011-26)", 2011, 9999))
+BINS = ((1960, 1985), (1986, 1990), (1991, 1995), (1996, 2000), (2001, 2005), (2006, 2010), (2011, 2015), (2016, 2020), (2021, 2026))
+# 解析対象から外す PubMed の記録: 正誤表・撤回通知・コメントは研究論文ではない。抄録が同一の記録は最初の1件だけ残す
+NON_ARTICLE_TYPES = {"published erratum", "retraction notice", "retraction of publication", "comment"}
 
 # 症例報告の定義（コード上に2つ存在した。どちらを主とするかは未決定なので両方を出す）
 _CASE_A = [r"一例", r"一症例", r"1例", r"１例", r"二例", r"2例", r"２例", r"三例", r"3例", r"３例", r"\d+例", r"\d+症例",
@@ -130,6 +133,21 @@ def classify_all(articles):
             row[f"concepts_{variant}"] = "|".join(sorted({t for t, _ in c["conservative"]}))
         rows.append(row)
     df = pd.DataFrame(rows)
+    df["bracketed"] = df.title.str.strip().str.startswith("[")   # PubMed は英語以外の論文の題名を [ ] で囲む（言語欄はこのDBに無い）
+    df["excluded"] = False
+    df["excluded_reason"] = ""
+    seen = set()
+    for i, a in enumerate(articles):
+        if a["source"] not in GROUPS or not (a.get("abstract") or "").strip():
+            continue
+        types = [t.lower() for t in (a.get("pub_types") or [])]
+        reason = next((t for t in types if t in NON_ARTICLE_TYPES), "")
+        key = (a["source"], re.sub(r"\s+", " ", a["abstract"].strip().lower()))
+        if not reason and key in seen:
+            reason = "duplicate abstract"
+        seen.add(key)
+        if reason:
+            df.loc[i, ["excluded", "excluded_reason"]] = [True, reason]
     df["year_int"] = pd.to_numeric(df["year"], errors="coerce")
     df["period"] = df["year_int"].map(lambda y: None if pd.isna(y) else next(n for n, lo, hi in PERIODS if lo <= y <= hi))
     return df
@@ -154,13 +172,16 @@ def verify_legacy(articles, csv_path):
 
 # ── 解析 ───────────────────────────────────────
 def analyses(df):
-    d = df[df.has_abstract & df.source.isin(GROUPS)].copy()
+    d = df[df.has_abstract & df.source.isin(GROUPS) & ~df.excluded].copy()
     km, pm = d[d.source == "kampo"].copy(), d[d.source == "pubmed_kampo"].copy()
     km["typeA"] = km.title.map(lambda t: kampo_type(t, "A"))
     km["typeB"] = km.title.map(lambda t: kampo_type(t, "B"))
     pm["ptype"] = pm.pub_types.map(pubmed_type)
     pm["humans"] = pm.mesh.map(lambda m: "Humans" in m)
-    out = []
+    ex = df[df.excluded]
+    out = ["\n## 解析対象\n",
+           f"抄録あり: kampo群 {int(((df.source == 'kampo') & df.has_abstract).sum())}件、pubmed_kampo群 {int(((df.source == 'pubmed_kampo') & df.has_abstract).sum())}件。"
+           f"そこから除外: {len(ex)}件（{{k: int(v) for k, v in ex.excluded_reason.value_counts().items()}}）→ kampo群 {len(km)}件、pubmed_kampo群 {len(pm)}件。\n"]
     for variant in ("primary", "legacy"):   # 主解析を先に出す
         col = f"quad_conservative_{variant}"
         title = "主解析（primary）" if variant == "primary" else "比較: 旧処理（legacy、投稿版 v3 の再現）"
@@ -249,6 +270,37 @@ def analyses(df):
         out += ["### 6. 臨床研究に限定", "",
                 "kampo群は症例報告+臨床研究（定義A）、PubMed群は症例報告+RCT+臨床試験。", "",
                 md_table(["PubMed側の条件", "kampo n（ギャップ）", "pubmed n（ギャップ）", "日英OR（条件付き）", "Fisher p"], rows), ""]
+
+    # 追加の感度分析（primary のみ）
+    col = "quad_conservative_primary"
+    kk, pp = q13(km, col), q13(pm, col)
+    out.append("\n## 感度分析（primary）\n")
+    ke = q13(km, "quad_conservative_primary_ext")
+    o, lo_, hi_, pv, _ = exact_or(ke, pp)
+    hits = km[(km[col] == "Q3_formula_only") & (km["quad_conservative_primary_ext"] == "Q1_both")]
+    out += ["### 7. 日本語側に概念語を足した場合（primary_ext）", "",
+            "足した語: 腹診・腹証・脈診・舌診・虚実・陰陽・寒熱・表裏・気血両虚・裏寒・○○湯証（日本語の草稿の説明にあるが辞書Bに無い語）。採否は専門家の判断。", "",
+            f"kampo群: Q1={ke[0]}、Q3={ke[1]}、ギャップ{gap_pct(*ke):.1f}%（primary {gap_pct(*kk):.1f}%、Q3→Q1 に移った {len(hits)}件）／"
+            f"日英OR {o:.2f}（{lo_:.2f}–{hi_:.2f}）", ""]
+    pm_en = pm[~pm.bracketed]
+    pe = q13(pm_en, col)
+    o, lo_, hi_, pv, _ = exact_or(kk, pe)
+    pb = q13(pm[pm.bracketed], col)
+    out += ["### 8. 英語の論文だけ（題名が [ ] で囲まれていない PubMed 記録）", "",
+            f"除いた記録（非英語の論文）: {int(pm.bracketed.sum())}件（ギャップ {gap_pct(*pb):.1f}%、処方言及 {sum(pb)}件）。"
+            f"残り: 処方言及 {sum(pe)}件、ギャップ{gap_pct(*pe):.1f}%、日英OR {o:.2f}（{lo_:.2f}–{hi_:.2f}）", ""]
+    rows = []
+    for lo, hi in BINS:
+        r = [f"{lo}–{hi}"]
+        for src in GROUPS:
+            allr = df[(df.source == src) & (df.year_int >= lo) & (df.year_int <= hi)]
+            g = d[(d.source == src) & (d.year_int >= lo) & (d.year_int <= hi)]
+            q1, q3 = q13(g, col)
+            r += [len(allr), f"{(len(allr) and int(allr.has_abstract.sum()) / len(allr) * 100):.1f}%", q1 + q3, f"{gap_pct(q1, q3):.1f}%" if q1 + q3 else "-"]
+        rows.append(r)
+    out += ["### 9. 抄録のある記録の割合と時期", "",
+            "抄録のない記録は解析から外れるので、抄録保有率が時期で変わると、時期ごとのギャップの比較に選択が入る。", "",
+            md_table(["期間", "kampo 全記録", "抄録あり", "処方言及 n", "ギャップ", "pubmed 全記録", "抄録あり", "処方言及 n", "ギャップ"], rows), ""]
 
     # 同一処方集合（primary のみ）
     names = G.tsumura_formula_names()

@@ -54,8 +54,17 @@ def yomi_to_romaji(yomi):
     return result
 
 
+# HEPBURN に無い仮名（白虎加人参湯 びゃっこ…、通脈四逆湯 つうみゃく…、治打撲一方 ぢだぼく…）。
+# yomi_to_romaji はこれらを黙って捨てて誤った綴りを作るので、yomi_to_romaji_variants では補う。
+_EXTRA_KANA = {
+    "びゃ": "bya", "びゅ": "byu", "びょ": "byo", "ぴゃ": "pya", "ぴゅ": "pyu", "ぴょ": "pyo",
+    "みゃ": "mya", "みゅ": "myu", "みょ": "myo", "ぢゃ": "ja", "ぢゅ": "ju", "ぢょ": "jo", "ぢ": "ji", "づ": "zu",
+}
+_KANA = {**HEPBURN, **_EXTRA_KANA}
+
+
 def _kana_to_romaji(yomi):
-    """促音は次の子音を重ねる（りっく → rikku）。長音は仮名どおり（しょう → shou）"""
+    """促音は次の子音を重ねる（りっく → rikku）。長音は仮名どおり（しょう → shou）。未知の仮名は ValueError"""
     out = ""
     i = 0
     double = False
@@ -65,15 +74,14 @@ def _kana_to_romaji(yomi):
             double = True
             i += 1
             continue
-        if i + 1 < len(yomi) and yomi[i : i + 2] in HEPBURN:
-            syl = HEPBURN[yomi[i : i + 2]]
+        if i + 1 < len(yomi) and yomi[i : i + 2] in _KANA:
+            syl = _KANA[yomi[i : i + 2]]
             i += 2
-        elif ch in HEPBURN:
-            syl = HEPBURN[ch]
+        elif ch in _KANA:
+            syl = _KANA[ch]
             i += 1
         else:
-            i += 1
-            continue
+            raise ValueError(f"変換できない仮名 {ch!r}（読み: {yomi}）")
         if double:
             syl = ("t" + syl) if syl.startswith("ch") else syl[0] + syl
             double = False

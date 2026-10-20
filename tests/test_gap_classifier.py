@@ -42,6 +42,17 @@ class FormulaDetectionEnglish(unittest.TestCase):
                       "Orengedoku-to for dermatitis", "Shimotsu-to in vitro", "Uyaku-junki-san for neuralgia"):
             self.assertTrue(G.classify(art(title), "primary")["formula"], title)
 
+    def test_short_hyphenated_names_and_spelling_variants(self):
+        # 8文字未満の名前は1語まるごとの一致で、ハイフンの有無によらない。訓令式・m→b・oh・長音の混在も同じ処方として扱う
+        for title in ("Mao-to for influenza", "Unkei-to in infertility", "Kihi-to and insomnia", "Kanzo-to was added", "Koso-san for dyspepsia",
+                      "Syo-saiko-to in hepatitis", "Gosya-jinki-gan for neuropathy", "Tokaku-jyoki-to for constipation", "Shimbu-to in elderly patients",
+                      "Hachimi-ji-oh-gan and the bladder", "Ninjin-youei-to for frailty", "Byakko-ka-ninjin-to for diabetes", "Tsumyaku-shigyaku-to"):
+            self.assertTrue(G.classify(art(title), "primary")["formula"], title)
+
+    def test_short_names_must_be_whole_words(self):
+        for title in ("The maotoxin was measured", "Only kihitos were counted", "unkeitoxic", "Mao tox"):
+            self.assertFalse(G.classify(art(title), "primary")["formula"], title)
+
     def test_shorter_name_inside_longer_formula_name_is_attributed_to_the_longer(self):
         c = G.classify(art("Saikokeishito was given"), "primary")
         self.assertTrue(c["formula"])
@@ -112,6 +123,31 @@ class ConceptDetection(unittest.TestCase):
         self.assertIn("sho-based", terms(c))
         self.assertNotIn("sho ", terms(c))
 
+    def test_sho_inside_a_formula_name_split_by_spaces_is_not_a_concept(self):
+        for text in ("Sho saiko-to was administered", "Bofu tsu sho san was given", "Sho-seiryu-to and Sho seiryu to"):
+            c = G.classify(art(text), "primary")
+            self.assertTrue(c["formula"], text)
+            self.assertNotIn("sho ", terms(c), text)
+
+    def test_capitalized_abbreviations_are_not_concepts(self):
+        # SHO は Shosaiko-to の略、HIE は低酸素性虚血性脳症
+        for text in ("Goreisan reduced HIE injury", "Shosaiko-to (SHO) was administered; SHO increased"):
+            c = G.classify(art(text), "primary")
+            self.assertNotIn("sho ", terms(c), text)
+            self.assertNotIn("hie ", terms(c), text)
+        self.assertIn("sho ", terms(G.classify(art("Goreisan was selected by Sho."), "primary")))
+        self.assertIn("hie ", terms(G.classify(art("Goreisan for hie in women"), "primary")))
+
+    def test_extension_terms_only_in_primary_ext(self):
+        a = art("桂枝茯苓丸を投与した。腹診で臍傍圧痛を認め、桂枝湯証と考えた。", lang="ja")
+        self.assertEqual(G.classify(a, "primary")["quad_conservative"], "Q3_formula_only")
+        c = G.classify(a, "primary_ext")
+        self.assertEqual(c["quad_conservative"], "Q1_both")
+        self.assertIn("腹診", terms(c))
+        self.assertIn("○○湯証", terms(c))
+        for variant in ("primary", "primary_ext"):   # 拡張は日本語側だけ
+            self.assertEqual(G.classify(art("Keishibukuryogan was prescribed; abdominal findings were noted"), variant)["quad_conservative"], "Q3_formula_only")
+
     def test_macron_is_folded(self):
         a = art("Kampo diagnosis by shō")
         self.assertNotIn("sho ", terms(G.classify(a, "legacy")))
@@ -169,6 +205,11 @@ class Romaji(unittest.TestCase):
         self.assertIn("hochuekkito", yomi_to_romaji_variants("ほちゅうえっきとう"))
         self.assertIn("ninjinyoeito", yomi_to_romaji_variants("にんじんようえいとう"))
         self.assertEqual(yomi_to_romaji_variants("よくかんさん"), {"yokukansan"})
+        self.assertIn("byakkokaninjinto", yomi_to_romaji_variants("びゃっこかにんじんとう"))   # びゃ は HEPBURN に無い
+        self.assertIn("tsumyakushigyakuto", yomi_to_romaji_variants("つうみゃくしぎゃくとう"))
+        self.assertIn("jidabokuippo", yomi_to_romaji_variants("ぢだぼくいっぽう"))
+        with self.assertRaises(ValueError):
+            yomi_to_romaji_variants("ゐ")
 
     def test_romaji_names_for_compact_matching_are_long_enough(self):
         self.assertTrue(G._COMPACT_NAMES)
