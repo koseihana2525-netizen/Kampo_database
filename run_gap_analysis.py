@@ -117,6 +117,22 @@ def md_table(headers, rows):
     return "\n".join(out)
 
 
+def exclusion_reasons(articles):
+    """解析対象の2群（抄録あり）から外す記録: {id: 理由}。正誤表などは研究論文ではない。抄録が同一の記録は最初の1件だけ残す"""
+    out, seen = {}, set()
+    for a in articles:
+        if a["source"] not in GROUPS or not (a.get("abstract") or "").strip():
+            continue
+        reason = next((t for t in (x.lower() for x in (a.get("pub_types") or [])) if t in NON_ARTICLE_TYPES), "")
+        key = (a["source"], re.sub(r"\s+", " ", a["abstract"].strip().lower()))
+        if not reason and key in seen:
+            reason = "duplicate abstract"
+        seen.add(key)
+        if reason:
+            out[a["id"]] = reason
+    return out
+
+
 # ── データ ─────────────────────────────────────
 def classify_all(articles):
     rows = []
@@ -134,20 +150,9 @@ def classify_all(articles):
         rows.append(row)
     df = pd.DataFrame(rows)
     df["bracketed"] = df.title.str.strip().str.startswith("[")   # PubMed は英語以外の論文の題名を [ ] で囲む（言語欄はこのDBに無い）
-    df["excluded"] = False
-    df["excluded_reason"] = ""
-    seen = set()
-    for i, a in enumerate(articles):
-        if a["source"] not in GROUPS or not (a.get("abstract") or "").strip():
-            continue
-        types = [t.lower() for t in (a.get("pub_types") or [])]
-        reason = next((t for t in types if t in NON_ARTICLE_TYPES), "")
-        key = (a["source"], re.sub(r"\s+", " ", a["abstract"].strip().lower()))
-        if not reason and key in seen:
-            reason = "duplicate abstract"
-        seen.add(key)
-        if reason:
-            df.loc[i, ["excluded", "excluded_reason"]] = [True, reason]
+    reasons = exclusion_reasons(articles)
+    df["excluded"] = df["id"].isin(reasons)
+    df["excluded_reason"] = df["id"].map(reasons).fillna("")
     df["year_int"] = pd.to_numeric(df["year"], errors="coerce")
     df["period"] = df["year_int"].map(lambda y: None if pd.isna(y) else next(n for n, lo, hi in PERIODS if lo <= y <= hi))
     return df
@@ -179,9 +184,10 @@ def analyses(df):
     pm["ptype"] = pm.pub_types.map(pubmed_type)
     pm["humans"] = pm.mesh.map(lambda m: "Humans" in m)
     ex = df[df.excluded]
+    reason_counts = {k: int(v) for k, v in ex.excluded_reason.value_counts().items()}
     out = ["\n## 解析対象\n",
            f"抄録あり: kampo群 {int(((df.source == 'kampo') & df.has_abstract).sum())}件、pubmed_kampo群 {int(((df.source == 'pubmed_kampo') & df.has_abstract).sum())}件。"
-           f"そこから除外: {len(ex)}件（{{k: int(v) for k, v in ex.excluded_reason.value_counts().items()}}）→ kampo群 {len(km)}件、pubmed_kampo群 {len(pm)}件。\n"]
+           f"そこから除外: {len(ex)}件（{reason_counts}）→ kampo群 {len(km)}件、pubmed_kampo群 {len(pm)}件。\n"]
     for variant in ("primary", "legacy"):   # 主解析を先に出す
         col = f"quad_conservative_{variant}"
         title = "主解析（primary）" if variant == "primary" else "比較: 旧処理（legacy、投稿版 v3 の再現）"
