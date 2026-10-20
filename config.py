@@ -32,3 +32,9 @@ EXTRACTED_DATA_PATH = OUTPUT_DIR / "extracted_data.json"
 NETWORK_HTML_PATH = OUTPUT_DIR / "pilot_demo.html"
 CLUSTERS_HTML_PATH = OUTPUT_DIR / "clusters.html"
 TIMELINE_HTML_PATH = OUTPUT_DIR / "timeline.html"
+
+# 認知ギャップの主解析（run_gap_analysis.py）
+# PAPER_DB_PATH は投稿版のデータの固定スナップショット。リポジトリには含まれない（.gitignore 対象）。
+# 月次更新パイプライン（run_update.py）は、このファイルを更新しない。
+PAPER_DB_PATH = DATA_DIR / "integrated_db_japan.json"
+GAP_OUTPUT_DIR = PROJECT_ROOT / "analysis_output" / "gap_primary"   # 未公開の結果。gitignore 対象

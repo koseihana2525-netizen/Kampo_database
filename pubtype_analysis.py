@@ -3,6 +3,10 @@
 
 integrated_db_japan.json + papers_classified_v2.csv を用いて
 論文タイプ別に認知ギャップ比率を算出する。
+
+NOTE（旧版）: このスクリプトは、投稿版 v3 の値を作った処理の記録として残している。
+      主解析は run_gap_analysis.py（gap_classifier.py の "primary"）。旧処理の再現は variant="legacy"。
+      英語の処方名検出などに修正があるため、数値は一致しない。詳細は ANALYSIS.md。
 """
 
 import json, os, re, sys
